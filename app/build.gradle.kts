@@ -30,7 +30,7 @@ android {
 
         buildConfigField("String", "api_key", properties.getProperty("API_KEY") ?: "")
     }
-    
+
     buildFeatures {
         buildConfig = true
     }
@@ -106,6 +106,10 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose.android)
 
     testImplementation(libs.junit)
+
+    // Mockito
+    testImplementation(libs.coroutine.test)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
