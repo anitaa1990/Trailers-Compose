@@ -20,6 +20,6 @@ interface MovieApiService {
 
     @GET("movie/{movieId}?append_to_response=videos,credits,similar")
     suspend fun fetchMovieDetail(
-        @Path("movieId") movieId: String
+        @Path("movieId") movieId: Long
     ): MovieEntity
 }
