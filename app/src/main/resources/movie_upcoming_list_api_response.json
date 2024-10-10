@@ -1,0 +1,403 @@
+{
+  "dates": {
+    "maximum": "2024-10-30",
+    "minimum": "2024-10-09"
+  },
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/xlkclSE4aq7r3JsFIJRgs21zUew.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 1034541,
+      "original_language": "en",
+      "original_title": "Terrifier 3",
+      "overview": "After surviving Art the Clown's Halloween massacre, Sienna and her brother are struggling to rebuild their shattered lives. As the holiday season approaches, they try to embrace the Christmas spirit and leave the horrors of the past behind. But just when they think they're safe, Art returns, determined to turn their holiday cheer into a new nightmare. The festive season quickly unravels as Art unleashes his twisted brand of terror, proving that no holiday is safe.",
+      "popularity": 503.989,
+      "poster_path": "/7NDHoebflLwL1CcgLJ9wZbbDrmV.jpg",
+      "release_date": "2024-10-11",
+      "title": "Terrifier 3",
+      "video": false,
+      "vote_average": 9.0,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/FzntbxhtPGp5gVmie16ry3k7Ow.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10751,
+        14
+      ],
+      "id": 567811,
+      "original_language": "en",
+      "original_title": "10 Lives",
+      "overview": "A pampered cat takes for granted the lucky hand he has been dealt after he is rescued and loved by Rose, a kind-hearted and passionate student. When he loses his ninth life, fate steps in to set him on a transformative journey.",
+      "popularity": 285.08,
+      "poster_path": "/r2D7MkNocsqKOqGnnGEQThU26JS.jpg",
+      "release_date": "2024-10-11",
+      "title": "10 Lives",
+      "video": false,
+      "vote_average": 8.3,
+      "vote_count": 90
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3V4kLQg0kSqPLctI5ziYWabAZYF.jpg",
+      "genre_ids": [
+        28,
+        878,
+        12
+      ],
+      "id": 912649,
+      "original_language": "en",
+      "original_title": "Venom: The Last Dance",
+      "overview": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.",
+      "popularity": 272.893,
+      "poster_path": "/aosm8NMQ3UyoBVpSxyimorCQykC.jpg",
+      "release_date": "2024-10-25",
+      "title": "Venom: The Last Dance",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ok4ot3YbfDYZcINXf91JUfq3maB.jpg",
+      "genre_ids": [
+        27,
+        9648,
+        80
+      ],
+      "id": 176,
+      "original_language": "en",
+      "original_title": "Saw",
+      "overview": "Two men wake up to find themselves shackled in a grimy, abandoned bathroom. As they struggle to comprehend their predicament, they discover a disturbing tape left behind by the sadistic mastermind known as Jigsaw. With a chilling voice and cryptic instructions, Jigsaw informs them that they must partake in a gruesome game in order to secure their freedom.",
+      "popularity": 68.63,
+      "poster_path": "/rLNSOudrayDBo1uqXjrhxcjODIC.jpg",
+      "release_date": "2004-10-29",
+      "title": "Saw",
+      "video": false,
+      "vote_average": 7.42,
+      "vote_count": 9100
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hd1TvTUGjkoYoqvXYfSBpI5Ri9B.jpg",
+      "genre_ids": [
+        16,
+        28,
+        12,
+        878
+      ],
+      "id": 1159311,
+      "original_language": "ja",
+      "original_title": "僕のヒーローアカデミア THE MOVIE ユアネクスト",
+      "overview": "In a society devastated by the effects of an all-out war between heroes and villains, a mysterious giant fortress suddenly appears, engulfing towns and people one after another. Then, a man reminiscent of All Might, the \"symbol of peace,\" stands in front of Izuku and his friends...",
+      "popularity": 86.825,
+      "poster_path": "/8rdB1wkheEMMqcY8qLAKjCMPcnZ.jpg",
+      "release_date": "2024-10-11",
+      "title": "My Hero Academia: You're Next",
+      "video": false,
+      "vote_average": 5.7,
+      "vote_count": 6
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cVg97LOJgrDZJ7bVmjU2KsGRYnU.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 1100782,
+      "original_language": "en",
+      "original_title": "Smile 2",
+      "overview": "About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events. Overwhelmed by the escalating horrors and the pressures of fame, Skye is forced to face her dark past to regain control of her life before it spirals out of control.",
+      "popularity": 86.237,
+      "poster_path": "/aE85MnPIsSoSs3978Noo16BRsKN.jpg",
+      "release_date": "2024-10-18",
+      "title": "Smile 2",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pmPDfocouP0mS1UjiRDSqUdNIWH.jpg",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "id": 1182047,
+      "original_language": "en",
+      "original_title": "The Apprentice",
+      "overview": "A young Donald Trump, eager to make his name as a hungry scion of a wealthy family in 1970s New York, comes under the spell of Roy Cohn, the cutthroat attorney who would help create the Donald Trump we know today. Cohn sees in Trump the perfect protégé—someone with raw ambition, a hunger for success, and a willingness to do whatever it takes to win.",
+      "popularity": 90.665,
+      "poster_path": "/3NdDiHFx8xV8jlU06FIoFvHenlu.jpg",
+      "release_date": "2024-10-11",
+      "title": "The Apprentice",
+      "video": false,
+      "vote_average": 5.5,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cJ1TJUzvpjmumyuuJoPstXra6j2.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 1100099,
+      "original_language": "en",
+      "original_title": "We Live in Time",
+      "overview": "Almut and Tobias are brought together in a surprise encounter that changes their lives. As they embark on a path challenged by the limits of time, they learn to cherish each moment of the unconventional route their love story has taken.",
+      "popularity": 97.243,
+      "poster_path": "/oeDNBgnlGF6rnyX1P1K8Vl2f3lW.jpg",
+      "release_date": "2024-10-11",
+      "title": "We Live in Time",
+      "video": false,
+      "vote_average": 8.0,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 1047373,
+      "original_language": "en",
+      "original_title": "The Silent Hour",
+      "overview": "While working a case as an interpreter, a hearing-impaired police detective must confront a group of criminals trying to eliminate a deaf murder witness in her apartment building.",
+      "popularity": 29.68,
+      "poster_path": "/tMvjfDinV5xEn4N4RFRXUy5dY70.jpg",
+      "release_date": "2024-10-11",
+      "title": "The Silent Hour",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iwXM4CB17fYVczUHOT4DxXPLiEg.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 1064213,
+      "original_language": "en",
+      "original_title": "Anora",
+      "overview": "Anora, a young sex worker from Brooklyn, gets her chance at a Cinderella story when she meets and impulsively marries the son of an oligarch. Once the news reaches Russia, her fairytale is threatened as the parents set out for New York to get the marriage annulled.",
+      "popularity": 56.542,
+      "poster_path": "/7GZQa5bX3Ty80AqoRkkRLszCaE4.jpg",
+      "release_date": "2024-10-18",
+      "title": "Anora",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eZzNdjNDvaSoyywy9ICg2UmFwul.jpg",
+      "genre_ids": [
+        18,
+        53,
+        9648
+      ],
+      "id": 974576,
+      "original_language": "en",
+      "original_title": "Conclave",
+      "overview": "Cardinal Lawrence is tasked with leading one of the world's most secretive and ancient events, selecting a new Pope. Once the Catholic Church’s most powerful leaders have gathered from around the world and are locked together in the Vatican halls, Lawrence finds himself at the center of a conspiracy and discovers a secret that could shake the very foundation of The Church.",
+      "popularity": 30.205,
+      "poster_path": "/l4WXg5oQPK6GVlISKQNIUGb8rKJ.jpg",
+      "release_date": "2024-10-25",
+      "title": "Conclave",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ryeuX0wMWvw5LoarJ583FVP6p0K.jpg",
+      "genre_ids": [
+        80,
+        18
+      ],
+      "id": 1093966,
+      "original_language": "ta",
+      "original_title": "வேட்டையன்",
+      "overview": "A sought-after Supercop gets caught in a series of unexpected events when he encounters a suspect who is accused of being involved in a murder case.",
+      "popularity": 48.514,
+      "poster_path": "/poElk45MZQMnKaQEzugZt7PVhi5.jpg",
+      "release_date": "2024-10-10",
+      "title": "Vettaiyan",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        28,
+        80,
+        18
+      ],
+      "id": 1281979,
+      "original_language": "en",
+      "original_title": "The Pastor",
+      "overview": "In an almost-forgotten part of town overrun by a ruthless gang infestation, a community is struggling with their faith and belief in God as they see their neighborhoods torn apart and their youth targeted for recruitment by the gangs. Even the local church struggles just to keep the lights on because of its barely-existent congregation's lack of enthusiasm. However, all this begins to change when a mysterious pastor arrives to lead the church. With his faith in hand and God by his side, Pastor Miguel sets out to inspire the community into action, empower the youth, and ultimately to re-ignite the community's faith in God.",
+      "popularity": 29.668,
+      "poster_path": "/leVgXva9F9SbmzHSTjJCSeDafsb.jpg",
+      "release_date": "2024-10-11",
+      "title": "The Pastor",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mMORgGbjtCJJdjnvszui8371qdn.jpg",
+      "genre_ids": [
+        16,
+        10402,
+        35,
+        99
+      ],
+      "id": 1236419,
+      "original_language": "en",
+      "original_title": "Piece by Piece",
+      "overview": "The story of the life and career of American musician Pharrell Williams in the style of LEGO animation.",
+      "popularity": 38.189,
+      "poster_path": "/9xSjP8B0iZHRzvrtKcYDkaalomS.jpg",
+      "release_date": "2024-10-11",
+      "title": "Piece by Piece",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3ZIPowwUwwMb6kO2Sh89GLnoLw9.jpg",
+      "genre_ids": [
+        36,
+        35,
+        18
+      ],
+      "id": 1120911,
+      "original_language": "en",
+      "original_title": "Saturday Night",
+      "overview": "At 11:30pm on October 11, 1975, a ferocious troupe of young comedians and writers changed television forever. This is the story of what happened behind the scenes in the 90 minutes leading up to the first broadcast of Saturday Night Live.",
+      "popularity": 31.784,
+      "poster_path": "/1eRwiqutoS2Ob13wqGX2Upwi4jq.jpg",
+      "release_date": "2024-09-27",
+      "title": "Saturday Night",
+      "video": false,
+      "vote_average": 8.5,
+      "vote_count": 4
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        28,
+        37
+      ],
+      "id": 1094986,
+      "original_language": "en",
+      "original_title": "Black Creek",
+      "overview": "A dark, gritty, dystopian, western action martial arts film featuring a strong 'no-holds-barred' female protagonist portrayed by action film star Cynthia Rothrock. The plot centers around a sheriff’s sister who seeks revenge against the terrifying leader of a group of outlaws after discovering he brutally murdered her brother, his wife, and other family members in a gritty southwestern town.",
+      "popularity": 28.41,
+      "poster_path": "/pwVtZBwBsyLfLaqHWuuytra3eNw.jpg",
+      "release_date": "2024-10-09",
+      "title": "Black Creek",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/UZtS6vV5soeeWQtWbcuAobzYeG.jpg",
+      "genre_ids": [
+        28,
+        35
+      ],
+      "id": 616446,
+      "original_language": "en",
+      "original_title": "Brothers",
+      "overview": "A reformed criminal's attempt at going straight is derailed when he reunites with his sanity-testing twin brother on a road trip for the score of a lifetime. Dodging bullets, the law, and an overbearing mother along the way, they must heal their severed family bond before they end up killing each other.",
+      "popularity": 27.233,
+      "poster_path": "/nM1uXAoOxJdp7oEr9RUaVviNyzD.jpg",
+      "release_date": "2024-10-10",
+      "title": "Brothers",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/epSWEPJhJKjNsfM6kFMQonx9nqM.jpg",
+      "genre_ids": [
+        35,
+        27
+      ],
+      "id": 1187417,
+      "original_language": "en",
+      "original_title": "Rumours",
+      "overview": "En route to the annual G7 summit, the seven leaders of the world’s wealthiest liberal democracies get lost in the woods and face increasing peril while attempting to draft a provisional statement regarding a global crisis.",
+      "popularity": 22.9,
+      "poster_path": "/lAjLzQDyUXxCH4tOBxkRYDbBpY.jpg",
+      "release_date": "2024-10-18",
+      "title": "Rumours",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rIuoFnIOVOn5qdmRZB6YjxzscWF.jpg",
+      "genre_ids": [
+        16,
+        18
+      ],
+      "id": 1064486,
+      "original_language": "en",
+      "original_title": "Memoir of a Snail",
+      "overview": "In 1970s Australia, Grace's life is troubled by misfortune and loss. After their mother dies during pregnancy, she and her twin brother, Gilbert, are raised by their paraplegic-alcoholic former juggler father, Percy. Despite a life filled with love, tragedy strikes anew when Percy passes away in his sleep. The siblings are forcibly separated and thrust into separate homes.",
+      "popularity": 24.504,
+      "poster_path": "/eehzHWYQ9MSvnOdxfEIvf0lRfrx.jpg",
+      "release_date": "2024-10-25",
+      "title": "Memoir of a Snail",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        18
+      ],
+      "id": 1304366,
+      "original_language": "en",
+      "original_title": "Average Joe",
+      "overview": "After a troubled childhood, a former Marine becomes a beloved high school football coach. However, his reputation comes under fire when he is fired for praying before each games.",
+      "popularity": 18.821,
+      "poster_path": "/stuzJUtbqSrOrUdAsYYgmzKggnc.jpg",
+      "release_date": "2024-10-10",
+      "title": "Average Joe",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    }
+  ],
+  "total_pages": 6,
+  "total_results": 111
+}

@@ -1,0 +1,402 @@
+{
+  "dates": {
+    "maximum": "2024-10-09",
+    "minimum": "2024-08-28"
+  },
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/9R9Za5kybgl5AhuCNoK3gngaBdG.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 1114513,
+      "original_language": "en",
+      "original_title": "Speak No Evil",
+      "overview": "When an American family is invited to spend the weekend at the idyllic country estate of a charming British family they befriended on vacation, what begins as a dream holiday soon warps into a snarled psychological nightmare.",
+      "popularity": 1636.932,
+      "poster_path": "/fDtkrO2OAF8LKQTdzYmu1Y7lCLB.jpg",
+      "release_date": "2024-09-13",
+      "title": "Speak No Evil",
+      "video": false,
+      "vote_average": 7.328,
+      "vote_count": 529
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uXDwP5qPhuRyPpQ7WkLbE6t2z5W.jpg",
+      "genre_ids": [
+        35,
+        53,
+        28
+      ],
+      "id": 877817,
+      "original_language": "en",
+      "original_title": "Wolfs",
+      "overview": "Hired to cover up a high-profile crime, a fixer soon finds his night spiralling out of control when he's forced to work with an unexpected counterpart.",
+      "popularity": 1249.675,
+      "poster_path": "/vOX1Zng472PC2KnS0B9nRfM8aaZ.jpg",
+      "release_date": "2024-09-20",
+      "title": "Wolfs",
+      "video": false,
+      "vote_average": 6.595,
+      "vote_count": 384
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7h6TqPB3ESmjuVbxCxAeB1c9OB1.jpg",
+      "genre_ids": [
+        878,
+        27,
+        35,
+        18
+      ],
+      "id": 933260,
+      "original_language": "en",
+      "original_title": "The Substance",
+      "overview": "A fading celebrity decides to use a black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.",
+      "popularity": 1492.249,
+      "poster_path": "/lqoMzCcZYEFK729d6qzt349fB4o.jpg",
+      "release_date": "2024-09-20",
+      "title": "The Substance",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 239
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4zlOPT9CrtIX05bBIkYxNZsm5zN.jpg",
+      "genre_ids": [
+        16,
+        878,
+        10751
+      ],
+      "id": 1184918,
+      "original_language": "en",
+      "original_title": "The Wild Robot",
+      "overview": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+      "popularity": 1096.791,
+      "poster_path": "/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+      "release_date": "2024-09-27",
+      "title": "The Wild Robot",
+      "video": false,
+      "vote_average": 7.961,
+      "vote_count": 116
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/reNf6GBzOe48l9WEnFOxXgW56Vg.jpg",
+      "genre_ids": [
+        18,
+        80,
+        53
+      ],
+      "id": 889737,
+      "original_language": "en",
+      "original_title": "Joker: Folie à Deux",
+      "overview": "While struggling with his dual identity, Arthur Fleck not only stumbles upon true love, but also finds the music that's always been inside him.",
+      "popularity": 1164.723,
+      "poster_path": "/if8QiqCI7WAGImKcJCfzp6VTyKA.jpg",
+      "release_date": "2024-10-04",
+      "title": "Joker: Folie à Deux",
+      "video": false,
+      "vote_average": 5.8,
+      "vote_count": 482
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/A1dZ6faTjg0e6HYftBmEKujuXGQ.jpg",
+      "genre_ids": [
+        35,
+        14,
+        27
+      ],
+      "id": 917496,
+      "original_language": "en",
+      "original_title": "Beetlejuice Beetlejuice",
+      "overview": "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Betelgeuse, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Afterlife.",
+      "popularity": 868.952,
+      "poster_path": "/kKgQzkUCnQmeTPkyIwHly2t6ZFI.jpg",
+      "release_date": "2024-09-06",
+      "title": "Beetlejuice Beetlejuice",
+      "video": false,
+      "vote_average": 7.088,
+      "vote_count": 815
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/blqiNjJefmY10Wx6y2vgJJWljJj.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 949484,
+      "original_language": "en",
+      "original_title": "Hounds of War",
+      "overview": "After a mission goes wrong, only one of a group of mercenaries is left alive to avenge his fallen brothers.",
+      "popularity": 589.663,
+      "poster_path": "/lRBT73EWsiQPuqK3YS3BnBW0Zwi.jpg",
+      "release_date": "2024-09-20",
+      "title": "Hounds of War",
+      "video": false,
+      "vote_average": 6.453,
+      "vote_count": 74
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tAwfoDyKiYa4KQdUp3DTMrEs4En.jpg",
+      "genre_ids": [
+        16,
+        878,
+        12,
+        10751,
+        28
+      ],
+      "id": 698687,
+      "original_language": "en",
+      "original_title": "Transformers One",
+      "overview": "The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but once were friends bonded like brothers who changed the fate of Cybertron forever.",
+      "popularity": 518.627,
+      "poster_path": "/qbkAqmmEIZfrCO8ZQAuIuVMlWoV.jpg",
+      "release_date": "2024-09-20",
+      "title": "Transformers One",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 120
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ArRR0UvZSV1ONjEm84IGZSWHqYq.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 1291594,
+      "original_language": "en",
+      "original_title": "Beezel",
+      "overview": "Over six tumultuous decades, three unwitting guests of a cursed New England home stumble upon a sinister secret dwelling beneath its floors - an eternal witch with an insatiable thirst for the souls of the living.",
+      "popularity": 330.308,
+      "poster_path": "/a9gZxhG98LATZJGy1vWssyjVkk.jpg",
+      "release_date": "2024-09-20",
+      "title": "Beezel",
+      "video": false,
+      "vote_average": 6.375,
+      "vote_count": 16
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vt37v6ouquokPYeEg3xqkzKjHRj.jpg",
+      "genre_ids": [
+        53
+      ],
+      "id": 1248753,
+      "original_language": "en",
+      "original_title": "Amber Alert",
+      "overview": "An ordinary rideshare becomes a high-stakes game of cat and mouse when Jaq and Shane receive an alert of a child abduction on their phones. Quickly realizing they are behind a car that matches the description of the kidnapper’s, Jaq and Shane desperately race against time to save the child’s life.",
+      "popularity": 329.335,
+      "poster_path": "/vkrmJ2fStfnvsLfBw55nimnjcd5.jpg",
+      "release_date": "2024-09-27",
+      "title": "Amber Alert",
+      "video": false,
+      "vote_average": 5.6,
+      "vote_count": 47
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/sjC29cgm4qZAnpOJQbYKCxDCcra.jpg",
+      "genre_ids": [
+        27,
+        878,
+        53
+      ],
+      "id": 1062215,
+      "original_language": "en",
+      "original_title": "Afraid",
+      "overview": "Curtis Pike and his family are selected to test a new home device: a digital assistant called AIA. AIA observes the family's behaviors and begins to anticipate their needs. And she can – and will – make sure nothing – and no one – gets in her family's way.",
+      "popularity": 344.216,
+      "poster_path": "/gUREuXCnJLVHsvKXDH9fgIcfM6e.jpg",
+      "release_date": "2024-08-30",
+      "title": "Afraid",
+      "video": false,
+      "vote_average": 6.286,
+      "vote_count": 185
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/AjTodtZJlQxycfRPktnUTpknblv.jpg",
+      "genre_ids": [
+        16,
+        12,
+        35,
+        10751
+      ],
+      "id": 1207830,
+      "original_language": "en",
+      "original_title": "Gracie & Pedro: Pets to the Rescue",
+      "overview": "Family frenemies, Gracie and Pedro, must put their differences aside, embarking on a thrilling quest packed with perilous escapades in order to reunite with their owners.",
+      "popularity": 366.881,
+      "poster_path": "/1agSI7NGvagr720za8XAubtqUoB.jpg",
+      "release_date": "2024-10-08",
+      "title": "Gracie & Pedro: Pets to the Rescue",
+      "video": false,
+      "vote_average": 7.273,
+      "vote_count": 11
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cVEXtEdP9XhKj1yppld68FEJkwp.jpg",
+      "genre_ids": [
+        878,
+        18
+      ],
+      "id": 592831,
+      "original_language": "en",
+      "original_title": "Megalopolis",
+      "overview": "Genius artist Cesar Catilina seeks to leap the City of New Rome into a utopian, idealistic future, while his opposition, Mayor Franklyn Cicero, remains committed to a regressive status quo, perpetuating greed, special interests, and partisan warfare. Torn between them is socialite Julia Cicero, the mayor’s daughter, whose love for Cesar has divided her loyalties, forcing her to discover what she truly believes humanity deserves.",
+      "popularity": 104.627,
+      "poster_path": "/8Sok3HNA3r1GHnK2lCytHyBz1A.jpg",
+      "release_date": "2024-09-27",
+      "title": "Megalopolis",
+      "video": false,
+      "vote_average": 5.2,
+      "vote_count": 121
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6DqzZaTAzFrT53JtRt3MLKs0Y9i.jpg",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "id": 10625,
+      "original_language": "en",
+      "original_title": "Mean Girls",
+      "overview": "Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.",
+      "popularity": 173.353,
+      "poster_path": "/fXm3YKXAEjx7d2tIWDg9TfRZtsU.jpg",
+      "release_date": "2004-04-30",
+      "title": "Mean Girls",
+      "video": false,
+      "vote_average": 7.212,
+      "vote_count": 8643
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cTiSLpimOWmPJIvuBuTVb5fPisq.jpg",
+      "genre_ids": [
+        80,
+        53
+      ],
+      "id": 413846,
+      "original_language": "en",
+      "original_title": "1992",
+      "overview": "In 1992, Mercer is desperately trying to rebuild his life and his relationship with his son amidst the turbulent Los Angeles uprising following the Rodney King verdict. Across town, another father and son put their own strained relationship to the test as they plot a dangerous heist to steal catalytic converters, which contain valuable platinum from the factory where Mercer works. As tensions rise and chaos erupts, both families reach their boiling points when their worlds collide.",
+      "popularity": 96.026,
+      "poster_path": "/tPvFmQZM5HMspryyYbrtW02NR0G.jpg",
+      "release_date": "2024-08-30",
+      "title": "1992",
+      "video": false,
+      "vote_average": 5.5,
+      "vote_count": 12
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aOebav1Zi5jBr0d5FXuDLKy8J2y.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 1007723,
+      "original_language": "en",
+      "original_title": "She Taught Love",
+      "overview": "Ever since getting off a prestigious cable television series, Frank Cooper has been coasting through life distracting himself with women, booze and blow, while auditioning to play stereotypical gang members and drug dealers. But the minute he meets Mali Waters, a sports agent living for the present, his whole world changes.",
+      "popularity": 99.937,
+      "poster_path": "/hTcsoaYkQnOj6YSPDpeLv9kpaPm.jpg",
+      "release_date": "2024-09-27",
+      "title": "She Taught Love",
+      "video": false,
+      "vote_average": 4.2,
+      "vote_count": 5
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/b6DU3kBmicMbpNvvkqf1cHaceMF.jpg",
+      "genre_ids": [
+        27,
+        18
+      ],
+      "id": 814889,
+      "original_language": "en",
+      "original_title": "Never Let Go",
+      "overview": "As an evil takes over the world beyond their front doorstep, the only protection for a mother and her twin sons is their house and their family’s protective bond.",
+      "popularity": 115.191,
+      "poster_path": "/3EpZ2ksjijmdr8BhISP03PYzNFW.jpg",
+      "release_date": "2024-09-20",
+      "title": "Never Let Go",
+      "video": false,
+      "vote_average": 5.9,
+      "vote_count": 51
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c0O7XhOffGyxJ1UwUis1CkdMNH0.jpg",
+      "genre_ids": [
+        35,
+        27,
+        53
+      ],
+      "id": 1139713,
+      "original_language": "en",
+      "original_title": "The Radleys",
+      "overview": "A seemingly ordinary family harbors a dark secret: they are vampires. They choose not to drink blood despite their natural cravings, but one day, their truth comes to light.",
+      "popularity": 95.118,
+      "poster_path": "/kaEc9t2CjHddXJyJLd9GQcDURcX.jpg",
+      "release_date": "2024-10-04",
+      "title": "The Radleys",
+      "video": false,
+      "vote_average": 5.438,
+      "vote_count": 8
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pMoCSAIRp0PHMYEn3rIuUz6KjDR.jpg",
+      "genre_ids": [
+        10751,
+        18
+      ],
+      "id": 1143508,
+      "original_language": "en",
+      "original_title": "You Gotta Believe",
+      "overview": "After dedicating the season to a teammate’s ailing father, a group of underestimated Ft. Worth youth baseball players takes its Cinderella run all the way to the 2002 Little League World Series—culminating in a record-breaking showdown that became an instant ESPN classic.",
+      "popularity": 83.157,
+      "poster_path": "/l4X9SeMFCv414BCt97IBgzYX7JC.jpg",
+      "release_date": "2024-08-30",
+      "title": "You Gotta Believe",
+      "video": false,
+      "vote_average": 6.182,
+      "vote_count": 11
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uFMIiNYUDHzo7YGSg5UUR7VLNma.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 1278099,
+      "original_language": "es",
+      "original_title": "El candidato honesto",
+      "overview": "A former idealistic leader turned corrupt politician is cursed by his grandmother on the eve of the presidential election, forcing him to be honest. Can he win without lies and what will be the conditions?",
+      "popularity": 75.747,
+      "poster_path": "/hmV5HPkbQuzgPo11Xm70CMQV3iZ.jpg",
+      "release_date": "2024-09-06",
+      "title": "El Candidato Honesto",
+      "video": false,
+      "vote_average": 6.984,
+      "vote_count": 31
+    }
+  ],
+  "total_pages": 18,
+  "total_results": 349
+}
