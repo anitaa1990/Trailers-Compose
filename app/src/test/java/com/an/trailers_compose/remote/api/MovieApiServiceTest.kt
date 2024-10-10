@@ -71,7 +71,7 @@ class MovieApiServiceTest {
         mockWebServer.enqueue(response)
 
         // Act
-        val actualResponse = apiService.fetchMovieDetail("")
+        val actualResponse = apiService.fetchMovieDetail(1L)
 
         // Assert
         assertNotNull(actualResponse.videoApiResponse)
