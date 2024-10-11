@@ -15,9 +15,9 @@ import javax.inject.Inject
 
 @OptIn(ExperimentalPagingApi::class)
 class MovieRemoteMediator @Inject constructor(
-    private val category: Category,
+    private val category: Category = Category.POPULAR,
     private val repository: MovieRepository
-) : RemoteMediator<Long, MovieEntity>() {
+) : RemoteMediator<Int, MovieEntity>() {
     override suspend fun initialize(): InitializeAction {
         val cacheTimeout = TimeUnit.MILLISECONDS.convert(1, TimeUnit.HOURS)
 
@@ -42,7 +42,7 @@ class MovieRemoteMediator @Inject constructor(
      */
     override suspend fun load(
         loadType: LoadType,
-        state: PagingState<Long, MovieEntity>
+        state: PagingState<Int, MovieEntity>
     ): MediatorResult {
         val page: Int = when (loadType) {
             LoadType.REFRESH -> {
@@ -107,7 +107,7 @@ class MovieRemoteMediator @Inject constructor(
     /** LoadType.Append
      * When we need to load data at the end of the currently loaded data set, the load parameter is LoadType.APPEND
      */
-    private suspend fun PagingState<Long, MovieEntity>.getRemoteKeyForLastItem(): MovieRemoteKey? {
+    private suspend fun PagingState<Int, MovieEntity>.getRemoteKeyForLastItem(): MovieRemoteKey? {
         // Get the last page that was retrieved, that contained items.
         // From that last page, get the last item
         return this.pages.lastOrNull {
@@ -120,7 +120,7 @@ class MovieRemoteMediator @Inject constructor(
     /** LoadType.Prepend
      * When we need to load data at the beginning of the currently loaded data set, the load parameter is LoadType.PREPEND
      */
-    private suspend fun PagingState<Long, MovieEntity>.getRemoteKeyForFirstItem(): MovieRemoteKey? {
+    private suspend fun PagingState<Int, MovieEntity>.getRemoteKeyForFirstItem(): MovieRemoteKey? {
         // Get the first page that was retrieved, that contained items.
         // From that first page, get the first item
         return this.pages.firstOrNull {
@@ -136,7 +136,7 @@ class MovieRemoteMediator @Inject constructor(
      * If this is the first load, then the anchorPosition is null.
      * When PagingDataAdapter.refresh() is called, the anchorPosition is the first visible position in the displayed list, so we will need to load the page that contains that specific item.
      */
-    private suspend fun PagingState<Long, MovieEntity>.getRemoteKeyClosestToCurrentPosition(): MovieRemoteKey? {
+    private suspend fun PagingState<Int, MovieEntity>.getRemoteKeyClosestToCurrentPosition(): MovieRemoteKey? {
         // The paging library is trying to load data after the anchor position
         // Get the item closest to the anchor position
         return this.anchorPosition?.let { position ->
