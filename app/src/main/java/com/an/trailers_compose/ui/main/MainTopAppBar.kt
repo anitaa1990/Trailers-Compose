@@ -1,12 +1,6 @@
 package com.an.trailers_compose.ui.main
 
-import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TopAppBarColors
@@ -15,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.produceState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.FloatingWindow
 import androidx.navigation.NavBackStackEntry
@@ -40,21 +35,6 @@ fun MainTopAppBar(
     )
 
     LargeTopAppBar(
-        navigationIcon = {
-            if (showBackButton) {
-                val backPressDispatcher = LocalOnBackPressedDispatcherOwner.current
-                IconButton(
-                    onClick = { backPressDispatcher?.onBackPressedDispatcher?.onBackPressed() },
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.Close,
-                        contentDescription = "",
-                        tint = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.size(25.dp)
-                    )
-                }
-            }
-        },
         scrollBehavior = scrollBehavior,
         title = {
             AppBarTitle(currentContentBackStackEntry)
@@ -62,6 +42,7 @@ fun MainTopAppBar(
         actions = {
             AppBarAction(currentContentBackStackEntry)
         },
+        modifier = Modifier.shadow(elevation = 10.dp),
         colors = TopAppBarColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer,
             scrolledContainerColor = MaterialTheme.colorScheme.primaryContainer,
