@@ -9,7 +9,10 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -22,6 +25,7 @@ fun MainAppBottomBar(
     navController: NavHostController
 ) {
     BottomAppBar(
+        modifier = Modifier.shadow(elevation = 12.dp),
         containerColor = MaterialTheme.colorScheme.primaryContainer,
         contentColor = MaterialTheme.colorScheme.primary
     ) {

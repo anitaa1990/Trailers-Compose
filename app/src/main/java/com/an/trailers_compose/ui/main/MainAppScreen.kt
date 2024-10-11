@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
@@ -15,7 +14,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.an.trailers_compose.ui.list.movie.MovieListScreen
+import com.an.trailers_compose.ui.list.tv.TvListScreen
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -47,10 +50,19 @@ fun MainApp(navController: NavHostController) {
                 )
             }
         ) { innerPadding ->
-            Text(
-                modifier = Modifier.padding(innerPadding),
-                text = "Example of a scaffold with a bottom app bar."
-            )
+
+            NavHost(
+                navController = navController,
+                startDestination = BottomNavItem.Movies.route,
+                modifier = Modifier.padding(innerPadding)
+            ) {
+                composable(BottomNavItem.Movies.route) {
+                    MovieListScreen()
+                }
+                composable(BottomNavItem.Tv.route) {
+                    TvListScreen()
+                }
+            }
         }
     }
 }

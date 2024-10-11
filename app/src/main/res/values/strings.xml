@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Trailers-Compose</string>
+    <string name="title_movies">Movies</string>
+    <string name="title_tv">TV</string>
 </resources>
