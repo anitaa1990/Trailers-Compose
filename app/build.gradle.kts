@@ -110,6 +110,7 @@ dependencies {
 
     // Mockito
     testImplementation(libs.coroutine.test)
+    androidTestImplementation(libs.mockito.android)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
