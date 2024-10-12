@@ -13,11 +13,14 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.paging.compose.collectAsLazyPagingItems
 import com.an.trailers_compose.ui.list.movie.MovieListScreen
+import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.list.tv.TvListScreen
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 
@@ -28,10 +31,6 @@ fun MainApp(navController: NavHostController) {
         val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior(
             rememberTopAppBarState()
         )
-        val currentBackStackEntry by navController.currentBackStackEntryAsState()
-        val isRootScreen by remember(currentBackStackEntry) {
-            derivedStateOf { navController.previousBackStackEntry == null }
-        }
 
         Scaffold(
             // Adding this line in order to draw the screen over the status bar
@@ -40,7 +39,7 @@ fun MainApp(navController: NavHostController) {
             topBar = {
                 MainTopAppBar(
                     navController = navController,
-                    showBackButton = !isRootScreen,
+                    showBackButton = false,
                     scrollBehavior = scrollBehavior
                 )
             },
@@ -51,13 +50,16 @@ fun MainApp(navController: NavHostController) {
             }
         ) { innerPadding ->
 
+            val viewModel = hiltViewModel<MovieListViewModel>()
+            val movies = viewModel.getMovies().collectAsLazyPagingItems()
+
             NavHost(
                 navController = navController,
                 startDestination = BottomNavItem.Movies.route,
                 modifier = Modifier.padding(innerPadding)
             ) {
                 composable(BottomNavItem.Movies.route) {
-                    MovieListScreen()
+                    MovieListScreen(movies)
                 }
                 composable(BottomNavItem.Tv.route) {
                     TvListScreen()

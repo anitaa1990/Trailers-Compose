@@ -8,4 +8,6 @@ object AppConstants {
 
     const val MOVIES = "Movies"
     const val TV = "TV"
+
+    const val IMAGE_URL = "https://image.tmdb.org/t/p/w500%s"
 }
