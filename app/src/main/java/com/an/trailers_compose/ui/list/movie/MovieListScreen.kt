@@ -20,12 +20,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import coil.compose.AsyncImage
 import com.an.trailers_compose.AppConstants.IMAGE_URL
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.local.entity.MovieEntity
 import com.an.trailers_compose.ui.component.CustomSearchBar
+import com.an.trailers_compose.ui.component.EmptyScreen
+import com.an.trailers_compose.ui.component.LoadingItem
 import com.an.trailers_compose.ui.component.ProvideAppBarTitle
 import com.an.trailers_compose.ui.component.TopBarTitle
 
@@ -44,18 +47,31 @@ fun MovieListScreen(
         // Search Bar
         CustomSearchBar()
 
-        // Movie List
-        val pagerState = rememberPagerState(
-            pageCount = { movies.itemCount }
-        )
-        HorizontalPager(
-            state = pagerState,
-            pageSize = PageSize.Fill
-        ) { index ->
-            movies[index]?.let {
-                MovieListItem(
-                    movie = it
+        // Different load states – Loading, Empty State, Pager list state
+        val loadState = movies.loadState.mediator
+        when {
+            loadState?.refresh == LoadState.Loading || loadState?.append == LoadState.Loading -> {
+                LoadingItem()
+            }
+            loadState?.refresh is LoadState.Error -> {
+                val error = (loadState.refresh as LoadState.Error).error
+                EmptyScreen(errorMessage = error.message ?: error.toString()) {
+                    movies.refresh()
+                }
+            }
+            else -> {
+                // Movie List
+                val pagerState = rememberPagerState(
+                    pageCount = { movies.itemCount }
                 )
+                HorizontalPager(
+                    state = pagerState,
+                    pageSize = PageSize.Fill
+                ) { index ->
+                    movies[index]?.let {
+                        MovieListItem(movie = it)
+                    }
+                }
             }
         }
     }
