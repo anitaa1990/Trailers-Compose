@@ -11,6 +11,7 @@ object AppConstants {
     const val TV = "TV"
 
     const val IMAGE_URL = "https://image.tmdb.org/t/p/w500%s"
+    const val YOUTUBE_THUMBNAIL_URL = "https://img.youtube.com/vi/%s/maxresdefault.jpg"
 
     private const val ROUTE_MOVIE_DETAIL = "movie_detail"
     const val ROUTE_DETAIL_ARG_NAME = "localId"
