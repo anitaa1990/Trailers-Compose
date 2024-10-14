@@ -51,16 +51,17 @@ fun MovieListScreen(
 
         // Different load states – Loading, Empty State, Pager list state
         val loadState = movies.loadState.mediator
-        when {
-            loadState?.refresh == LoadState.Loading || loadState?.append == LoadState.Loading -> {
+        when (loadState?.refresh) {
+            LoadState.Loading -> {
                 LoadingItem()
             }
-            loadState?.refresh is LoadState.Error -> {
+            is LoadState.Error -> {
                 val error = (loadState.refresh as LoadState.Error).error
                 EmptyScreen(errorMessage = error.message ?: error.toString()) {
                     movies.refresh()
                 }
             }
+
             else -> {
                 // Movie List
                 val pagerState = rememberPagerState(
