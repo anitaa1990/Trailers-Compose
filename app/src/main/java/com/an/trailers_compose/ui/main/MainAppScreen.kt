@@ -12,9 +12,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.an.trailers_compose.AppConstants.ROUTE_DETAIL_ARG_NAME
+import com.an.trailers_compose.AppConstants.ROUTE_MOVIE_DETAIL_PATH
+import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
 import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.list.tv.TvListScreen
@@ -55,10 +60,27 @@ fun MainApp(navController: NavHostController) {
                 modifier = Modifier.padding(innerPadding)
             ) {
                 composable(BottomNavItem.Movies.route) {
-                    MovieListScreen(movies)
+                    MovieListScreen(movies,
+                        onItemClicked = { id ->
+                            navController.navigate(
+                                route = ROUTE_MOVIE_DETAIL_PATH.replace(
+                                    "{${ROUTE_DETAIL_ARG_NAME}}",
+                                    "$id"
+                                )
+                            )
+                        }
+                    )
                 }
                 composable(BottomNavItem.Tv.route) {
                     TvListScreen()
+                }
+                composable(
+                    route = ROUTE_MOVIE_DETAIL_PATH,
+                    arguments = listOf(
+                        navArgument(ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
+                    ),
+                ) {
+                    MovieDetailScreen()
                 }
             }
         }
