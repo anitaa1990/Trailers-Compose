@@ -6,6 +6,7 @@ object AppConstants {
     const val PAGE_SIZE = 20
     const val PREFETCH_DISTANCE = 10
 
+    const val HOME = "home"
     const val MOVIES = "Movies"
     const val TV = "TV"
 
