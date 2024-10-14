@@ -2,9 +2,9 @@ package com.an.trailers_compose.ui.list.movie
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -21,6 +21,7 @@ import coil.compose.AsyncImage
 import com.an.trailers_compose.AppConstants.IMAGE_URL
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.local.entity.MovieEntity
+import com.an.trailers_compose.ui.component.CustomSearchBar
 import com.an.trailers_compose.ui.component.ProvideAppBarTitle
 import com.an.trailers_compose.ui.component.TopBarTitle
 
@@ -31,12 +32,15 @@ fun MovieListScreen(
     // Toolbar title
     ProvideAppBarTitle { TopBarTitle(text = R.string.title_movies) }
 
-    // Movie List
     Column(
-        modifier = Modifier.wrapContentSize(),
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Search Bar
+        CustomSearchBar()
+
+        // Movie List
         LazyRow {
             items(
                 count = movies.itemCount,
@@ -44,7 +48,7 @@ fun MovieListScreen(
             ) { index ->
                 movies[index]?.let { movie ->
                     MovieListItem(
-                        movie, Modifier
+                        movie
                     )
                 }
             }
@@ -54,12 +58,10 @@ fun MovieListScreen(
 
 @Composable
 fun MovieListItem(
-    movie: MovieEntity,
-    modifier: Modifier = Modifier
+    movie: MovieEntity
 ) {
     Card(
-        modifier = modifier
-            .padding(8.dp),
+        modifier = Modifier.padding(8.dp),
         shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(10.dp),
         colors = CardDefaults.cardColors(

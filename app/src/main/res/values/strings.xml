@@ -2,4 +2,5 @@
     <string name="app_name">Trailers-Compose</string>
     <string name="title_movies">Movies</string>
     <string name="title_tv">TV</string>
+    <string name="search_hint_movies">Search your favourite movies…</string>
 </resources>
