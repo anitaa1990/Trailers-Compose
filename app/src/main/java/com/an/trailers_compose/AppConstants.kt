@@ -10,4 +10,9 @@ object AppConstants {
     const val TV = "TV"
 
     const val IMAGE_URL = "https://image.tmdb.org/t/p/w500%s"
+
+    private const val ROUTE_MOVIE_DETAIL = "movie_detail"
+    const val ROUTE_DETAIL_ARG_NAME = "localId"
+
+    const val ROUTE_MOVIE_DETAIL_PATH = "$ROUTE_MOVIE_DETAIL/$ROUTE_DETAIL_ARG_NAME/{$ROUTE_DETAIL_ARG_NAME}"
 }

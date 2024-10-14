@@ -1,5 +1,6 @@
 package com.an.trailers_compose.ui.list.movie
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -34,7 +35,8 @@ import com.an.trailers_compose.ui.component.TopBarTitle
 
 @Composable
 fun MovieListScreen(
-    movies: LazyPagingItems<MovieEntity>
+    movies: LazyPagingItems<MovieEntity>,
+    onItemClicked: (remoteId: Long) -> Unit
 ) {
     // Toolbar title
     ProvideAppBarTitle { TopBarTitle(text = R.string.title_movies) }
@@ -69,7 +71,12 @@ fun MovieListScreen(
                     pageSize = PageSize.Fill
                 ) { index ->
                     movies[index]?.let {
-                        MovieListItem(movie = it)
+                        MovieListItem(
+                            movie = it,
+                            onItemClicked = {
+                                onItemClicked(it.remoteId)
+                            }
+                        )
                     }
                 }
             }
@@ -79,10 +86,12 @@ fun MovieListScreen(
 
 @Composable
 fun MovieListItem(
-    movie: MovieEntity
+    movie: MovieEntity,
+    onItemClicked: () -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize()
+            .clickable { onItemClicked() },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Card(
