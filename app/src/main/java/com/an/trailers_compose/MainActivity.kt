@@ -13,6 +13,7 @@ import androidx.navigation.navArgument
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.an.trailers_compose.AppConstants.HOME
 import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
+import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.main.MainApp
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
@@ -46,7 +47,7 @@ class MainActivity : ComponentActivity() {
                             navArgument(AppConstants.ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
                         ),
                     ) {
-                        MovieDetailScreen()
+                        MovieDetailScreen(hiltViewModel<MovieDetailViewModel>())
                     }
                 }
             }

@@ -31,7 +31,7 @@ class MovieRepository @Inject constructor(
         }
     }
 
-    suspend fun fetchMovie(remoteId: Long): MovieEntity {
+    private suspend fun fetchMovie(remoteId: Long): MovieEntity {
         return try {
             movieApiService.fetchMovieDetail(movieId = remoteId)
         } catch (e: Exception) {
@@ -39,6 +39,19 @@ class MovieRepository @Inject constructor(
             throw Exception(e)
         }
     }
+
+    suspend fun getMovie(remoteId: Long): MovieEntity =
+        try {
+            // Fetch movie from API
+            val movie = fetchMovie(remoteId)
+            // store movie in local db
+            movieDao.addMovie(movie)
+            // return movie
+            movie
+        } catch (e: Exception) {
+            e.printStackTrace()
+            throw Exception(e)
+        }
 
     suspend fun addMovies(movies: List<MovieEntity>) = movieDao.addMovies(movies)
 

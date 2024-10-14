@@ -19,7 +19,7 @@ data class MovieEntity(
     @SerializedName("backdrop_path")
     val backdropPath: String?,
     @SerializedName("genre_ids")
-    val genreIds: List<Long>,
+    val genreIds: List<Long>? = emptyList(),
     val genres: List<Genre>? = emptyList(),
     val title: String,
     val overview: String,
