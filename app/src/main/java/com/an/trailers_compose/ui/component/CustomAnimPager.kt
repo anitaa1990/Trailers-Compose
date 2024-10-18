@@ -34,11 +34,10 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import coil.compose.AsyncImage
 import com.an.trailers_compose.AppConstants
@@ -117,15 +116,11 @@ fun CircleRevealPager(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp)
+                        .padding(20.dp)
                         .align(Alignment.BottomCenter)
                 ) {
                     Text(
-                        text = movie.title, style = MaterialTheme.typography.headlineLarge.copy(
-                            color = Color.White,
-                            fontSize = 36.sp,
-                            fontWeight = FontWeight.Black,
-                        )
+                        text = movie.title, style = MaterialTheme.typography.headlineLarge
                     )
                     Box(
                         modifier = Modifier
@@ -137,11 +132,9 @@ fun CircleRevealPager(
                     Text(
                         modifier = Modifier.padding(vertical = 10.dp),
                         text = movie.overview,
-                        style = MaterialTheme.typography.bodyLarge.copy(
-                            color = Color.White,
-                            fontSize = 14.sp,
-                            lineHeight = 22.sp,
-                        )
+                        maxLines = 3,
+                        overflow = TextOverflow.Ellipsis,
+                        style = MaterialTheme.typography.bodyLarge
                     )
                 }
             }
