@@ -37,7 +37,7 @@ fun MovieListScreen(
             }
             else -> {
                 // Movie List
-                CircleRevealPager(movies)
+                CircleRevealPager(movies = movies, onItemClicked = onItemClicked)
             }
         }
     }

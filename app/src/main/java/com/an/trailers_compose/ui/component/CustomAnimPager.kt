@@ -1,6 +1,7 @@
 package com.an.trailers_compose.ui.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -48,7 +49,8 @@ import kotlin.math.sqrt
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun CircleRevealPager(
-    movies: LazyPagingItems<MovieEntity>
+    movies: LazyPagingItems<MovieEntity>,
+    onItemClicked: (remoteId: Long) -> Unit
 ) {
     val state = rememberPagerState(pageCount = { movies.itemCount } )
     var offsetY by remember { mutableStateOf(0f) }
@@ -65,6 +67,7 @@ fun CircleRevealPager(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
+                    .clickable { onItemClicked(movie.remoteId) }
                     .graphicsLayer {
                         val pageOffset = state.offsetForPage(page)
                         translationX = size.width * pageOffset
