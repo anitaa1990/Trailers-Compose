@@ -1,5 +1,8 @@
 package com.an.trailers_compose.ui.detail.movie
 
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -15,22 +18,30 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.palette.graphics.Palette
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.an.trailers_compose.AppConstants.IMAGE_URL
 import com.an.trailers_compose.AppConstants.YOUTUBE_THUMBNAIL_URL
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.remote.model.Video
+import com.an.trailers_compose.utils.ImageUtils
 
 @Composable
 fun MovieDetailScreen(viewModel: MovieDetailViewModel) {
@@ -40,23 +51,21 @@ fun MovieDetailScreen(viewModel: MovieDetailViewModel) {
 
     if (movieUiState.value is MovieDetailViewModel.MovieDetailUiState.Success) {
         val movie = (movieUiState.value as MovieDetailViewModel.MovieDetailUiState.Success).movie
+
+        var backgroundColor by remember { mutableStateOf(Color.Black) }
+
         Box(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .background(color = backgroundColor),
         ) {
-            // Background Image
-            AsyncImage(
-                model = ImageRequest.Builder(LocalContext.current)
-                    .data(String.format(IMAGE_URL, movie.backdropPath))
-                    .build(),
-                contentDescription = "",
-                modifier = Modifier
-                    .fillMaxSize()
-                    .alpha(0.5f),
-                contentScale = ContentScale.Crop
-            )
 
             // Poster Image
-            PosterImage(String.format(IMAGE_URL, movie.posterPath))
+            PosterImage(imageUrl = String.format(IMAGE_URL, movie.posterPath)) {
+                backgroundColor = ImageUtils.parseColorSwatch(
+                    Palette.from(it).generate().mutedSwatch
+                )
+            }
 
             // Trailers list
             movie.videoApiResponse?.let {
@@ -67,7 +76,10 @@ fun MovieDetailScreen(viewModel: MovieDetailViewModel) {
 }
 
 @Composable
-fun PosterImage(imageUrl: String) {
+fun PosterImage(
+    imageUrl: String,
+    onImageLoaded:(bitmap: Bitmap) -> Unit
+) {
     Column (
         modifier = Modifier
             .fillMaxHeight(0.25f)
@@ -77,7 +89,13 @@ fun PosterImage(imageUrl: String) {
             model = imageUrl,
             contentDescription = "",
             modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            onSuccess = {
+                val bitmap = (it.result.drawable as BitmapDrawable).bitmap.copy(
+                    Bitmap.Config.ARGB_8888, true
+                )
+                onImageLoaded(bitmap)
+            }
         )
     }
 }
