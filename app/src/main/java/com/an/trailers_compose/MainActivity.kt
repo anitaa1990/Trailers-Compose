@@ -11,11 +11,11 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.an.trailers_compose.AppConstants.HOME
+import com.an.trailers_compose.AppConstants.MOVIES
 import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
 import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
+import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
-import com.an.trailers_compose.ui.main.MainApp
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -33,12 +33,19 @@ class MainActivity : ComponentActivity() {
 
                 NavHost(
                     navController = navController,
-                    startDestination = HOME
+                    startDestination = MOVIES
                 ) {
-                    composable(HOME) {
-                        MainApp(
-                            parentNavController = navController,
-                            movies = movies
+                    composable(MOVIES) {
+                        MovieListScreen(
+                            movies = movies,
+                            onItemClicked = { id ->
+                                navController.navigate(
+                                    route = AppConstants.ROUTE_MOVIE_DETAIL_PATH.replace(
+                                        "{${AppConstants.ROUTE_DETAIL_ARG_NAME}}",
+                                        "$id"
+                                    )
+                                )
+                            }
                         )
                     }
                     composable(
