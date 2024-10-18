@@ -103,6 +103,9 @@ dependencies {
     // Coil
     implementation(libs.coil)
 
+    // Android Palette
+    implementation(libs.palette)
+
     // Android Compose Lifecycle
     implementation(libs.androidx.lifecycle.runtime.compose.android)
 

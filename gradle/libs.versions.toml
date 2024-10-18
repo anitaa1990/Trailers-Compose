@@ -20,6 +20,7 @@ coil = "2.6.0"
 lifecycleRuntimeComposeAndroid = "2.8.6"
 testCoroutine = "1.9.0-RC"
 mockitoAndroid = "5.7.0"
+palette = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -71,6 +72,9 @@ androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", nam
 
 ## Library needed for testing coroutines
 coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "testCoroutine" }
+
+## Android Palette
+palette = { group = "androidx.palette", name = "palette-ktx", version.ref = "palette" }
 
 ## Mockito
 mockito-android = { group = "org.mockito", name = "mockito-android", version.ref = "mockitoAndroid" }
