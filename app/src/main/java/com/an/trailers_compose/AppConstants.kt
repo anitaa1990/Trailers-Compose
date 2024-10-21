@@ -1,5 +1,10 @@
 package com.an.trailers_compose
 
+import com.an.trailers_compose.ui.theme.genreColor1
+import com.an.trailers_compose.ui.theme.genreColor2
+import com.an.trailers_compose.ui.theme.genreColor3
+import com.an.trailers_compose.ui.theme.genreColor4
+
 object AppConstants {
     const val BASE_URL = "https://api.themoviedb.org/3/"
 
@@ -17,4 +22,6 @@ object AppConstants {
     const val ROUTE_DETAIL_ARG_NAME = "localId"
 
     const val ROUTE_MOVIE_DETAIL_PATH = "$ROUTE_MOVIE_DETAIL/$ROUTE_DETAIL_ARG_NAME/{$ROUTE_DETAIL_ARG_NAME}"
+
+    val genreColors = listOf(genreColor1, genreColor2, genreColor3, genreColor4)
 }

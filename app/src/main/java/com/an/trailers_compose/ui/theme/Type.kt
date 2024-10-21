@@ -19,10 +19,10 @@ val Typography = Typography(
     ),
     // Other default text styles to override
     titleLarge = TextStyle(
-        fontFamily = FontFamily.Serif,
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 25.sp,
-        lineHeight = 28.sp,
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp,
+        lineHeight = 22.sp,
         letterSpacing = 0.sp
     ),
     labelSmall = TextStyle(
