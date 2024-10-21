@@ -1,6 +1,7 @@
 package com.an.trailers_compose.ui.component
 
 import androidx.annotation.DrawableRes
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
@@ -24,7 +25,8 @@ import com.an.trailers_compose.ui.model.SimilarContent
 @Composable
 fun SimilarContentCard(
     @DrawableRes similarContentTitleId: Int,
-    similarContent: List<SimilarContent>
+    similarContent: List<SimilarContent>,
+    onItemClicked: (remoteId: Long) -> Unit
 ) {
     Column(
         modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp)
@@ -38,16 +40,22 @@ fun SimilarContentCard(
             items(
                 count = similarContent.size
             ) { index ->
-                SimilarContentListItem(similarContent[index])
+                SimilarContentListItem(similarContent[index], onItemClicked)
             }
         }
     }
 }
 
 @Composable
-private fun SimilarContentListItem(content: SimilarContent) {
+private fun SimilarContentListItem(
+    content: SimilarContent,
+    onItemClicked: (remoteId: Long) -> Unit
+) {
     Card(
-        modifier = Modifier.wrapContentSize().padding(horizontal = 10.dp),
+        modifier = Modifier
+            .wrapContentSize()
+            .padding(horizontal = 10.dp)
+            .clickable { onItemClicked(content.id) },
         shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(10.dp)
     ) {
