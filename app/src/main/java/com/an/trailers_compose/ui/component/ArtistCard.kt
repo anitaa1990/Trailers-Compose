@@ -43,7 +43,7 @@ fun ArtistCard(
             style = MaterialTheme.typography.titleLarge
         )
         HorizontalDivider(
-            thickness = 2.dp,
+            thickness = 1.dp,
             color = MaterialTheme.colorScheme.surface,
             modifier = Modifier.padding(vertical = 5.dp)
         )

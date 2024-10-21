@@ -34,7 +34,11 @@ fun TrailersCard(
         items(
             count = videos.size
         ) { index ->
-            TrailersListItem(video = videos[index])
+            Box(
+                modifier = Modifier.fillParentMaxSize(0.7f)
+            ) {
+                TrailersListItem(video = videos[index])
+            }
         }
     }
 }
@@ -42,10 +46,7 @@ fun TrailersCard(
 @Composable
 fun TrailersListItem(video: Video) {
     Card(
-        modifier = Modifier
-            .padding(horizontal = 10.dp)
-            .width(250.dp)
-            .height(150.dp),
+        modifier = Modifier.padding(horizontal = 10.dp),
         shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(20.dp)
     ) {
