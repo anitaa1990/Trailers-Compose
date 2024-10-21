@@ -5,4 +5,10 @@
     <string name="search_hint_movies">Search your favourite movies…</string>
     <string name="refresh">Refresh</string>
     <string name="loading">Loading…</string>
+    <string name="runtime">%s mins</string>
+    <string name="read_more">READ MORE</string>
+    <string name="read_less">READ LESS</string>
+    <string name="cast">Cast</string>
+    <string name="crew">Crew</string>
+    <string name="similar_movies">Similar movies</string>
 </resources>
