@@ -48,37 +48,43 @@ fun MovieListScreen(
                 // Movie List
                 CircleRevealPager(movies = movies, onItemClicked = onItemClicked)
 
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 55.dp, horizontal = 20.dp),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    // Filter option
-                    Icon(
-                        modifier = Modifier.size(25.dp),
-                        painter = painterResource(id = R.drawable.ic_filter),
-                        contentDescription = "",
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(Modifier.weight(1f))
-                    // Tv or Movie option
-                    Icon(
-                        modifier = Modifier.size(25.dp),
-                        painter = painterResource(id = R.drawable.ic_tv),
-                        contentDescription = "",
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(Modifier.weight(1f))
-                    // Search icon
-                    Icon(
-                        modifier = Modifier.size(25.dp),
-                        imageVector = Icons.Default.Search,
-                        contentDescription = "",
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                }
+                // Added filter, search & Tv/movie option
+                MenuItems()
             }
         }
+    }
+}
+
+@Composable
+fun MenuItems() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 55.dp, horizontal = 20.dp),
+        horizontalArrangement = Arrangement.End
+    ) {
+        // Filter option
+        Icon(
+            modifier = Modifier.size(25.dp),
+            painter = painterResource(id = R.drawable.ic_filter),
+            contentDescription = "",
+            tint = MaterialTheme.colorScheme.primary
+        )
+        Spacer(Modifier.weight(1f))
+        // Tv or Movie option
+        Icon(
+            modifier = Modifier.size(25.dp),
+            painter = painterResource(id = R.drawable.ic_tv),
+            contentDescription = "",
+            tint = MaterialTheme.colorScheme.primary
+        )
+        Spacer(Modifier.weight(1f))
+        // Search icon
+        Icon(
+            modifier = Modifier.size(25.dp),
+            imageVector = Icons.Default.Search,
+            contentDescription = "",
+            tint = MaterialTheme.colorScheme.primary
+        )
     }
 }
