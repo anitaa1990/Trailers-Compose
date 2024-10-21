@@ -4,8 +4,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.an.trailers_compose.AppConstants.ROUTE_DETAIL_ARG_NAME
-import com.an.trailers_compose.data.local.entity.MovieEntity
 import com.an.trailers_compose.data.repository.MovieRepository
+import com.an.trailers_compose.ui.model.Content
+import com.an.trailers_compose.ui.model.toContent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -31,13 +32,14 @@ class MovieDetailViewModel @Inject constructor(
     private fun getMovie() = viewModelScope.launch {
         _movieUiState.update {
             try {
-                MovieDetailUiState.Success(repository.getMovie(remoteId))
+                val movie = repository.getMovie(remoteId)
+                MovieDetailUiState.Success(movie.toContent())
             } catch (e: Exception) { MovieDetailUiState.Error }
         }
     }
 
     sealed class MovieDetailUiState {
-        data class Success(val movie: MovieEntity) : MovieDetailUiState()
+        data class Success(val content: Content) : MovieDetailUiState()
         data object Error : MovieDetailUiState()
         data object Loading : MovieDetailUiState()
     }

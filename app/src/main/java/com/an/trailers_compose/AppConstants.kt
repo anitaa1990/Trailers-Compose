@@ -14,6 +14,7 @@ object AppConstants {
     const val HOME = "home"
     const val MOVIES = "Movies"
     const val TV = "TV"
+    const val MOVIE_STATUS_RELEASED = "Released"
 
     const val IMAGE_URL = "https://image.tmdb.org/t/p/w500%s"
     const val YOUTUBE_THUMBNAIL_URL = "https://img.youtube.com/vi/%s/maxresdefault.jpg"
