@@ -54,7 +54,17 @@ class MainActivity : ComponentActivity() {
                             navArgument(AppConstants.ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
                         ),
                     ) {
-                        MovieDetailScreen(hiltViewModel<MovieDetailViewModel>())
+                        MovieDetailScreen(
+                            viewModel = hiltViewModel<MovieDetailViewModel>(),
+                            onItemClicked = { id ->
+                                navController.navigate(
+                                    route = AppConstants.ROUTE_MOVIE_DETAIL_PATH.replace(
+                                    "{${AppConstants.ROUTE_DETAIL_ARG_NAME}}",
+                                    "$id"
+                                    )
+                                )
+                            }
+                        )
                     }
                 }
             }

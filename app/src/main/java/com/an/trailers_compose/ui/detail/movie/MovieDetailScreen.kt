@@ -30,7 +30,10 @@ import com.an.trailers_compose.ui.component.TrailersCard
 import com.an.trailers_compose.utils.ImageUtils
 
 @Composable
-fun MovieDetailScreen(viewModel: MovieDetailViewModel) {
+fun MovieDetailScreen(
+    viewModel: MovieDetailViewModel,
+    onItemClicked: (remoteId: Long) -> Unit
+) {
     val movieUiState = viewModel.movieUiState.collectAsStateWithLifecycle(
         lifecycleOwner = LocalLifecycleOwner.current
     )
@@ -70,7 +73,8 @@ fun MovieDetailScreen(viewModel: MovieDetailViewModel) {
                 // Similar movies
                 SimilarContentCard(
                     similarContentTitleId = R.string.similar_movies,
-                    similarContent = movie.similarMovies
+                    similarContent = movie.similarMovies,
+                    onItemClicked = onItemClicked
                 )
             }
         }
