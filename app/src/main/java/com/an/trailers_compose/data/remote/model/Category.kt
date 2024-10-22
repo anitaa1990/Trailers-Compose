@@ -10,3 +10,5 @@ enum class Category(@DrawableRes val iconResId: Int) {
     UPCOMING(R.drawable.ic_upcoming)
 }
 fun Category.api() = this.name.lowercase()
+
+fun Category.equalTo(category: Category?) = this == category
