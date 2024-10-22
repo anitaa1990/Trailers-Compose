@@ -2,20 +2,56 @@ package com.an.trailers_compose.ui.list.movie
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
-import androidx.paging.PagingData
+import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.an.trailers_compose.data.local.entity.MovieEntity
+import com.an.trailers_compose.AppConstants
+import com.an.trailers_compose.data.remote.model.Category
+import com.an.trailers_compose.data.repository.MovieRepository
+import com.an.trailers_compose.data.source.MovieRemoteMediator
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
 @HiltViewModel
 class MovieListViewModel @Inject constructor(
-    private val moviesPager: Pager<Int, MovieEntity>
+    private val repository: MovieRepository
 ) : ViewModel() {
-    fun getMovies(): Flow<PagingData<MovieEntity>> =
-        moviesPager
+
+    private val _selectedCategory = MutableStateFlow(Category.POPULAR)
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    val movies = _selectedCategory.flatMapLatest {
+        getPager(it)
             .flow
             .cachedIn(viewModelScope)
+    }
+
+    val selectedCategory = _selectedCategory.asStateFlow()
+    fun updateCategory(newCategory: Category) {
+        _selectedCategory.update { newCategory }
+    }
+
+    @OptIn(ExperimentalPagingApi::class)
+    private fun getPager(category: Category) = Pager(
+        config = PagingConfig(
+            pageSize = AppConstants.PAGE_SIZE,
+            prefetchDistance = AppConstants.PREFETCH_DISTANCE,
+            initialLoadSize = AppConstants.PAGE_SIZE, // How many items you want to load initially
+        ),
+        pagingSourceFactory = {
+            // The pagingSourceFactory lambda should always return a brand new PagingSource
+            // when invoked as PagingSource instances are not reusable.
+            repository.getMoviesPagingSource()
+        },
+        remoteMediator = MovieRemoteMediator(
+            category = category,
+            repository = repository
+        )
+    )
 }

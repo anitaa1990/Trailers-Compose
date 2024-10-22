@@ -18,8 +18,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
+import com.an.trailers_compose.AppConstants.movieCategories
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.local.entity.MovieEntity
+import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.component.CircleRevealPager
 import com.an.trailers_compose.ui.component.ContentCategories
 import com.an.trailers_compose.ui.component.EmptyScreen
@@ -28,7 +30,9 @@ import com.an.trailers_compose.ui.component.LoadingItem
 @Composable
 fun MovieListScreen(
     movies: LazyPagingItems<MovieEntity>,
-    onItemClicked: (remoteId: Long) -> Unit
+    onItemClicked: (remoteId: Long) -> Unit,
+    selectedCategory: Category,
+    onCategorySelected: (category: Category) -> Unit
 ) {
     Box(
         modifier = Modifier.fillMaxSize()
@@ -53,7 +57,11 @@ fun MovieListScreen(
                 MenuItems()
 
                 // Filter by category
-                ContentCategories()
+                ContentCategories(
+                   selectedCategory = selectedCategory,
+                    categories = movieCategories,
+                    onCategorySelected = onCategorySelected
+                )
             }
         }
     }

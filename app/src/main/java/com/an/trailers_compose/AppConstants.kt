@@ -1,5 +1,6 @@
 package com.an.trailers_compose
 
+import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.theme.genreColor1
 import com.an.trailers_compose.ui.theme.genreColor2
 import com.an.trailers_compose.ui.theme.genreColor3
@@ -25,4 +26,5 @@ object AppConstants {
     const val ROUTE_MOVIE_DETAIL_PATH = "$ROUTE_MOVIE_DETAIL/$ROUTE_DETAIL_ARG_NAME/{$ROUTE_DETAIL_ARG_NAME}"
 
     val genreColors = listOf(genreColor1, genreColor2, genreColor3, genreColor4)
+    val movieCategories = Category.entries.toList()
 }
