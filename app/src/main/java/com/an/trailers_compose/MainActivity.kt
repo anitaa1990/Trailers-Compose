@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -29,7 +31,10 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
 
                 val viewModel = hiltViewModel<MovieListViewModel>()
-                val movies = viewModel.getMovies().collectAsLazyPagingItems()
+                val movies = viewModel.movies.collectAsLazyPagingItems()
+                val selectedCategory = viewModel.selectedCategory.collectAsStateWithLifecycle(
+                    lifecycleOwner = LocalLifecycleOwner.current
+                )
 
                 NavHost(
                     navController = navController,
@@ -45,6 +50,11 @@ class MainActivity : ComponentActivity() {
                                         "$id"
                                     )
                                 )
+                            },
+                            selectedCategory = selectedCategory.value,
+                            onCategorySelected = {
+                                viewModel.updateCategory(it)
+                                movies.refresh()
                             }
                         )
                     }

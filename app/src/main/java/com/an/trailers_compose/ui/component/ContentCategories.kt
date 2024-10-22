@@ -10,10 +10,6 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,8 +18,11 @@ import androidx.compose.ui.unit.dp
 import com.an.trailers_compose.data.remote.model.Category
 
 @Composable
-fun ContentCategories() {
-    var selectedOption by remember { mutableStateOf(Category.POPULAR) }
+fun ContentCategories(
+    selectedCategory: Category,
+    categories: List<Category>,
+    onCategorySelected: (category: Category) -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxHeight()
@@ -32,16 +31,22 @@ fun ContentCategories() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.Start
     ) {
-        Category.entries.forEach { category ->
+        categories.forEach { category ->
             Row(
                 modifier = Modifier.padding(horizontal = 5.dp, vertical = 25.dp),
             ) {
-                IconButton(onClick = { selectedOption = category }) {
+                IconButton(
+                    onClick = {
+                        if (selectedCategory != category) {
+                            onCategorySelected(category)
+                        }
+                    }
+                ) {
                     Icon(
                         modifier = Modifier.size(30.dp),
                         painter = painterResource(id = category.iconResId),
                         contentDescription = "",
-                        tint = if (selectedOption == category) Color.Yellow else Color.White
+                        tint = if (selectedCategory == category) Color.Yellow else Color.White
                     )
                 }
             }
