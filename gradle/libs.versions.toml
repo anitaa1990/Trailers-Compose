@@ -21,6 +21,7 @@ lifecycleRuntimeComposeAndroid = "2.8.6"
 testCoroutine = "1.9.0-RC"
 mockitoAndroid = "5.7.0"
 palette = "1.0.0"
+dataStore = "1.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -63,6 +64,9 @@ okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-i
 paging = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
 paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging" }
 paging-testing = { group = "androidx.paging", name = "paging-testing", version.ref = "paging" }
+
+## Android DataStore
+datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
 
 ## Coil - image loading
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }

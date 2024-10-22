@@ -109,6 +109,9 @@ dependencies {
     // Android Compose Lifecycle
     implementation(libs.androidx.lifecycle.runtime.compose.android)
 
+    // DataStore
+    implementation(libs.datastore)
+
     testImplementation(libs.junit)
 
     // Mockito
