@@ -1,5 +1,6 @@
 package com.an.trailers_compose.ui.component
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,15 +18,19 @@ import com.an.trailers_compose.R
 @Composable
 fun LoadingItem() {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Text(
-            modifier = Modifier.padding(8.dp),
-            text = stringResource(id = R.string.loading)
-        )
+        CircularProgressIndicator(color = MaterialTheme.colorScheme.onPrimaryContainer)
 
-        CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
+        Text(
+            modifier = Modifier.padding(10.dp),
+            text = stringResource(id = R.string.loading),
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onPrimary
+        )
     }
 }
