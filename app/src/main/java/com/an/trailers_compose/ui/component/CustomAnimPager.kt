@@ -35,12 +35,15 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import coil.compose.AsyncImage
+import coil.request.CachePolicy
+import coil.request.ImageRequest
 import com.an.trailers_compose.AppConstants
 import com.an.trailers_compose.data.local.entity.MovieEntity
 import kotlin.math.absoluteValue
@@ -54,6 +57,8 @@ fun CircleRevealPager(
 ) {
     val state = rememberPagerState(pageCount = { movies.itemCount } )
     var offsetY by remember { mutableFloatStateOf(0f) }
+
+    val imageRequest = ImageRequest.Builder(LocalContext.current)
     HorizontalPager(
         modifier = Modifier
             .pointerInteropFilter {
@@ -96,8 +101,19 @@ fun CircleRevealPager(
                     },
                 contentAlignment = Alignment.Center,
             ) {
+                if(page == 0) {
+                    imageRequest.crossfade(800)
+                        .memoryCachePolicy(CachePolicy.DISABLED)
+                        .diskCachePolicy(CachePolicy.DISABLED)
+                } else {
+                    imageRequest.crossfade(false)
+                        .memoryCachePolicy(CachePolicy.ENABLED)
+                        .diskCachePolicy(CachePolicy.ENABLED)
+                }
                 AsyncImage(
-                    model = String.format(AppConstants.IMAGE_URL, movie.posterPath),
+                    model = imageRequest
+                        .data(String.format(AppConstants.IMAGE_URL, movie.posterPath))
+                        .build(),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize()
