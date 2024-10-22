@@ -82,6 +82,9 @@ dependencies {
     kspAndroidTest(libs.hilt.android.compiler)
     androidTestImplementation(libs.hilt.android.testing)
 
+    // Navigation compose
+    implementation(libs.navigation.compose)
+
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson.converter)
