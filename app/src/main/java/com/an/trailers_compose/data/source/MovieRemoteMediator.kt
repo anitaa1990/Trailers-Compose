@@ -4,10 +4,13 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
+import com.an.trailers_compose.data.local.CategoryStore
 import com.an.trailers_compose.data.local.entity.MovieEntity
 import com.an.trailers_compose.data.local.entity.MovieRemoteKey
 import com.an.trailers_compose.data.remote.model.Category
+import com.an.trailers_compose.data.remote.model.equalTo
 import com.an.trailers_compose.data.repository.MovieRepository
+import kotlinx.coroutines.flow.firstOrNull
 import retrofit2.HttpException
 import java.io.IOException
 import java.util.concurrent.TimeUnit
@@ -15,13 +18,18 @@ import javax.inject.Inject
 
 @OptIn(ExperimentalPagingApi::class)
 class MovieRemoteMediator @Inject constructor(
-    private val category: Category = Category.POPULAR,
+    private val category: Category,
+    private val categoryStore: CategoryStore,
     private val repository: MovieRepository
 ) : RemoteMediator<Int, MovieEntity>() {
     override suspend fun initialize(): InitializeAction {
         val cacheTimeout = TimeUnit.MILLISECONDS.convert(1, TimeUnit.HOURS)
+        val currentCategory = categoryStore.movieCategory.firstOrNull()
 
-        return if (System.currentTimeMillis() - (repository.getRemoteKeyCreatedTime() ?: 0) < cacheTimeout) {
+        return if (
+            System.currentTimeMillis() - (repository.getRemoteKeyCreatedTime() ?: 0) < cacheTimeout
+            && category.equalTo(currentCategory)
+            ) {
             // Cached data is up-to-date, so there is no need to re-fetch from the network.
             InitializeAction.SKIP_INITIAL_REFRESH
         } else {
@@ -93,6 +101,7 @@ class MovieRemoteMediator @Inject constructor(
 
             repository.addRemoteKeys(remoteKeys)
             repository.addMovies(movies)
+            categoryStore.storeMovieCategory(category)
 
             return MediatorResult.Success(endOfPaginationReached = endOfPaginationReached)
         } catch (error: IOException) {
@@ -105,7 +114,8 @@ class MovieRemoteMediator @Inject constructor(
     }
 
     /** LoadType.Append
-     * When we need to load data at the end of the currently loaded data set, the load parameter is LoadType.APPEND
+     * When we need to load data at the end of the currently loaded data set, the load parameter is
+     * LoadType.APPEND
      */
     private suspend fun PagingState<Int, MovieEntity>.getRemoteKeyForLastItem(): MovieRemoteKey? {
         // Get the last page that was retrieved, that contained items.
@@ -118,7 +128,8 @@ class MovieRemoteMediator @Inject constructor(
     }
 
     /** LoadType.Prepend
-     * When we need to load data at the beginning of the currently loaded data set, the load parameter is LoadType.PREPEND
+     * When we need to load data at the beginning of the currently loaded data set, the load
+     * parameter is LoadType.PREPEND
      */
     private suspend fun PagingState<Int, MovieEntity>.getRemoteKeyForFirstItem(): MovieRemoteKey? {
         // Get the first page that was retrieved, that contained items.
@@ -131,10 +142,11 @@ class MovieRemoteMediator @Inject constructor(
     }
 
     /** LoadType.REFRESH
-     * Gets called when it's the first time we're loading data, or when PagingDataAdapter.refresh() is called;
-     * so now the point of reference for loading our data is the state.anchorPosition.
-     * If this is the first load, then the anchorPosition is null.
-     * When PagingDataAdapter.refresh() is called, the anchorPosition is the first visible position in the displayed list, so we will need to load the page that contains that specific item.
+     * Gets called when it's the first time we're loading data, or when PagingDataAdapter.refresh()
+     * is called; so now the point of reference for loading our data is the state.anchorPosition.
+     * If this is the first load, then the anchorPosition is null. When PagingDataAdapter.refresh()
+     * is called, the anchorPosition is the first visible position in the displayed list, so we
+     * will need to load the page that contains that specific item.
      */
     private suspend fun PagingState<Int, MovieEntity>.getRemoteKeyClosestToCurrentPosition(): MovieRemoteKey? {
         // The paging library is trying to load data after the anchor position

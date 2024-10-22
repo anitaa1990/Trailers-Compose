@@ -7,6 +7,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.an.trailers_compose.AppConstants
+import com.an.trailers_compose.data.local.CategoryStore
 import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.data.repository.MovieRepository
 import com.an.trailers_compose.data.source.MovieRemoteMediator
@@ -20,7 +21,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MovieListViewModel @Inject constructor(
-    private val repository: MovieRepository
+    private val repository: MovieRepository,
+    private val categoryStore: CategoryStore
 ) : ViewModel() {
 
     private val _selectedCategory = MutableStateFlow(Category.POPULAR)
@@ -51,6 +53,7 @@ class MovieListViewModel @Inject constructor(
         },
         remoteMediator = MovieRemoteMediator(
             category = category,
+            categoryStore = categoryStore,
             repository = repository
         )
     )
