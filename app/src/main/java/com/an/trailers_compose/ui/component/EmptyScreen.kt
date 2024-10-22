@@ -1,5 +1,6 @@
 package com.an.trailers_compose.ui.component
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -27,19 +28,25 @@ fun EmptyScreen(
     onRefreshClicked:() -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Icon(
             modifier = Modifier.size(64.dp),
-            imageVector = Icons.Rounded.Warning, contentDescription = ""
+            imageVector = Icons.Rounded.Warning,
+            contentDescription = "",
+            tint = MaterialTheme.colorScheme.primary
         )
 
         Text(
             modifier = Modifier.padding(8.dp),
             text = errorMessage,
             textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.primary
         )
 
         Button(
@@ -48,8 +55,8 @@ fun EmptyScreen(
                 Text(text = stringResource(id = R.string.refresh))
             },
             colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = Color.White,
+                containerColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                contentColor = MaterialTheme.colorScheme.onPrimary,
             )
         )
     }
