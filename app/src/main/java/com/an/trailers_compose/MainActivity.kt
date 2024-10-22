@@ -4,6 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -19,6 +23,7 @@ import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
 import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
+import com.an.trailers_compose.utils.navigateToDetail
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -38,19 +43,30 @@ class MainActivity : ComponentActivity() {
 
                 NavHost(
                     navController = navController,
-                    startDestination = MOVIES
+                    startDestination = MOVIES,
+                    modifier = Modifier.fillMaxSize()
                 ) {
-                    composable(MOVIES) {
+                    composable(
+                        route = MOVIES,
+                        enterTransition = {
+                            return@composable slideIntoContainer(
+                                AnimatedContentTransitionScope.SlideDirection.End, tween(700)
+                            )
+                        },
+                        exitTransition = {
+                            return@composable slideOutOfContainer(
+                                AnimatedContentTransitionScope.SlideDirection.Start, tween(700)
+                            )
+                        },
+                        popEnterTransition = {
+                            return@composable slideIntoContainer(
+                                AnimatedContentTransitionScope.SlideDirection.End, tween(700)
+                            )
+                        }
+                    ) {
                         MovieListScreen(
                             movies = movies,
-                            onItemClicked = { id ->
-                                navController.navigate(
-                                    route = AppConstants.ROUTE_MOVIE_DETAIL_PATH.replace(
-                                        "{${AppConstants.ROUTE_DETAIL_ARG_NAME}}",
-                                        "$id"
-                                    )
-                                )
-                            },
+                            onItemClicked = { navController.navigateToDetail(it) },
                             selectedCategory = selectedCategory.value,
                             onCategorySelected = {
                                 viewModel.updateCategory(it)
@@ -63,17 +79,20 @@ class MainActivity : ComponentActivity() {
                         arguments = listOf(
                             navArgument(AppConstants.ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
                         ),
+                        enterTransition = {
+                            return@composable slideIntoContainer(
+                                AnimatedContentTransitionScope.SlideDirection.Start, tween(700)
+                            )
+                        },
+                        popExitTransition = {
+                            return@composable slideOutOfContainer(
+                                AnimatedContentTransitionScope.SlideDirection.End, tween(700)
+                            )
+                        }
                     ) {
                         MovieDetailScreen(
                             viewModel = hiltViewModel<MovieDetailViewModel>(),
-                            onItemClicked = { id ->
-                                navController.navigate(
-                                    route = AppConstants.ROUTE_MOVIE_DETAIL_PATH.replace(
-                                    "{${AppConstants.ROUTE_DETAIL_ARG_NAME}}",
-                                    "$id"
-                                    )
-                                )
-                            }
+                            onItemClicked = { navController.navigateToDetail(it) }
                         )
                     }
                 }
