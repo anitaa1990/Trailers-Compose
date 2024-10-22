@@ -21,6 +21,7 @@ import androidx.paging.compose.LazyPagingItems
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.local.entity.MovieEntity
 import com.an.trailers_compose.ui.component.CircleRevealPager
+import com.an.trailers_compose.ui.component.ContentCategories
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 
@@ -50,6 +51,9 @@ fun MovieListScreen(
 
                 // Added filter, search & Tv/movie option
                 MenuItems()
+
+                // Filter by category
+                ContentCategories()
             }
         }
     }
@@ -63,14 +67,6 @@ fun MenuItems() {
             .padding(vertical = 55.dp, horizontal = 20.dp),
         horizontalArrangement = Arrangement.End
     ) {
-        // Filter option
-        Icon(
-            modifier = Modifier.size(25.dp),
-            painter = painterResource(id = R.drawable.ic_filter),
-            contentDescription = "",
-            tint = MaterialTheme.colorScheme.primary
-        )
-        Spacer(Modifier.weight(1f))
         // Tv or Movie option
         Icon(
             modifier = Modifier.size(25.dp),
