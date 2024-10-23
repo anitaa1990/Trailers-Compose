@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.an.trailers_compose.AppConstants
@@ -34,7 +35,6 @@ import com.an.trailers_compose.data.remote.model.Genre
 import com.an.trailers_compose.ui.model.Artist
 import com.an.trailers_compose.ui.model.Content
 import com.an.trailers_compose.ui.theme.statusColor
-import java.util.*
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
@@ -49,13 +49,11 @@ fun SharedTransitionScope.ContentCard(
             .padding(20.dp),
         elevation = CardDefaults.cardElevation(10.dp),
         shape = RoundedCornerShape(8.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
-        )
+        colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
         Column(
             modifier = Modifier
-                .padding(start = 25.dp, end = 15.dp, top = 25.dp, bottom = 8.dp)
+                .padding(start = 25.dp, top = 25.dp, end = 5.dp)
                 .animateContentSize(
                     animationSpec = tween(
                         durationMillis = 300,
@@ -72,7 +70,6 @@ fun SharedTransitionScope.ContentCard(
                 ), animatedVisibilityScope = animatedContentScope)
             )
             // Content Genres
-            val colorIndex = Random().nextInt(AppConstants.genreColors.size)
             LazyRow(modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
@@ -81,19 +78,12 @@ fun SharedTransitionScope.ContentCard(
                 items(
                     count = content.genres.size
                 ) {
-                    GenreItem(genre = content.genres[it], colorIndex = colorIndex)
+                    GenreItem(genre = content.genres[it], bgColor = content.genreBgColor)
                 }
             }
             // Content Description
-            Text(
-                text = content.description,
-                style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 25.sp),
-                modifier = Modifier
-                    .padding(vertical = 20.dp)
-                    .sharedElement(rememberSharedContentState(
-                        key = String.format(AppConstants.KEY_SHARED_TRANSITION_DESC, content.id)
-                    ), animatedVisibilityScope = animatedContentScope)
-            )
+            ContentDescription(content = content, animatedContentScope = animatedContentScope)
+
             // Content status
             ContentStatus(status = content.status, runTime = content.durationInMins)
 
@@ -106,19 +96,19 @@ fun SharedTransitionScope.ContentCard(
 @Composable
 private fun GenreItem(
     genre: Genre,
-    colorIndex: Int
+    bgColor: Color
 ) {
     FilterChip(
         onClick = {  },
         border = FilterChipDefaults.filterChipBorder(
             enabled = true,
             selected = true,
-            borderColor = AppConstants.genreColors[colorIndex],
-            selectedBorderColor = AppConstants.genreColors[colorIndex]
+            borderColor = bgColor,
+            selectedBorderColor = bgColor
         ),
         shape = RoundedCornerShape(4.dp),
         colors = FilterChipDefaults.filterChipColors(
-            selectedContainerColor = AppConstants.genreColors[colorIndex]
+            selectedContainerColor = bgColor
         ),
         label = {
             Text(
@@ -134,14 +124,37 @@ private fun GenreItem(
     )
 }
 
+@OptIn(ExperimentalSharedTransitionApi::class)
+@Composable
+private fun SharedTransitionScope.ContentDescription(
+    content: Content,
+    animatedContentScope: AnimatedContentScope
+) {
+    Text(
+        text = content.description,
+        style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 25.sp),
+        maxLines = 5,
+        overflow = TextOverflow.Ellipsis,
+        textAlign = TextAlign.Justify,
+        modifier = Modifier
+            .padding(top = 20.dp, bottom = 20.dp, end = 12.dp)
+            .sharedElement(rememberSharedContentState(
+                key = String.format(AppConstants.KEY_SHARED_TRANSITION_DESC, content.id)
+            ), animatedVisibilityScope = animatedContentScope)
+    )
+}
+
 @Composable
 private fun ContentStatus(
     status: String,
     runTime: String
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.Start
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentHeight(),
+        horizontalArrangement = Arrangement.Start,
+        verticalAlignment = Alignment.CenterVertically
     ) {
         // Content Status
         FilterChip(
@@ -159,7 +172,7 @@ private fun ContentStatus(
             label = {
                 Text(
                     text = status,
-                    style = MaterialTheme.typography.bodyMedium.copy(
+                    style = MaterialTheme.typography.bodySmall.copy(
                         color = Color.White,
                         textAlign = TextAlign.Center
                     )
@@ -171,10 +184,10 @@ private fun ContentStatus(
         // Content runtime
         Text(
             text = String.format(stringResource(id = R.string.runtime),runTime),
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodySmall,
             modifier = Modifier
-                .padding(horizontal = 20.dp)
-                .align(Alignment.CenterVertically),
+                .padding(horizontal = 20.dp, vertical = 8.dp)
+                .align(Alignment.Bottom),
             textAlign = TextAlign.Center
         )
     }

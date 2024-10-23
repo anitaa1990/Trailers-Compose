@@ -1,10 +1,13 @@
 package com.an.trailers_compose.ui.model
 
+import androidx.compose.ui.graphics.Color
 import com.an.trailers_compose.AppConstants
 import com.an.trailers_compose.AppConstants.MOVIE_STATUS_RELEASED
+import com.an.trailers_compose.AppConstants.genreColors
 import com.an.trailers_compose.data.local.entity.MovieEntity
 import com.an.trailers_compose.data.remote.model.Genre
 import com.an.trailers_compose.data.remote.model.Video
+import java.util.*
 
 data class Content(
     val id: Long,
@@ -18,7 +21,8 @@ data class Content(
     val durationInMins: String,
     val cast: List<Artist>,
     val crew: List<Artist>,
-    val similarMovies: List<SimilarContent>
+    val similarMovies: List<SimilarContent>,
+    val genreBgColor: Color
 )
 
 data class SimilarContent(
@@ -43,7 +47,8 @@ fun MovieEntity.toContent() = Content(
     durationInMins = this.getDuration(),
     cast = this.credits?.cast?.map { it.toArtist() } ?: emptyList(),
     crew = this.credits?.crew?.map { it.toArtist() } ?: emptyList(),
-    similarMovies = this.similarMoviesApiResponse?.results?.map { it.toSimilarContent() } ?: emptyList()
+    similarMovies = this.similarMoviesApiResponse?.results?.map { it.toSimilarContent() } ?: emptyList(),
+    genreBgColor = genreColors[Random().nextInt(genreColors.size)]
 )
 
 private fun MovieEntity.getDuration() = if (MOVIE_STATUS_RELEASED == status)
