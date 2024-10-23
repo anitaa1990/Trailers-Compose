@@ -30,7 +30,7 @@ import com.an.trailers_compose.data.remote.model.Video
 fun TrailersCard(
     videos: List<Video>
 ) {
-    LazyRow(modifier = Modifier.padding(10.dp)) {
+    LazyRow(modifier = Modifier) {
         items(
             count = videos.size
         ) { index ->

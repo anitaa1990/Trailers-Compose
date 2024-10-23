@@ -27,13 +27,11 @@ fun SimilarContentCard(
     similarContent: List<SimilarContent>,
     onItemClicked: (remoteId: Long) -> Unit
 ) {
-    Column(
-        modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp)
-    ) {
+    Column {
         Text(
             text = stringResource(id = similarContentTitleId),
             style = MaterialTheme.typography.titleLarge,
-            modifier = Modifier.padding(vertical = 10.dp)
+            modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp)
         )
         LazyRow(modifier = Modifier.padding(vertical = 10.dp)) {
             items(

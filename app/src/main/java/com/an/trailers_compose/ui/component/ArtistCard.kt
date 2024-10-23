@@ -16,7 +16,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -36,22 +38,24 @@ fun ArtistCard(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 10.dp)
+            .padding(bottom = 15.dp)
     ) {
         Text(
             text = stringResource(id = titleId),
-            style = MaterialTheme.typography.titleLarge
+            style = MaterialTheme.typography.titleMedium
         )
         HorizontalDivider(
             thickness = 1.dp,
-            color = MaterialTheme.colorScheme.surface,
-            modifier = Modifier.padding(vertical = 5.dp)
+            color = Color.LightGray,
+            modifier = Modifier
+                .padding(vertical = 5.dp)
+                .alpha(0.7f)
         )
         LazyRow(
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
-                .padding(10.dp)
+                .padding(top = 20.dp)
         ) {
             items(
                 count = artists.size
@@ -90,14 +94,14 @@ private fun ArtistListItem(
             text = artist.name,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodySmall,
             modifier = Modifier.padding(top = 5.dp)
         )
         Text(
             text = artist.job,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.bodyMedium
+            style = MaterialTheme.typography.bodySmall
         )
     }
 }
