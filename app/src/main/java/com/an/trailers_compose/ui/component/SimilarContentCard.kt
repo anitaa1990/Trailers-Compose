@@ -3,8 +3,8 @@ package com.an.trailers_compose.ui.component
 import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -19,6 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.an.trailers_compose.R
 import com.an.trailers_compose.ui.model.SimilarContent
 
 @Composable
@@ -50,7 +51,7 @@ private fun SimilarContentListItem(
 ) {
     Card(
         modifier = Modifier
-            .wrapContentSize()
+            .aspectRatio(1f/1.3f)
             .padding(horizontal = 10.dp)
             .clickable { onItemClicked(content.id) },
         shape = RoundedCornerShape(10.dp),
@@ -59,6 +60,8 @@ private fun SimilarContentListItem(
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(content.posterUrl)
+                .placeholder(R.drawable.ic_placeholder)
+                .error(R.drawable.ic_placeholder)
                 .build(),
             contentDescription = "",
             contentScale = ContentScale.Crop
