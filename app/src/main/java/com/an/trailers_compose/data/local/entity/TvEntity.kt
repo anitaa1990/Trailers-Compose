@@ -21,9 +21,10 @@ data class TvEntity(
     @SerializedName("genre_ids")
     val genreIds: List<Long>? = emptyList(),
     val genres: List<Genre>? = emptyList(),
+    @SerializedName("name")
     val title: String,
     val overview: String,
-    @SerializedName("release_date")
+    @SerializedName("first_air_date")
     val releaseDate: String,
     val runtime: Long,
     val status: String?,

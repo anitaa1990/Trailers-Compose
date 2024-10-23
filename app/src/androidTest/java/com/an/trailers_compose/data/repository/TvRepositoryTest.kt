@@ -4,11 +4,11 @@ import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.an.trailers_compose.ContentTest
-import com.an.trailers_compose.data.local.MovieDatabase
-import com.an.trailers_compose.data.local.dao.MovieDao
-import com.an.trailers_compose.data.local.dao.MovieRemoteKeyDao
-import com.an.trailers_compose.data.local.entity.MovieRemoteKey
-import com.an.trailers_compose.data.remote.api.MovieApiService
+import com.an.trailers_compose.data.local.TvDatabase
+import com.an.trailers_compose.data.local.dao.TvDao
+import com.an.trailers_compose.data.local.dao.TvRemoteKeyDao
+import com.an.trailers_compose.data.local.entity.TvRemoteKey
+import com.an.trailers_compose.data.remote.api.TvApiService
 import junit.framework.TestCase
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -18,13 +18,13 @@ import org.junit.runner.RunWith
 import org.mockito.Mockito.mock
 
 @RunWith(AndroidJUnit4::class)
-class MovieRepositoryTest: TestCase() {
-    private lateinit var db: MovieDatabase
-    private val apiService: MovieApiService = mock()
+class TvRepositoryTest: TestCase() {
+    private lateinit var db: TvDatabase
+    private val apiService: TvApiService = mock()
 
-    private lateinit var repository: MovieRepository
+    private lateinit var repository: TvRepository
 
-    private val expectedMovies = ContentTest.getPopularMovies()
+    private val expectedTvList = ContentTest.getTvList()
 
     // Override function setUp() and annotate it with @Before.
     // The @Before annotation makes sure fun setupDatabase() is executed before each class.
@@ -38,11 +38,11 @@ class MovieRepositoryTest: TestCase() {
         // initialize the db and dao variable
         db = Room.inMemoryDatabaseBuilder(
             ApplicationProvider.getApplicationContext(),
-            MovieDatabase::class.java
+            TvDatabase::class.java
         ).build()
-        val dao: MovieDao = db.movieDao
-        val remoteKeyDao: MovieRemoteKeyDao = db.remoteKeyDao
-        repository = MovieRepository(dao, remoteKeyDao, apiService)
+        val dao: TvDao = db.tvDao
+        val remoteKeyDao: TvRemoteKeyDao = db.remoteKeyDao
+        repository = TvRepository(dao, remoteKeyDao, apiService)
     }
 
     // Override function closeDb() and annotate it with @After.
@@ -54,58 +54,49 @@ class MovieRepositoryTest: TestCase() {
     }
 
     @Test
-    fun getMovieRecordsWhenNoneExistsInDb() = runBlocking {
-        // When there are no records in the db, when we fetch movies by categories,
+    fun getTvRecordsWhenNoneExistsInDb() = runBlocking {
+        // When there are no records in the db, when we fetch tv list by categories,
         // the list is empty and does not cause errors
-        val popularMovies = repository.getMovies()
-        assertEquals(0, popularMovies.size)
-
-        val upcomingMovies = repository.getMovies()
-        assertEquals(0, upcomingMovies.size)
-
-        val topRatedMovies = repository.getMovies()
-        assertEquals(0, topRatedMovies.size)
-
-        val nowPlayingMovies = repository.getMovies()
-        assertEquals(0, nowPlayingMovies.size)
+        val tvSeriesList = repository.getTvList()
+        assertEquals(0, tvSeriesList.size)
     }
 
     @Test
-    fun insertMoviesIfNoRecordsExistsInDb() = runBlocking {
-        repository.addMovies(expectedMovies)
+    fun insertTvListIfNoRecordsExistsInDb() = runBlocking {
+        repository.addTvList(expectedTvList)
 
-        val movies = repository.getMovies()
-        assertEquals(expectedMovies.size, movies.size)
+        val tvList = repository.getTvList()
+        assertEquals(expectedTvList.size, tvList.size)
 
         for(index in 0..19) {
-            assertEquals(expectedMovies[index].title, movies[index].title)
-            assertEquals(expectedMovies[index].remoteId, movies[index].remoteId)
+            assertEquals(expectedTvList[index].title, tvList[index].title)
+            assertEquals(expectedTvList[index].remoteId, tvList[index].remoteId)
         }
     }
 
     @Test
-    fun deleteAllMoviesAndVerifyRecordsAreDeleted() = runBlocking {
-        repository.addMovies(expectedMovies)
+    fun deleteAllTvListAndVerifyRecordsAreDeleted() = runBlocking {
+        repository.addTvList(expectedTvList)
 
-        // delete movies from db
+        // delete tv list from db
         repository.deleteAll()
 
         // verify all records are deleted
-        val dbMovies = repository.getMovies()
-        assertEquals(0, dbMovies.size)
+        val dbList = repository.getTvList()
+        assertEquals(0, dbList.size)
     }
 
     @Test
     fun insertRemoteKeysAndVerifyInsertIsSuccessful() = runBlocking {
-        val movies = ContentTest.getPopularMovies()
+        val tvList = ContentTest.getTvList()
 
         // insert
         val page = 1
         val prevKey = null
         val nextKey = page + 1
-        val remoteKeys = movies.map {
-            MovieRemoteKey(
-                movieId = it.remoteId,
+        val remoteKeys = tvList.map {
+            TvRemoteKey(
+                tvId = it.remoteId,
                 prevKey = prevKey,
                 currentPage = page,
                 nextKey = nextKey
@@ -116,8 +107,8 @@ class MovieRepositoryTest: TestCase() {
 
         // Verify records exist in db
         for(index in 0..19) {
-            val insertedKeys = repository.getRemoteKeyByMovieId(movies[index].remoteId)
-            assertEquals(remoteKeys[index].movieId, insertedKeys?.movieId)
+            val insertedKeys = repository.getRemoteKeyByTvId(tvList[index].remoteId)
+            assertEquals(remoteKeys[index].tvId, insertedKeys?.tvId)
             assertEquals(remoteKeys[index].prevKey, insertedKeys?.prevKey)
             assertEquals(remoteKeys[index].nextKey, insertedKeys?.nextKey)
             assertEquals(remoteKeys[index].currentPage, insertedKeys?.currentPage)
@@ -126,15 +117,15 @@ class MovieRepositoryTest: TestCase() {
 
     @Test
     fun updateRemoteKeysAndVerifyUpdateIsSuccessful() = runBlocking {
-        val movies = ContentTest.getPopularMovies()
+        val tvList = ContentTest.getTvList()
 
         // insert
         val page = 1
         val prevKey = null
         val nextKey = page + 1
-        val remoteKeys = movies.map {
-            MovieRemoteKey(
-                movieId = it.remoteId,
+        val remoteKeys = tvList.map {
+            TvRemoteKey(
+                tvId = it.remoteId,
                 prevKey = prevKey,
                 currentPage = page,
                 nextKey = nextKey
@@ -147,9 +138,9 @@ class MovieRepositoryTest: TestCase() {
         val page2 = 2
         val updatePrevKey = page2 - 1
         val updatedNextKey = page2 + 1
-        val updatedRemoteKeys = movies.map {
-            MovieRemoteKey(
-                movieId = it.remoteId,
+        val updatedRemoteKeys = tvList.map {
+            TvRemoteKey(
+                tvId = it.remoteId,
                 prevKey = updatePrevKey,
                 currentPage = page2,
                 nextKey = updatedNextKey
@@ -159,8 +150,8 @@ class MovieRepositoryTest: TestCase() {
 
         // Verify records are updated in db
         for(index in 0..19) {
-            val updatedKeys = repository.getRemoteKeyByMovieId(movies[index].remoteId)
-            assertEquals(updatedRemoteKeys[index].movieId, updatedKeys?.movieId)
+            val updatedKeys = repository.getRemoteKeyByTvId(tvList[index].remoteId)
+            assertEquals(updatedRemoteKeys[index].tvId, updatedKeys?.tvId)
             assertEquals(updatedRemoteKeys[index].prevKey, updatedKeys?.prevKey)
             assertEquals(updatedRemoteKeys[index].nextKey, updatedKeys?.nextKey)
             assertEquals(updatedRemoteKeys[index].currentPage, updatedKeys?.currentPage)
@@ -169,15 +160,15 @@ class MovieRepositoryTest: TestCase() {
 
     @Test
     fun deleteRemoteKeyRecordsFromDbAndVerifyDeleteIsSuccessful() = runBlocking {
-        val movies = ContentTest.getPopularMovies()
+        val tvList = ContentTest.getTvList()
 
         // insert
         val page = 1
         val prevKey = null
         val nextKey = page + 1
-        val remoteKeys = movies.map {
-            MovieRemoteKey(
-                movieId = it.remoteId,
+        val remoteKeys = tvList.map {
+            TvRemoteKey(
+                tvId = it.remoteId,
                 prevKey = prevKey,
                 currentPage = page,
                 nextKey = nextKey
@@ -191,7 +182,7 @@ class MovieRepositoryTest: TestCase() {
 
         // verify all records are deleted
         for(index in 0..19) {
-            val keys = repository.getRemoteKeyByMovieId(movies[index].remoteId)
+            val keys = repository.getRemoteKeyByTvId(tvList[index].remoteId)
             assertNull(keys)
         }
     }

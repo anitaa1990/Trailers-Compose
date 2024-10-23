@@ -8,7 +8,7 @@ import androidx.paging.RemoteMediator
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.an.trailers_compose.MovieTest
+import com.an.trailers_compose.ContentTest
 import com.an.trailers_compose.data.local.MovieDatabase
 import com.an.trailers_compose.data.local.dao.MovieDao
 import com.an.trailers_compose.data.local.dao.MovieRemoteKeyDao
@@ -34,7 +34,7 @@ class MovieRemoteMediatorTest: TestCase() {
     private val apiService: MovieApiService = mock()
 
     private lateinit var repository: MovieRepository
-    private val mockMoviesList = MovieTest.getPopularMovies()
+    private val mockMoviesList = ContentTest.getPopularMovies()
 
     @Before
     public override fun setUp() {
