@@ -47,22 +47,21 @@ import androidx.paging.compose.LazyPagingItems
 import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
-import com.an.trailers_compose.AppConstants
 import com.an.trailers_compose.AppConstants.KEY_SHARED_TRANSITION_DESC
 import com.an.trailers_compose.AppConstants.KEY_SHARED_TRANSITION_IMAGE
 import com.an.trailers_compose.AppConstants.KEY_SHARED_TRANSITION_TITLE
-import com.an.trailers_compose.data.local.entity.MovieEntity
+import com.an.trailers_compose.ui.model.Content
 import kotlin.math.absoluteValue
 import kotlin.math.sqrt
 
 @OptIn(ExperimentalSharedTransitionApi::class, ExperimentalComposeUiApi::class)
 @Composable
 fun SharedTransitionScope.CircleRevealPager(
-    movies: LazyPagingItems<MovieEntity>,
+    contentList: LazyPagingItems<Content>,
     onItemClicked: (remoteId: Long) -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
-    val state = rememberPagerState(pageCount = { movies.itemCount } )
+    val state = rememberPagerState(pageCount = { contentList.itemCount } )
     var offsetY by remember { mutableFloatStateOf(0f) }
 
     val imageRequest = ImageRequest.Builder(LocalContext.current)
@@ -75,11 +74,11 @@ fun SharedTransitionScope.CircleRevealPager(
         state = state,
         pageSize = PageSize.Fill
     ) { page ->
-        movies[page]?.let { movie ->
+        contentList[page]?.let { content ->
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .clickable { onItemClicked(movie.remoteId) }
+                    .clickable { onItemClicked(content.id) }
                     .graphicsLayer {
                         val pageOffset = state.offsetForPage(page)
                         translationX = size.width * pageOffset
@@ -117,7 +116,7 @@ fun SharedTransitionScope.CircleRevealPager(
                         .memoryCachePolicy(CachePolicy.ENABLED)
                         .diskCachePolicy(CachePolicy.ENABLED)
                 }
-                val imageUrl = String.format(AppConstants.IMAGE_URL, movie.posterPath)
+                val imageUrl = content.posterUrl
                 AsyncImage(
                     model = imageRequest
                         .data(imageUrl)
@@ -151,10 +150,10 @@ fun SharedTransitionScope.CircleRevealPager(
                         .align(Alignment.BottomCenter)
                 ) {
                     Text(
-                        text = movie.title,
+                        text = content.title,
                         style = MaterialTheme.typography.headlineLarge,
                         modifier = Modifier.sharedElement(rememberSharedContentState(
-                            key = String.format(KEY_SHARED_TRANSITION_TITLE, movie.remoteId)
+                            key = String.format(KEY_SHARED_TRANSITION_TITLE, content.id)
                         ), animatedVisibilityScope = animatedContentScope)
                     )
                     Box(
@@ -168,9 +167,9 @@ fun SharedTransitionScope.CircleRevealPager(
                         modifier = Modifier
                             .padding(vertical = 10.dp)
                             .sharedElement(rememberSharedContentState(
-                                key = String.format(KEY_SHARED_TRANSITION_DESC, movie.remoteId)
+                                key = String.format(KEY_SHARED_TRANSITION_DESC, content.id)
                             ), animatedVisibilityScope = animatedContentScope),
-                        text = movie.overview,
+                        text = content.description,
                         maxLines = 3,
                         overflow = TextOverflow.Ellipsis,
                         style = MaterialTheme.typography.bodyLarge

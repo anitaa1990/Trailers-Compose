@@ -6,16 +6,19 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
+import androidx.paging.map
 import com.an.trailers_compose.AppConstants
 import com.an.trailers_compose.data.local.CategoryStore
 import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.data.repository.MovieRepository
 import com.an.trailers_compose.data.source.MovieRemoteMediator
+import com.an.trailers_compose.ui.model.toContent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
@@ -32,6 +35,9 @@ class MovieListViewModel @Inject constructor(
         getPager(it)
             .flow
             .cachedIn(viewModelScope)
+            .map { pagingData ->
+                pagingData.map { movie -> movie.toContent() }
+            }
     }
 
     val selectedCategory = _selectedCategory.asStateFlow()
