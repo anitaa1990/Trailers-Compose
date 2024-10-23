@@ -1,6 +1,6 @@
 package com.an.trailers_compose.ui.component
 
-import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -19,12 +19,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.an.trailers_compose.R
 import com.an.trailers_compose.ui.model.SimilarContent
 
 @Composable
 fun SimilarContentCard(
-    @DrawableRes similarContentTitleId: Int,
+    @StringRes similarContentTitleId: Int,
     similarContent: List<SimilarContent>,
     onItemClicked: (remoteId: Long) -> Unit
 ) {
