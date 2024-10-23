@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class TvRemoteKey(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "tv_id")
-    val movieId: Long,
+    val tvId: Long,
     val prevKey: Int?,
     val currentPage: Int,
     val nextKey: Int?,
