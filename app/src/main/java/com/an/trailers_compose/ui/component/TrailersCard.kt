@@ -1,11 +1,10 @@
 package com.an.trailers_compose.ui.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -28,7 +27,8 @@ import com.an.trailers_compose.data.remote.model.Video
 
 @Composable
 fun TrailersCard(
-    videos: List<Video>
+    videos: List<Video>,
+    onVideoItemClicked: (key: String) -> Unit
 ) {
     LazyRow(modifier = Modifier) {
         items(
@@ -37,16 +37,25 @@ fun TrailersCard(
             Box(
                 modifier = Modifier.fillParentMaxSize(0.7f)
             ) {
-                TrailersListItem(video = videos[index])
+                TrailersListItem(
+                    video = videos[index],
+                    onVideoItemClicked = onVideoItemClicked
+                )
             }
         }
     }
 }
 
 @Composable
-fun TrailersListItem(video: Video) {
+fun TrailersListItem(
+    video: Video,
+    onVideoItemClicked: (key: String) -> Unit
+) {
     Card(
-        modifier = Modifier.padding(horizontal = 10.dp),
+        modifier = Modifier
+            .padding(horizontal = 10.dp)
+            .clickable { onVideoItemClicked(video.key) }
+        ,
         shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(20.dp)
     ) {

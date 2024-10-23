@@ -29,6 +29,8 @@ object AppConstants {
     const val KEY_SHARED_TRANSITION_TITLE = "title-%s"
     const val KEY_SHARED_TRANSITION_DESC = "desc-%s"
 
+    const val INTENT_VIDEO_KEY = "intent_video_key"
+
     val genreColors = listOf(genreColor1, genreColor2, genreColor3, genreColor4)
     val movieCategories = Category.entries.toList()
 }
