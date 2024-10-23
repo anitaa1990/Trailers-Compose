@@ -23,17 +23,17 @@ import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.an.trailers_compose.AppConstants.movieCategories
 import com.an.trailers_compose.R
-import com.an.trailers_compose.data.local.entity.MovieEntity
 import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.component.CircleRevealPager
 import com.an.trailers_compose.ui.component.ContentCategories
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
+import com.an.trailers_compose.ui.model.Content
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun SharedTransitionScope.MovieListScreen(
-    movies: LazyPagingItems<MovieEntity>,
+    movies: LazyPagingItems<Content>,
     onItemClicked: (remoteId: Long) -> Unit,
     selectedCategory: Category,
     onCategorySelected: (category: Category) -> Unit,
@@ -57,7 +57,7 @@ fun SharedTransitionScope.MovieListScreen(
             else -> {
                 // Movie List
                 CircleRevealPager(
-                    movies = movies,
+                    contentList = movies,
                     onItemClicked = onItemClicked,
                     animatedContentScope = animatedContentScope
                 )
