@@ -8,6 +8,7 @@ import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -24,6 +25,7 @@ import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 import com.an.trailers_compose.utils.navigateToDetail
+import com.an.trailers_compose.utils.navigateToVideo
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -65,9 +67,11 @@ class MainActivity : ComponentActivity() {
                                 navArgument(AppConstants.ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
                             )
                         ) {
+                            val context = LocalContext.current
                             MovieDetailScreen(
                                 viewModel = hiltViewModel<MovieDetailViewModel>(),
                                 onItemClicked = { navController.navigateToDetail(it) },
+                                onVideoItemClicked = { navigateToVideo(context, it) },
                                 animatedContentScope = this@composable
                             )
                         }

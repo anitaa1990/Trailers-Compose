@@ -33,6 +33,7 @@ import com.an.trailers_compose.utils.ImageUtils
 fun SharedTransitionScope.MovieDetailScreen(
     viewModel: MovieDetailViewModel,
     onItemClicked: (remoteId: Long) -> Unit,
+    onVideoItemClicked: (key: String) -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
     val movieUiState = viewModel.movieUiState.collectAsStateWithLifecycle(
@@ -69,7 +70,8 @@ fun SharedTransitionScope.MovieDetailScreen(
             ) {
                 // Trailers list
                 TrailersCard(
-                    videos = movie.trailers
+                    videos = movie.trailers,
+                    onVideoItemClicked = onVideoItemClicked
                 )
 
                 // Movie detail card
