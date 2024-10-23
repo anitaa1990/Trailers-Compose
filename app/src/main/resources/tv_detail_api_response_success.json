@@ -1,0 +1,1058 @@
+{
+  "adult": false,
+  "backdrop_path": "/9faGSFi5jam6pDWGNd0p8JcJgXQ.jpg",
+  "created_by": [
+    {
+      "id": 66633,
+      "credit_id": "52542286760ee31328001a7b",
+      "name": "Vince Gilligan",
+      "original_name": "Vince Gilligan",
+      "gender": 2,
+      "profile_path": "/z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg"
+    }
+  ],
+  "episode_run_time": [],
+  "first_air_date": "2008-01-20",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "homepage": "https://www.sonypictures.com/tv/breakingbad",
+  "id": 1396,
+  "in_production": false,
+  "languages": [
+    "en",
+    "de",
+    "es"
+  ],
+  "last_air_date": "2013-09-29",
+  "last_episode_to_air": {
+    "id": 62161,
+    "name": "Felina",
+    "overview": "All bad things must come to an end.",
+    "vote_average": 9.218,
+    "vote_count": 218,
+    "air_date": "2013-09-29",
+    "episode_number": 16,
+    "episode_type": "finale",
+    "production_code": "",
+    "runtime": 56,
+    "season_number": 5,
+    "show_id": 1396,
+    "still_path": "/pA0YwyhvdDXP3BEGL2grrIhq8aM.jpg"
+  },
+  "name": "Breaking Bad",
+  "next_episode_to_air": null,
+  "networks": [
+    {
+      "id": 174,
+      "logo_path": "/alqLicR1ZMHMaZGP3xRQxn9sq7p.png",
+      "name": "AMC",
+      "origin_country": "US"
+    }
+  ],
+  "number_of_episodes": 62,
+  "number_of_seasons": 5,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "Breaking Bad",
+  "overview": "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+  "popularity": 609.477,
+  "poster_path": "/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+  "production_companies": [
+    {
+      "id": 11073,
+      "logo_path": "/aCbASRcI1MI7DXjPbSW9Fcv9uGR.png",
+      "name": "Sony Pictures Television",
+      "origin_country": "US"
+    },
+    {
+      "id": 33742,
+      "logo_path": null,
+      "name": "High Bridge Productions",
+      "origin_country": "US"
+    },
+    {
+      "id": 2605,
+      "logo_path": null,
+      "name": "Gran Via Productions",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2009-02-17",
+      "episode_count": 9,
+      "id": 3577,
+      "name": "Specials",
+      "overview": "",
+      "poster_path": "/40dT79mDEZwXkQiZNBgSaydQFDP.jpg",
+      "season_number": 0,
+      "vote_average": 0.0
+    },
+    {
+      "air_date": "2008-01-20",
+      "episode_count": 7,
+      "id": 3572,
+      "name": "Season 1",
+      "overview": "High school chemistry teacher Walter White's life is suddenly transformed by a dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\" Walter a new trade.",
+      "poster_path": "/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg",
+      "season_number": 1,
+      "vote_average": 8.3
+    },
+    {
+      "air_date": "2009-03-08",
+      "episode_count": 13,
+      "id": 3573,
+      "name": "Season 2",
+      "overview": "Walt must deal with the chain reaction of his choice, as he and Jesse face new and severe consequences. When danger and suspicion around Walt escalate, he is pushed to new levels of desperation. Just how much higher will the stakes rise? How far is Walt willing to go to ensure his family's security? Will his grand plan spiral out of control?",
+      "poster_path": "/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg",
+      "season_number": 2,
+      "vote_average": 8.4
+    },
+    {
+      "air_date": "2010-03-21",
+      "episode_count": 13,
+      "id": 3575,
+      "name": "Season 3",
+      "overview": "Walt continues to battle dueling identities: a desperate husband and father trying to provide for his family, and a newly appointed key player in the Albuquerque drug trade. As the danger around him escalates, Walt is now entrenched in the complex worlds of an angst-ridden family on the verge of dissolution, and the ruthless and unrelenting drug cartel.",
+      "poster_path": "/ffP8Q8ew048YofHRnFVM18B2fPG.jpg",
+      "season_number": 3,
+      "vote_average": 8.4
+    },
+    {
+      "air_date": "2011-07-17",
+      "episode_count": 13,
+      "id": 3576,
+      "name": "Season 4",
+      "overview": "Walt and Jesse must cope with the fallout of their previous actions, both personally and professionally. Tension mounts as Walt faces a true standoff with his employer, Gus, with neither side willing or able to back down. Walt must also adjust to a new relationship with Skyler, whom while still reconciling her relationship with Walt, is committed to properly laundering Walt’s money and ensuring her sister Marie and an ailing Hank are financially stable.",
+      "poster_path": "/5p7WduYlIIFjVYUIsqRZLFYWjMc.jpg",
+      "season_number": 4,
+      "vote_average": 8.5
+    },
+    {
+      "air_date": "2012-07-15",
+      "episode_count": 16,
+      "id": 3578,
+      "name": "Season 5",
+      "overview": "Walt is faced with the prospect of moving on in a world without his enemy. As the pressure of a criminal life starts to build, Skyler struggles to keep Walt’s terrible secrets. Facing resistance from sometime adversary and former Fring lieutenant Mike, Walt tries to keep his world from falling apart even as his DEA Agent brother in law, Hank, finds numerous leads that could blaze a path straight to Walt. ",
+      "poster_path": "/r3z70vunihrAkjILQKWHX0G2xzO.jpg",
+      "season_number": 5,
+      "vote_average": 8.9
+    }
+  ],
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "German",
+      "iso_639_1": "de",
+      "name": "Deutsch"
+    },
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    }
+  ],
+  "status": "Ended",
+  "tagline": "Change the equation.",
+  "type": "Scripted",
+  "vote_average": 8.915,
+  "vote_count": 14348,
+  "videos": {
+    "results": [
+      {
+        "iso_639_1": "en",
+        "iso_3166_1": "US",
+        "name": "Series Trailer",
+        "key": "XZ8daibM3AE",
+        "published_at": "2013-03-25T16:28:54.000Z",
+        "site": "YouTube",
+        "size": 480,
+        "type": "Trailer",
+        "official": true,
+        "id": "5759db2fc3a3683e7c003df7"
+      }
+    ]
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 17419,
+        "known_for_department": "Acting",
+        "name": "Bryan Cranston",
+        "original_name": "Bryan Cranston",
+        "popularity": 31.187,
+        "profile_path": "/kNyTXGkiSP8W4Gs60hF7UoxZnWN.jpg",
+        "character": "Walter White",
+        "credit_id": "52542282760ee313280017f9",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 84497,
+        "known_for_department": "Acting",
+        "name": "Aaron Paul",
+        "original_name": "Aaron Paul",
+        "popularity": 21.216,
+        "profile_path": "/8Ac9uuoYwZoYVAIJfRLzzLsGGJn.jpg",
+        "character": "Jesse Pinkman",
+        "credit_id": "52542282760ee31328001845",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 134531,
+        "known_for_department": "Acting",
+        "name": "Anna Gunn",
+        "original_name": "Anna Gunn",
+        "popularity": 23.967,
+        "profile_path": "/adppyeu1a4REN3khtgmXusrapFi.jpg",
+        "character": "Skyler White",
+        "credit_id": "52542282760ee3132800181b",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 209674,
+        "known_for_department": "Acting",
+        "name": "RJ Mitte",
+        "original_name": "RJ Mitte",
+        "popularity": 15.895,
+        "profile_path": "/aG6NYV2EgzBFLRIl7vvbtd7go1j.jpg",
+        "character": "Walter White Jr.",
+        "credit_id": "52542284760ee313280018a9",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 14329,
+        "known_for_department": "Acting",
+        "name": "Dean Norris",
+        "original_name": "Dean Norris",
+        "popularity": 20.677,
+        "profile_path": "/mVaGouQNschhJEncob8ld1aOZwF.jpg",
+        "character": "Hank Schrader",
+        "credit_id": "52542283760ee3132800187b",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1217934,
+        "known_for_department": "Acting",
+        "name": "Betsy Brandt",
+        "original_name": "Betsy Brandt",
+        "popularity": 17.028,
+        "profile_path": "/kIbVUpGfLAF1KMn1YvWPnc12DRP.jpg",
+        "character": "Marie Schrader",
+        "credit_id": "52542283760ee31328001891",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 59410,
+        "known_for_department": "Acting",
+        "name": "Bob Odenkirk",
+        "original_name": "Bob Odenkirk",
+        "popularity": 25.046,
+        "profile_path": "/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg",
+        "character": "Saul Goodman",
+        "credit_id": "5271b180760ee35afc09bb8d",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 783,
+        "known_for_department": "Acting",
+        "name": "Jonathan Banks",
+        "original_name": "Jonathan Banks",
+        "popularity": 31.581,
+        "profile_path": "/bswk26L13PvY4iMTwUTAsepXCLv.jpg",
+        "character": "Mike Ehrmantraut",
+        "credit_id": "5271b1e6760ee35af60941ad",
+        "order": 9
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 24951,
+        "known_for_department": "Production",
+        "name": "Peter Gould",
+        "original_name": "Peter Gould",
+        "popularity": 5.462,
+        "profile_path": "/a2dJSpUiXQ2NAxqSzztr6WsnhOJ.jpg",
+        "credit_id": "64189e3f0d5d85009ba2c1d8",
+        "department": "Production",
+        "job": "Co-Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 103009,
+        "known_for_department": "Writing",
+        "name": "Thomas Schnauz",
+        "original_name": "Thomas Schnauz",
+        "popularity": 3.634,
+        "profile_path": "/uMz5wsgv6QQAgFI809SgCCbwYn9.jpg",
+        "credit_id": "64189ecbe7414600f7ef55f8",
+        "department": "Production",
+        "job": "Co-Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1537674,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Jennifer Bryan",
+        "original_name": "Jennifer Bryan",
+        "popularity": 1.165,
+        "profile_path": "/oA5QovyVfEG0SUIs0DIhGsriyok.jpg",
+        "credit_id": "6418a1a7a14bef00b815158a",
+        "department": "Costume & Make-Up",
+        "job": "Costume Design"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1223198,
+        "known_for_department": "Writing",
+        "name": "Moira Walley-Beckett",
+        "original_name": "Moira Walley-Beckett",
+        "popularity": 11.06,
+        "profile_path": "/1sRNcxMZVsVcY6NFNQzASJuR8By.jpg",
+        "credit_id": "64189f31310325010151b83d",
+        "department": "Production",
+        "job": "Supervising Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1223193,
+        "known_for_department": "Writing",
+        "name": "George Mastras",
+        "original_name": "George Mastras",
+        "popularity": 2.183,
+        "profile_path": "/2K0NELbA0Ow45ECudbO2eFc1Fe4.jpg",
+        "credit_id": "64189e9c6a2227008de8d158",
+        "department": "Production",
+        "job": "Co-Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1930718,
+        "known_for_department": "Production",
+        "name": "Christian Diaz de Bedoya",
+        "original_name": "Christian Diaz de Bedoya",
+        "popularity": 0.706,
+        "profile_path": "/jgELIZ1msexaFvFHUePDvvZpFRr.jpg",
+        "credit_id": "6449841d05a53304be1b880d",
+        "department": "Production",
+        "job": "Location Manager"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 17419,
+        "known_for_department": "Acting",
+        "name": "Bryan Cranston",
+        "original_name": "Bryan Cranston",
+        "popularity": 31.187,
+        "profile_path": "/kNyTXGkiSP8W4Gs60hF7UoxZnWN.jpg",
+        "credit_id": "5254228d760ee31328001cc7",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1223199,
+        "known_for_department": "Production",
+        "name": "Melissa Bernstein",
+        "original_name": "Melissa Bernstein",
+        "popularity": 2.444,
+        "profile_path": "/rSztwqMUIko8RkmwjxBse1XDW3g.jpg",
+        "credit_id": "64189dcea14bef008100712b",
+        "department": "Production",
+        "job": "Co-Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1223202,
+        "known_for_department": "Production",
+        "name": "Diane Mercer",
+        "original_name": "Diane Mercer",
+        "popularity": 1.878,
+        "profile_path": null,
+        "credit_id": "64189d742b8a4300b8d57ca9",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3970747,
+        "known_for_department": "Production",
+        "name": "Andrew Ortner",
+        "original_name": "Andrew Ortner",
+        "popularity": 0.56,
+        "profile_path": null,
+        "credit_id": "64189f7aa14bef0099c8395a",
+        "department": "Production",
+        "job": "Associate Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1223194,
+        "known_for_department": "Writing",
+        "name": "Sam Catlin",
+        "original_name": "Sam Catlin",
+        "popularity": 2.353,
+        "profile_path": "/xc9Ax2kpvQLayUaFL1d1NTUQ7df.jpg",
+        "credit_id": "64189e12a14bef00b81514a9",
+        "department": "Production",
+        "job": "Co-Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 29779,
+        "known_for_department": "Directing",
+        "name": "Michelle MacLaren",
+        "original_name": "Michelle MacLaren",
+        "popularity": 6.537,
+        "profile_path": "/3LcH5eNiysMWaepARllVrS4Dzn7.jpg",
+        "credit_id": "64189e5f6a2227008de8d147",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 4065202,
+        "known_for_department": "Crew",
+        "name": "Richard Berry",
+        "original_name": "Richard Berry",
+        "popularity": 0.493,
+        "profile_path": null,
+        "credit_id": "64634c54ef8b3200fe7e825f",
+        "department": "Crew",
+        "job": "Thanks"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 12706,
+        "known_for_department": "Art",
+        "name": "Mark S. Freeborn",
+        "original_name": "Mark S. Freeborn",
+        "popularity": 0.704,
+        "profile_path": null,
+        "credit_id": "539980a1c3a3681d0d00148b",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1537675,
+        "known_for_department": "Production",
+        "name": "Russell Scott",
+        "original_name": "Russell Scott",
+        "popularity": 1.789,
+        "profile_path": null,
+        "credit_id": "644465ffd38b580521114ec4",
+        "department": "Production",
+        "job": "Casting Associate"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1223200,
+        "known_for_department": "Production",
+        "name": "Stewart Lyons",
+        "original_name": "Stewart Lyons",
+        "popularity": 0.639,
+        "profile_path": "/dCAN4EMn8rsqALwDIjf9aNjuVTm.jpg",
+        "credit_id": "64189d12310325010151b7b7",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1330079,
+        "known_for_department": "Art",
+        "name": "Bjarne Sletteland",
+        "original_name": "Bjarne Sletteland",
+        "popularity": 1.333,
+        "profile_path": null,
+        "credit_id": "539980c8c3a3681d0700143a",
+        "department": "Art",
+        "job": "Art Direction"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1069688,
+        "known_for_department": "Sound",
+        "name": "Thomas Golubić",
+        "original_name": "Thomas Golubić",
+        "popularity": 1.789,
+        "profile_path": "/umzkpmX3p3GdrSutAHFX7Rij0Sm.jpg",
+        "credit_id": "64634e45e3fa2f00e404a628",
+        "department": "Sound",
+        "job": "Music Supervisor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1537682,
+        "known_for_department": "Sound",
+        "name": "Kurt Nicholas Forshager",
+        "original_name": "Kurt Nicholas Forshager",
+        "popularity": 1.135,
+        "profile_path": null,
+        "credit_id": "644986702fdec604e4a1236a",
+        "department": "Sound",
+        "job": "Supervising Sound Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1537690,
+        "known_for_department": "Crew",
+        "name": "Al Goto",
+        "original_name": "Al Goto",
+        "popularity": 2.689,
+        "profile_path": "/sJEtjLwLdqhY3soar4BflPBDpZu.jpg",
+        "credit_id": "6450485343501100ea397cba",
+        "department": "Crew",
+        "job": "Stunt Coordinator"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 959387,
+        "known_for_department": "Production",
+        "name": "Sherry Thomas",
+        "original_name": "Sherry Thomas",
+        "popularity": 0.881,
+        "profile_path": null,
+        "credit_id": "64446643cee2f604f336e877",
+        "department": "Production",
+        "job": "Casting"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 6479,
+        "known_for_department": "Production",
+        "name": "Sharon Bialy",
+        "original_name": "Sharon Bialy",
+        "popularity": 8.82,
+        "profile_path": "/uOex6LpaQYncD0sQfVYD1frI5uJ.jpg",
+        "credit_id": "6444663ccee2f6049f36d7d3",
+        "department": "Production",
+        "job": "Casting"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1280070,
+        "known_for_department": "Sound",
+        "name": "Dave Porter",
+        "original_name": "Dave Porter",
+        "popularity": 2.093,
+        "profile_path": "/flRW9QknVtU8HG7lLjMvflbhl2a.jpg",
+        "credit_id": "52b7008819c29559eb03dd72",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5162,
+        "known_for_department": "Production",
+        "name": "Mark Johnson",
+        "original_name": "Mark Johnson",
+        "popularity": 7.504,
+        "profile_path": "/gLuXkOQjqB81aHMGJ2OtYzEpHQu.jpg",
+        "credit_id": "52542287760ee31328001b69",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 66633,
+        "known_for_department": "Writing",
+        "name": "Vince Gilligan",
+        "original_name": "Vince Gilligan",
+        "popularity": 11.731,
+        "profile_path": "/z3E0DhBg1V1PZVEtS9vfFPzOWYB.jpg",
+        "credit_id": "52542287760ee31328001af1",
+        "department": "Production",
+        "job": "Executive Producer"
+      }
+    ]
+  },
+  "similar": {
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/cH2ieR8SgqBfmiMPMC6BwrDtL3c.jpg",
+        "genre_ids": [
+          18,
+          10751
+        ],
+        "id": 112302,
+        "origin_country": [
+          "PH"
+        ],
+        "original_language": "tl",
+        "original_name": "Ngayon at Kailanman",
+        "overview": "Inno and Eva are from different worlds, but destiny will bring them together, only to tear them apart. The star-crossed lovers will need to decide what they are willing to risk for love.",
+        "popularity": 28.846,
+        "poster_path": "/qu3urCz2jhSFe8sYnSFnFv9Wqc.jpg",
+        "first_air_date": "2018-08-20",
+        "name": "Ngayon at Kailanman",
+        "vote_average": 0.0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/wnAboUyDiTILkZfPhFyVIiY87Fa.jpg",
+        "genre_ids": [
+          18
+        ],
+        "id": 3050,
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "The Practice",
+        "overview": "A provocative legal drama focused on young associates at a bare-bones Boston firm and their scrappy boss, Bobby Donnell. The show's forte is its storylines about “people who walk a moral tightrope.”",
+        "popularity": 124.861,
+        "poster_path": "/7OKZSUIWhjFP0F2s478zTrAYwDB.jpg",
+        "first_air_date": "1997-03-04",
+        "name": "The Practice",
+        "vote_average": 7.7,
+        "vote_count": 96
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/D2DL5b9HBAy9jST2ZaDJLNHEsY.jpg",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "id": 54650,
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "Power",
+        "overview": "A successful New York entrepreneur lives a double life as the head of a drug empire that serves only the rich and influential, all while wanting to escape the underworld and keep his family safe.",
+        "popularity": 124.338,
+        "poster_path": "/ctftzvyj8b0odco7EoS9VfJhf7K.jpg",
+        "first_air_date": "2014-06-07",
+        "name": "Power",
+        "vote_average": 7.678,
+        "vote_count": 1191
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/jGAkSHs3saH4HGBHVQ808DHUzXK.jpg",
+        "genre_ids": [
+          16,
+          35,
+          18
+        ],
+        "id": 84660,
+        "origin_country": [
+          "JP"
+        ],
+        "original_language": "ja",
+        "original_name": "同居人はひざ、時々、頭のうえ。",
+        "overview": "Getting a roommate is the last thing an eccentric author like Mikazuki would do, until a stray cat sparks an idea for his next novel. After plucking the little killer off the streets, Mikazuki is inspired in ways he would have never expected",
+        "popularity": 33.206,
+        "poster_path": "/dZtgupPgtSGIDXqjPKQmyJR2GvJ.jpg",
+        "first_air_date": "2019-01-09",
+        "name": "My Roommate is a Cat",
+        "vote_average": 7.8,
+        "vote_count": 35
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          99,
+          80
+        ],
+        "id": 84399,
+        "origin_country": [
+          "CA"
+        ],
+        "original_language": "fr",
+        "original_name": "Délateurs",
+        "overview": "To save their skins and get their jail time reduced, criminals will sell out their accomplices and give the police precious info. Without their collaboration, police forces couldn’t have orchestrated the waves of arrests seen in Quebec in the last few years.",
+        "popularity": 2.985,
+        "poster_path": "/uPWxvkVbuBW4WzOKcQbyQsmeibf.jpg",
+        "first_air_date": "2017-01-06",
+        "name": "Délateurs",
+        "vote_average": 0.0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/loV6xhTbeJyN1yh1NBqjGFKdtEz.jpg",
+        "genre_ids": [
+          18
+        ],
+        "id": 84452,
+        "origin_country": [
+          "CO"
+        ],
+        "original_language": "es",
+        "original_name": "Nicky Jam: El Ganador",
+        "overview": "Follow Reggaeton artist Nicky Jam's struggles to overcome drug addiction and rise to international success in this dramatization of his life story.",
+        "popularity": 20.444,
+        "poster_path": "/kWVTRnYtuILMGgtRfg6P328Yakl.jpg",
+        "first_air_date": "2018-11-30",
+        "name": "Nicky Jam: El Ganador",
+        "vote_average": 7.3,
+        "vote_count": 532
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          18,
+          35
+        ],
+        "id": 2882,
+        "origin_country": [
+          "CA"
+        ],
+        "original_language": "en",
+        "original_name": "This Is Wonderland",
+        "overview": "Alice De Raey is a newly minted attorney who joins the chaotic world of criminal justice in Toronto. She's exposed to the seamier side of life, the backroom deals that make the system work accompanied by the usual eccentric characters.",
+        "popularity": 31.714,
+        "poster_path": "/oDVf1KgCH4FhmyGAa1EJa6sXXr6.jpg",
+        "first_air_date": "2004-01-12",
+        "name": "This Is Wonderland",
+        "vote_average": 9.0,
+        "vote_count": 1
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/dQ4GPq2NdrazwgVA7LCQNBBxtxf.jpg",
+        "genre_ids": [
+          18,
+          35
+        ],
+        "id": 2933,
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "The Riches",
+        "overview": "A family of crooks assume the identity of an upper-middle-class suburban clan in the Deep South.",
+        "popularity": 32.635,
+        "poster_path": "/c8eyL7xBTVZeeqb9oDEADqHlNc2.jpg",
+        "first_air_date": "2007-03-12",
+        "name": "The Riches",
+        "vote_average": 6.99,
+        "vote_count": 49
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1WTc28lcCZK5myLaoNBkUwmDSJq.jpg",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "id": 112101,
+        "origin_country": [
+          "NL"
+        ],
+        "original_language": "nl",
+        "original_name": "Doodstil",
+        "overview": "Luther, the support and anchor of Carmen in Penoza, gets his own series: Doodstil. We know Luther to be tough and loyal to the bone, but how did he actually become that ruthless killer? This four-part mini-series answers this question.\n\nWe meet Luther in the present, where in the underworld he not only tries to take revenge on his brother's murderer, but where he also grapples with the demons of his past. At the same time, we get to know the young talkative Luther from the 90s, who bravely ends up in the booming hash trade. He has to fight harder and harder to survive in a drug world that is increasingly hardening.",
+        "popularity": 3.382,
+        "poster_path": "/jFcmSUWGjdVrgYrHGsuFuKDYJFk.jpg",
+        "first_air_date": "2020-12-27",
+        "name": "Doodstil",
+        "vote_average": 7.0,
+        "vote_count": 5
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/6thsXlPqiSUulRo7euZtlwmYngo.jpg",
+        "genre_ids": [
+          18,
+          80
+        ],
+        "id": 220545,
+        "origin_country": [
+          "PH"
+        ],
+        "original_language": "tl",
+        "original_name": "Magpahanggang Wakas",
+        "overview": "",
+        "popularity": 24.352,
+        "poster_path": "/fUKupj01NFiOarXFV8pjQJ4EXkj.jpg",
+        "first_air_date": "2016-09-19",
+        "name": "Magpahanggang Wakas",
+        "vote_average": 0.0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/zfiTarytwu4KNXJqkwapHAOu0p7.jpg",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "id": 2204,
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "Brotherhood",
+        "overview": "A working-class Irish family rules a city built on loyalty and corruption. The Caffee brothers, Tommy, a rising politician desperate for reelection, and Michael, a hardened criminal returning from seven years on the run and eager to reclaim his turf, fight for survival on opposite sides of the law. In their ruthless quest for power, the entire Caffee family is driven to lies, betrayal and infidelity -- threatening to tear them and the city of Providence, RI apart.",
+        "popularity": 25.448,
+        "poster_path": "/1Qb3qTvq1Wo0HxzfwECTuj7Aa80.jpg",
+        "first_air_date": "2006-07-09",
+        "name": "Brotherhood",
+        "vote_average": 6.896,
+        "vote_count": 48
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/quLu79iZ3KioB1FaVcDxzQuVjv5.jpg",
+        "genre_ids": [
+          80,
+          18,
+          9648
+        ],
+        "id": 2343,
+        "origin_country": [
+          "GB"
+        ],
+        "original_language": "en",
+        "original_name": "Lewis",
+        "overview": "Inspector Robert Lewis and Sergeant James Hathaway solve the tough cases that the learned inhabitants of Oxford throw at them.",
+        "popularity": 82.639,
+        "poster_path": "/rwf7nHqAzUFqGEMbN9lxta6UbbX.jpg",
+        "first_air_date": "2007-02-18",
+        "name": "Lewis",
+        "vote_average": 7.6,
+        "vote_count": 100
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/6NJdscx3qb2H7h8rEHFn9i6vTcs.jpg",
+        "genre_ids": [
+          80,
+          18
+        ],
+        "id": 2093,
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "Matlock",
+        "overview": "Matlock is an American television legal drama, starring Andy Griffith in the title role of criminal defense attorney Ben Matlock. The show, produced by The Fred Silverman Company, Dean Hargrove Productions, Viacom Productions and Paramount Television originally aired from September 23, 1986 to May 8, 1992 on NBC; and from November 5, 1992 until May 7, 1995 on ABC.\n\nThe show's format is similar to that of CBS's Perry Mason, with Matlock identifying the perpetrators and then confronting them in dramatic courtroom scenes. One difference, however, was that whereas Mason usually exculpated his clients at a pretrial hearing, Matlock usually secured an acquittal at trial, from the jury.",
+        "popularity": 102.214,
+        "poster_path": "/2eGYyekQjcAXVmcYW1g4keR4plV.jpg",
+        "first_air_date": "1986-03-03",
+        "name": "Matlock",
+        "vote_average": 7.2,
+        "vote_count": 111
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/31KwUPZ86lIOpT1rbHcPHXxZt4k.jpg",
+        "genre_ids": [
+          18
+        ],
+        "id": 219100,
+        "origin_country": [
+          "PH"
+        ],
+        "original_language": "tl",
+        "original_name": "Love of My Life",
+        "overview": "",
+        "popularity": 24.309,
+        "poster_path": "/tVYi9KdRL0OsprcT0HqJYoKSMzi.jpg",
+        "first_air_date": "2020-02-03",
+        "name": "Love of My Life",
+        "vote_average": 0.0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/da9EiP7UbfXI6ikxG142ecsKdFQ.jpg",
+        "genre_ids": [
+          18,
+          80,
+          9648
+        ],
+        "id": 219142,
+        "origin_country": [
+          "AZ"
+        ],
+        "original_language": "az",
+        "original_name": "Əqrəb mövsümü",
+        "overview": "The series is about a mysterious serial killer who keeps the whole city in fear and terror. All attempts to find the killer have failed. As a result, experienced detectives Rauf Eyvazov and Kanan Orujov are assigned to find the killer. Each murder carries a message and makes the crime case more complicated.",
+        "popularity": 8.565,
+        "poster_path": "/xfPFTqLMQHLoggDEAimiDnVi6xJ.jpg",
+        "first_air_date": "2023-01-10",
+        "name": "The Scorpio Season",
+        "vote_average": 9.2,
+        "vote_count": 4
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1Y96m8MMq7A9b3Mc2Woyrtv85FJ.jpg",
+        "genre_ids": [
+          18,
+          9648,
+          10765
+        ],
+        "id": 219160,
+        "origin_country": [
+          "TH"
+        ],
+        "original_language": "th",
+        "original_name": "สัญญา สัญญาณ",
+        "overview": "In this fantasy investigation series, investigators from two eras must hunt for the truth in old unsolved cases, communicating only through an old radio. The signal between the past and the present only opens at 23:23.",
+        "popularity": 16.934,
+        "poster_path": "/3qTThjT0EmW1eRdnUOF7qC5zji8.jpg",
+        "first_air_date": "2023-01-20",
+        "name": "23:23",
+        "vote_average": 8.0,
+        "vote_count": 1
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          18,
+          10751
+        ],
+        "id": 83503,
+        "origin_country": [
+          "JP"
+        ],
+        "original_language": "ja",
+        "original_name": "ごめん、愛してる",
+        "overview": "Ritsu was abandoned by his mother Reiko when he was little, so now he belongs in the lower social strata. One day, Ritsu gets involved in a case and his head is severely injured, so he can die at anytime. Convinced she abandoned him due to poverty, Ritsu attempts to find his mother and be good to her before his death. But when he learns that she is leading a happy life instead, with her pianist son Satoru, he decides to take revenge on his mother. Ritsu then meets Rinka, a girl whom he happened to help in the past, and discovers she is Satoru’s childhood friend.",
+        "popularity": 17.439,
+        "poster_path": "/5orzlyb1EqeIyaUmJbW4i9LuaDG.jpg",
+        "first_air_date": "2017-07-09",
+        "name": "I'm Sorry, I Love You",
+        "vote_average": 6.7,
+        "vote_count": 3
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/i1xenYMlX4TPNhhbZQCUznpgHbt.jpg",
+        "genre_ids": [
+          18,
+          10751
+        ],
+        "id": 83506,
+        "origin_country": [
+          "JP"
+        ],
+        "original_language": "ja",
+        "original_name": "グッドライフ〜ありがとう、パパ。さよなら〜",
+        "overview": "The basis for the drama is the novel “Kashikogi” by author Cho Chang-in, which has sold 2 million copies in Korea since its publication in 2000. It has already been adapted as a television drama and a stage play in that country. On February 4, Shogakukan is publishing the book in Japan under the title “Good Life.” Sorimachi plays the part of Daichi Sawamoto, a newspaper reporter who has always prioritized his work over his family. When his wife suddenly leaves him, he finally notices the love he has been receiving from his son. Just as he decides to answer back, it is discovered that his son has leukemia.",
+        "popularity": 16.573,
+        "poster_path": "/iGcm19W0qwln9Kj90VpuhB0wMKn.jpg",
+        "first_air_date": "2011-04-19",
+        "name": "Good Life: Thank You, Papa, Goodbye",
+        "vote_average": 7.0,
+        "vote_count": 1
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/sQ4suH4iPFm7IQpn4XS1EBBAZkO.jpg",
+        "genre_ids": [
+          18
+        ],
+        "id": 83544,
+        "origin_country": [
+          "JP"
+        ],
+        "original_language": "ja",
+        "original_name": "美丘 ―君がいた日々―",
+        "overview": "One day, Taichi, an ordinary university student, meets Mioka, a girl who is like a storm. Taichi finds himself drawn to Mioka, who lives freely as she wishes without holding back, and they eventually fall in love. However, Mioka tells Taichi of her shocking truth. She has an incurable brain disease, with no medicine or treatment that can help her.",
+        "popularity": 23.021,
+        "poster_path": "/icn73cfwAGvSDfDHMDFPmMttpzX.jpg",
+        "first_air_date": "2010-07-10",
+        "name": "MIOKA –MY LAST DAYS WITH YOU–",
+        "vote_average": 9.0,
+        "vote_count": 1
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/chKuEdL9JJ6ZPJPrjLXYiACLFh9.jpg",
+        "genre_ids": [
+          10766,
+          18
+        ],
+        "id": 83595,
+        "origin_country": [
+          "BR"
+        ],
+        "original_language": "pt",
+        "original_name": "Além do Tempo",
+        "overview": "Livia and Felipe are in a forbidden love story doomed to end tragically. A century later, they both have a new chance to make their love real again. “Time After Time” is an innovative romance set in two different eras in which characters hold the opportunity to make up for their mistakes, come to terms with the past and write themselves another story.",
+        "popularity": 57.571,
+        "poster_path": "/806nRtr42FxowSJTWk88IZpWHrS.jpg",
+        "first_air_date": "2015-07-13",
+        "name": "Time After Time",
+        "vote_average": 7.563,
+        "vote_count": 8
+      }
+    ],
+    "total_pages": 2140,
+    "total_results": 42795
+  }
+}
