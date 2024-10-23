@@ -2,6 +2,7 @@ package com.an.trailers_compose.module
 
 import com.an.trailers_compose.AppConstants.BASE_URL
 import com.an.trailers_compose.data.remote.api.MovieApiService
+import com.an.trailers_compose.data.remote.api.TvApiService
 import com.an.trailers_compose.data.remote.interceptor.HeaderInterceptor
 import dagger.Module
 import dagger.Provides
@@ -15,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object MovieApiModule {
+object ApiModule {
     @Provides
     fun provideBaseUrl(): String = BASE_URL
 
@@ -39,6 +40,11 @@ object MovieApiModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit): MovieApiService =
+    fun provideMovieApiService(retrofit: Retrofit): MovieApiService =
         retrofit.create(MovieApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideTvApiService(retrofit: Retrofit): TvApiService =
+        retrofit.create(TvApiService::class.java)
 }
