@@ -24,6 +24,7 @@ palette = "1.0.0"
 dataStore = "1.1.1"
 navigationCompose = "2.8.3"
 animationCompose = "1.7.4"
+youtubePlayer = "12.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -88,6 +89,9 @@ palette = { group = "androidx.palette", name = "palette-ktx", version.ref = "pal
 
 ## Mockito
 mockito-android = { group = "org.mockito", name = "mockito-android", version.ref = "mockitoAndroid" }
+
+## Youtube player
+youtube-player = { group = "com.pierfrancescosoffritti.androidyoutubeplayer", name = "core", version.ref = "youtubePlayer" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
