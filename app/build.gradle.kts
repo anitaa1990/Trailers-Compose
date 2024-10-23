@@ -117,6 +117,9 @@ dependencies {
     // DataStore
     implementation(libs.datastore)
 
+    // Youtube player
+    implementation(libs.youtube.player)
+
     testImplementation(libs.junit)
 
     // Mockito
