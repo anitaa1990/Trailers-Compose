@@ -1,5 +1,8 @@
 package com.an.trailers_compose.ui.component
 
+import androidx.compose.animation.AnimatedContentScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -45,15 +48,19 @@ import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.an.trailers_compose.AppConstants
+import com.an.trailers_compose.AppConstants.KEY_SHARED_TRANSITION_DESC
+import com.an.trailers_compose.AppConstants.KEY_SHARED_TRANSITION_IMAGE
+import com.an.trailers_compose.AppConstants.KEY_SHARED_TRANSITION_TITLE
 import com.an.trailers_compose.data.local.entity.MovieEntity
 import kotlin.math.absoluteValue
 import kotlin.math.sqrt
 
-@OptIn(ExperimentalComposeUiApi::class)
+@OptIn(ExperimentalSharedTransitionApi::class, ExperimentalComposeUiApi::class)
 @Composable
-fun CircleRevealPager(
+fun SharedTransitionScope.CircleRevealPager(
     movies: LazyPagingItems<MovieEntity>,
-    onItemClicked: (remoteId: Long) -> Unit
+    onItemClicked: (remoteId: Long) -> Unit,
+    animatedContentScope: AnimatedContentScope
 ) {
     val state = rememberPagerState(pageCount = { movies.itemCount } )
     var offsetY by remember { mutableFloatStateOf(0f) }
@@ -110,13 +117,18 @@ fun CircleRevealPager(
                         .memoryCachePolicy(CachePolicy.ENABLED)
                         .diskCachePolicy(CachePolicy.ENABLED)
                 }
+                val imageUrl = String.format(AppConstants.IMAGE_URL, movie.posterPath)
                 AsyncImage(
                     model = imageRequest
-                        .data(String.format(AppConstants.IMAGE_URL, movie.posterPath))
+                        .data(imageUrl)
                         .build(),
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .sharedElement(rememberSharedContentState(
+                                key = String.format(KEY_SHARED_TRANSITION_IMAGE, imageUrl)
+                        ), animatedVisibilityScope = animatedContentScope)
                 )
                 Box(
                     modifier = Modifier
@@ -139,7 +151,11 @@ fun CircleRevealPager(
                         .align(Alignment.BottomCenter)
                 ) {
                     Text(
-                        text = movie.title, style = MaterialTheme.typography.headlineLarge
+                        text = movie.title,
+                        style = MaterialTheme.typography.headlineLarge,
+                        modifier = Modifier.sharedElement(rememberSharedContentState(
+                            key = String.format(KEY_SHARED_TRANSITION_TITLE, movie.remoteId)
+                        ), animatedVisibilityScope = animatedContentScope)
                     )
                     Box(
                         modifier = Modifier
@@ -149,7 +165,11 @@ fun CircleRevealPager(
                             .background(Color.White)
                     )
                     Text(
-                        modifier = Modifier.padding(vertical = 10.dp),
+                        modifier = Modifier
+                            .padding(vertical = 10.dp)
+                            .sharedElement(rememberSharedContentState(
+                                key = String.format(KEY_SHARED_TRANSITION_DESC, movie.remoteId)
+                            ), animatedVisibilityScope = animatedContentScope),
                         text = movie.overview,
                         maxLines = 3,
                         overflow = TextOverflow.Ellipsis,

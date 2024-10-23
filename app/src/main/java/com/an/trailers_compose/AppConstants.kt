@@ -25,6 +25,10 @@ object AppConstants {
 
     const val ROUTE_MOVIE_DETAIL_PATH = "$ROUTE_MOVIE_DETAIL/$ROUTE_DETAIL_ARG_NAME/{$ROUTE_DETAIL_ARG_NAME}"
 
+    const val KEY_SHARED_TRANSITION_IMAGE = "image-%s"
+    const val KEY_SHARED_TRANSITION_TITLE = "title-%s"
+    const val KEY_SHARED_TRANSITION_DESC = "desc-%s"
+
     val genreColors = listOf(genreColor1, genreColor2, genreColor3, genreColor4)
     val movieCategories = Category.entries.toList()
 }
