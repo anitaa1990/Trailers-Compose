@@ -1,5 +1,8 @@
 package com.an.trailers_compose.ui.list.movie
 
+import androidx.compose.animation.AnimatedContentScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -27,12 +30,14 @@ import com.an.trailers_compose.ui.component.ContentCategories
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun MovieListScreen(
+fun SharedTransitionScope.MovieListScreen(
     movies: LazyPagingItems<MovieEntity>,
     onItemClicked: (remoteId: Long) -> Unit,
     selectedCategory: Category,
-    onCategorySelected: (category: Category) -> Unit
+    onCategorySelected: (category: Category) -> Unit,
+    animatedContentScope: AnimatedContentScope
 ) {
     Box(
         modifier = Modifier.fillMaxSize()
@@ -51,7 +56,11 @@ fun MovieListScreen(
             }
             else -> {
                 // Movie List
-                CircleRevealPager(movies = movies, onItemClicked = onItemClicked)
+                CircleRevealPager(
+                    movies = movies,
+                    onItemClicked = onItemClicked,
+                    animatedContentScope = animatedContentScope
+                )
 
                 // Added filter, search & Tv/movie option
                 MenuItems()

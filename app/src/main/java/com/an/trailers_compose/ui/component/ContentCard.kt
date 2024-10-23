@@ -1,5 +1,8 @@
 package com.an.trailers_compose.ui.component
 
+import androidx.compose.animation.AnimatedContentScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -33,9 +36,11 @@ import com.an.trailers_compose.ui.model.Content
 import com.an.trailers_compose.ui.theme.statusColor
 import java.util.*
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun ContentCard(
-    content: Content
+fun SharedTransitionScope.ContentCard(
+    content: Content,
+    animatedContentScope: AnimatedContentScope
 ) {
     Card (
         modifier = Modifier
@@ -61,7 +66,10 @@ fun ContentCard(
             // Content title
             Text(
                 text = content.title,
-                style = MaterialTheme.typography.titleLarge
+                style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.sharedElement(rememberSharedContentState(
+                    key = String.format(AppConstants.KEY_SHARED_TRANSITION_TITLE, content.id)
+                ), animatedVisibilityScope = animatedContentScope)
             )
             // Content Genres
             val colorIndex = Random().nextInt(AppConstants.genreColors.size)
@@ -80,7 +88,11 @@ fun ContentCard(
             Text(
                 text = content.description,
                 style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 25.sp),
-                modifier = Modifier.padding(vertical = 20.dp)
+                modifier = Modifier
+                    .padding(vertical = 20.dp)
+                    .sharedElement(rememberSharedContentState(
+                        key = String.format(AppConstants.KEY_SHARED_TRANSITION_DESC, content.id)
+                    ), animatedVisibilityScope = animatedContentScope)
             )
             // Content status
             ContentStatus(status = content.status, runTime = content.durationInMins)
