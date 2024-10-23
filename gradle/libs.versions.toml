@@ -23,6 +23,7 @@ mockitoAndroid = "5.7.0"
 palette = "1.0.0"
 dataStore = "1.1.1"
 navigationCompose = "2.8.3"
+animationCompose = "1.7.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +49,7 @@ hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-com
 
 ## Navigation in compose
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+animation-compose = { group = "androidx.compose.animation", name = "animation", version.ref = "animationCompose" }
 
 ## Room - local db
 room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
