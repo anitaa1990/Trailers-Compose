@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface TvApiService {
     /**
      * We would be using the below url:
-     * https://api.themoviedb.org/3/movie/{type}
+     * https://api.themoviedb.org/3/tv/{type}
      * where type can be: top_rated, on_the_air, airing_today or popular
      */
     @GET("tv/{type}?language=en-US&region=US")
@@ -19,7 +19,7 @@ interface TvApiService {
     ): TvApiResponse
 
     @GET("tv/{tvId}?append_to_response=videos,credits,similar")
-    suspend fun fetchMovieDetail(
+    suspend fun fetchTvDetail(
         @Path("tvId") tvId: Long
     ): TvEntity
 }

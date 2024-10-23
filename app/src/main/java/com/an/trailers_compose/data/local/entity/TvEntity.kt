@@ -31,5 +31,5 @@ data class TvEntity(
     val videoApiResponse: VideoApiResponse?,
     val credits: CreditsApiResponse?,
     @SerializedName("similar")
-    val similarMoviesApiResponse: TvApiResponse?
+    val similarTvApiResponse: TvApiResponse?
 )

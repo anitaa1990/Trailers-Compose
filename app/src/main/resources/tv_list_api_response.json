@@ -1,0 +1,420 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/rj3jBAZwPiOgkwAy1205MAgLahj.jpg",
+      "genre_ids": [
+        10766
+      ],
+      "id": 81329,
+      "origin_country": [
+        "FR"
+      ],
+      "original_language": "fr",
+      "original_name": "Un si grand soleil",
+      "overview": "Claire is surprised when she gets arrested for the murder of her childhood friend after she returns to Montpellier.",
+      "popularity": 3272.746,
+      "poster_path": "/t6jVlbPMtZOJoAOfeoR4yQmnjXM.jpg",
+      "first_air_date": "2018-08-27",
+      "name": "Chronicles of the Sun",
+      "vote_average": 7.0,
+      "vote_count": 102
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vgeDRVpSUa4Hvovg4C6dgm4dfUW.jpg",
+      "genre_ids": [
+        10766,
+        18
+      ],
+      "id": 112470,
+      "origin_country": [
+        "FR"
+      ],
+      "original_language": "fr",
+      "original_name": "Ici tout commence",
+      "overview": "This television drama series is centered around the prestigious culinary school of renowned chef Auguste Armand. The show follows the lives of students and staff as they navigate the challenges and pressures of the culinary world—delving into their personal and professional lives, revealing secrets, rivalries, and complex relationships.",
+      "popularity": 3056.79,
+      "poster_path": "/yuTHx38jpogXovMhqNatvozigMJ.jpg",
+      "first_air_date": "2020-11-02",
+      "name": "Ici tout commence",
+      "vote_average": 7.0,
+      "vote_count": 53
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/l7LRGYJY3NzIGBlpvHpMsNXHbm5.jpg",
+      "genre_ids": [
+        10751,
+        35
+      ],
+      "id": 218145,
+      "origin_country": [
+        "SK"
+      ],
+      "original_language": "sk",
+      "original_name": "Mama na prenájom",
+      "overview": "Abandoned by his wife, Martin is lying to his daughter not to be upset. But as Hanka grows, these lies become unbearable. Martin meets Nada unexpectedly, asked her to be a rent-a-mother and all lives are completely changed.",
+      "popularity": 2966.863,
+      "poster_path": "/fH7PP2Rkdlo414IHvZABBHhtoqd.jpg",
+      "first_air_date": "2023-01-09",
+      "name": "Mom for rent",
+      "vote_average": 5.111,
+      "vote_count": 27
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mlX6SG7lJ0BiLui5x5Nu4agetBA.jpg",
+      "genre_ids": [
+        10766,
+        18
+      ],
+      "id": 82708,
+      "origin_country": [
+        "NL"
+      ],
+      "original_language": "nl",
+      "original_name": "Brugklas",
+      "overview": "The First Years is a Dutch series for young people in which real-life situations are recreated. The series sheds light on subjects that pupils in the first year of secondary school may be confronted with.",
+      "popularity": 2911.911,
+      "poster_path": "/klPqN1oITjVub0Yss0Kqnx8NfY3.jpg",
+      "first_air_date": "2014-05-26",
+      "name": "The First Years",
+      "vote_average": 5.0,
+      "vote_count": 9
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oPUJvCl9vo16nttEDwmK3zy06jj.jpg",
+      "genre_ids": [
+        10766,
+        10759,
+        18
+      ],
+      "id": 247884,
+      "origin_country": [
+        "MX"
+      ],
+      "original_language": "es",
+      "original_name": "Fugitivas, en busca de la libertad",
+      "overview": "Lorena, Frida, Lisset and Montse, four friends who are in prison serving a sentence. One of them is accused unjustly. In the prison where they are held there is a massive escape and they escape. After their escape, the fugitives take refuge in a bar looking for the opportunity to start a new life.",
+      "popularity": 2576.629,
+      "poster_path": "/oqHWSZmoCgz7JPsbNXihASGnfLW.jpg",
+      "first_air_date": "2024-07-01",
+      "name": "Fugitivas, en busca de la libertad",
+      "vote_average": 7.8,
+      "vote_count": 25
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7ZBNbpkLhC2fS90j6onLS8qqfRX.jpg",
+      "genre_ids": [],
+      "id": 4682,
+      "origin_country": [
+        "GB"
+      ],
+      "original_language": "en",
+      "original_name": "Strictly Come Dancing: It Takes Two",
+      "overview": "The companion show to the popular BBC One programme Strictly Come Dancing which features interviews and training footage of the couples competing in the main Saturday night show, opinions from the judges on the previous Saturday show and the training footage for the next, and interviews with celebrities who have been watching the show.",
+      "popularity": 2527.815,
+      "poster_path": "/1UOKLsJ3bopZHg6ntRfmO4C5Gcm.jpg",
+      "first_air_date": "2004-10-25",
+      "name": "Strictly Come Dancing: It Takes Two",
+      "vote_average": 4.5,
+      "vote_count": 4
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4i3iJepkqqH5JJgTNLJdi8ke6ir.jpg",
+      "genre_ids": [
+        10766
+      ],
+      "id": 249010,
+      "origin_country": [
+        "ZA"
+      ],
+      "original_language": "af",
+      "original_name": "Kelders van Geheime",
+      "overview": "Kelders van Geheime (Cellars of Secrets) is a South African, Afrikaans-language telenovela based on the wheeling's and dealings of the community that lives on Soebatskloof (a wine farm in the Cape). The series focuses on three families: the Abrahams, Syster and Marais households. These families will have to stand together, agree (or agree to disagree), and work together to earn their bread and butter – and a glass of wine.",
+      "popularity": 2425.568,
+      "poster_path": "/vf1I0G5jICTstI1EXxb9Oqq80TU.jpg",
+      "first_air_date": "2024-05-06",
+      "name": "Kelders van Geheime",
+      "vote_average": 6.167,
+      "vote_count": 6
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mLcD1v4sfoa1juOsBat7Vik7wEe.jpg",
+      "genre_ids": [
+        10764
+      ],
+      "id": 248890,
+      "origin_country": [
+        "ZA"
+      ],
+      "original_language": "en",
+      "original_name": "Ready Steady Cook South Africa",
+      "overview": "In Ready Steady Cook, two teams - a Red Tomato and a Green Pepper - compete in a Red Kitchen and a Green Kitchen, together with a South African chef on each side and paired with enthusiastic home cooks, as they are challenged creatively with a mystery bag of ingredients in a 20-minute cook-off.",
+      "popularity": 2411.581,
+      "poster_path": "/30xX4IMbgnMbQwo76xM4BOSokZO.jpg",
+      "first_air_date": "2024-03-18",
+      "name": "Ready Steady Cook South Africa",
+      "vote_average": 2.125,
+      "vote_count": 4
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/725Dh3UC4bjDTflsIxQvSx9vkLr.jpg",
+      "genre_ids": [
+        10764
+      ],
+      "id": 250716,
+      "origin_country": [
+        "CL"
+      ],
+      "original_language": "es",
+      "original_name": "¿Ganar o servir?",
+      "overview": "",
+      "popularity": 2319.965,
+      "poster_path": "/7ZhXzKBXNuFictb3XE2HZDLN9tl.jpg",
+      "first_air_date": "2024-04-21",
+      "name": "¿Ganar o servir?",
+      "vote_average": 8.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nCXV9ARvIE2Yc9tLg6pBwpPpPld.jpg",
+      "genre_ids": [
+        10764
+      ],
+      "id": 8892,
+      "origin_country": [
+        "PH"
+      ],
+      "original_language": "tl",
+      "original_name": "Pinoy Big Brother",
+      "overview": "The Philippine adaptation of the reality game show \"Big Brother\" features Filipino housemates live together, share their stories and build meaningful relationships as they do tasks and challenges supervised by Big Brother. Every week a nomination is done, and the public decides who gets evicted and eventually become the Big Winner of the program.",
+      "popularity": 2277.98,
+      "poster_path": "/zUva0cs2SOjoxFPpwINbpevzoax.jpg",
+      "first_air_date": "2005-08-21",
+      "name": "Pinoy Big Brother",
+      "vote_average": 5.6,
+      "vote_count": 10
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jWXrQstj7p3Wl5MfYWY6IHqRpDb.jpg",
+      "genre_ids": [
+        10763
+      ],
+      "id": 94722,
+      "origin_country": [
+        "DE"
+      ],
+      "original_language": "de",
+      "original_name": "Tagesschau",
+      "overview": "German daily news program, the oldest still existing program on German television.",
+      "popularity": 2179.856,
+      "poster_path": "/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg",
+      "first_air_date": "1952-12-26",
+      "name": "Tagesschau",
+      "vote_average": 6.729,
+      "vote_count": 205
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qz5NZvbaYs1zuhjU91gtNDJWTJ9.jpg",
+      "genre_ids": [
+        18,
+        9648,
+        80
+      ],
+      "id": 252523,
+      "origin_country": [
+        "CN"
+      ],
+      "original_language": "zh",
+      "original_name": "人民警察",
+      "overview": "Ten years ago, Zhao Haiyang’s mistake during a manhunt led to the death of his mentor, Xia Hui. Now, Zhao is the Deputy Director of Dongzhou’s Public Security Bureau, while Fang Cheng, a former colleague, returns to the city with innovative ideas for police reform. Tension arises as Zhao is skeptical of Fang’s methods, but the new techniques prove effective in combating a wave of modern crimes. Just as progress is being made, the killer from a fifteen-year-old case resurfaces, forcing Zhao and Fang to join forces to bring the criminal to justice while facing an unseen, powerful adversary.",
+      "popularity": 2178.735,
+      "poster_path": "/caMBUg1vqXlWNaE2PfrS0hxoWQ9.jpg",
+      "first_air_date": "2024-10-07",
+      "name": "The People's Police",
+      "vote_average": 4.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/u4Lh4viuwHGVLFyUnY7YvwOTwl0.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 252373,
+      "origin_country": [
+        "PT"
+      ],
+      "original_language": "pt",
+      "original_name": "A Promessa",
+      "overview": "",
+      "popularity": 2074.641,
+      "poster_path": "/uptgxt2apx5wwWItQzqL0HwhjZC.jpg",
+      "first_air_date": "2024-06-18",
+      "name": "A Promessa",
+      "vote_average": 8.0,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/q3UGWifvIpdey1T2efX4dSmbZpU.jpg",
+      "genre_ids": [
+        9648,
+        18,
+        10765
+      ],
+      "id": 124364,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "FROM",
+      "overview": "Unravel the mystery of a nightmarish town in middle America that traps all those who enter. As the unwilling residents fight to keep a sense of normalcy and search for a way out, they must also survive the threats of the surrounding forest – including the terrifying creatures that come out when the sun goes down.",
+      "popularity": 2060.429,
+      "poster_path": "/cjXLrg4R7FRPFafvuQ3SSznQOd9.jpg",
+      "first_air_date": "2022-02-20",
+      "name": "FROM",
+      "vote_average": 8.168,
+      "vote_count": 1293
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        18,
+        35
+      ],
+      "id": 36361,
+      "origin_country": [
+        "CZ"
+      ],
+      "original_language": "cs",
+      "original_name": "Ulice",
+      "overview": "Ulice is a Czech soap opera produced and broadcast by Nova. In the Czech language Ulice means street.\n\nThe show describes the lives of the Farský, Jordán, Boháč, Nikl, and Liška families and many other people that live in Prague. Their daily battle against real problems of living in a modern world like divorce, love, betrayal and illness or disease. Ulice often shows crime.",
+      "popularity": 2054.769,
+      "poster_path": "/gFEHva8Csx18hMGJJZ6gi4sFSKR.jpg",
+      "first_air_date": "2005-09-05",
+      "name": "Ulice",
+      "vote_average": 3.6,
+      "vote_count": 20
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gMMnf8VRg3Z98WaFmOLr9Jk8pIs.jpg",
+      "genre_ids": [
+        35,
+        10767
+      ],
+      "id": 63770,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Late Show with Stephen Colbert",
+      "overview": "Stephen Colbert brings his signature satire and comedy to The Late Show with Stephen Colbert, the #1 show in late night, where he talks with an eclectic mix of guests about what is new and relevant in the worlds of politics, entertainment, business, music, technology, and more. Featuring bandleader Jon Batiste with his band Stay Human, the Emmy Award-nominated show is broadcast from the historic Ed Sullivan Theater. Stephen Colbert, Chris Licht, Tom Purcell, and Jon Stewart are executive producers. Barry Julien and Denise Rehrig serve as co-executive producers.must watch",
+      "popularity": 1912.058,
+      "poster_path": "/9jkThAGYj2yp8jsS6Nriy5mzKFT.jpg",
+      "first_air_date": "2015-09-08",
+      "name": "The Late Show with Stephen Colbert",
+      "vote_average": 6.535,
+      "vote_count": 271
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/93R3gd0iNqnib1JKwbWXksDcMY.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10751
+      ],
+      "id": 255150,
+      "origin_country": [
+        "PE"
+      ],
+      "original_language": "es",
+      "original_name": "Pituca Sin Lucas",
+      "overview": "",
+      "popularity": 1856.339,
+      "poster_path": "/cjqJqODyUbul2GZL7ti2B5SVv7I.jpg",
+      "first_air_date": "2024-05-06",
+      "name": "Pituca Sin Lucas",
+      "vote_average": 8.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mu3lEhGovyhKHPJzb7HNYtZUCDT.jpg",
+      "genre_ids": [
+        10766
+      ],
+      "id": 206559,
+      "origin_country": [
+        "ZA"
+      ],
+      "original_language": "af",
+      "original_name": "Binnelanders",
+      "overview": "A South African Afrikaans soap opera. It is set in and around the fictional private hospital, Binneland Kliniek, in Pretoria, and the storyline follows the trials, trauma and tribulations of the staff and patients of the hospital.",
+      "popularity": 1838.977,
+      "poster_path": "/3bzECfllho8PphdYujLUIuhncJD.jpg",
+      "first_air_date": "2005-10-13",
+      "name": "Binnelanders",
+      "vote_average": 5.6,
+      "vote_count": 72
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zk3UqXnnK7cpUv6LsD9DS8FtUxb.jpg",
+      "genre_ids": [
+        18,
+        10759
+      ],
+      "id": 256121,
+      "origin_country": [
+        "PH"
+      ],
+      "original_language": "tl",
+      "original_name": "Lavender Fields",
+      "overview": "Jasmin loved her idyllic life in her mountain town, but a brush with a criminal empire took it all away. Now she's out for revenge with a new identity.",
+      "popularity": 1814.764,
+      "poster_path": "/lphvsr062SlxWM6XegsV2dLGaiE.jpg",
+      "first_air_date": "2024-09-02",
+      "name": "Lavender Fields",
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wCsDvlcQLwz7fzuZkfe2eS5Pgkh.jpg",
+      "genre_ids": [
+        18,
+        10759
+      ],
+      "id": 256429,
+      "origin_country": [
+        "PH"
+      ],
+      "original_language": "tl",
+      "original_name": "Pamilya Sagrado",
+      "overview": "The members of the Sagrado family live to prove they are the most powerful and influential, stopping at nothing to bury dirty secrets to keep their name faultless and sacred.",
+      "popularity": 1800.359,
+      "poster_path": "/hlRhstt3Du57qm4A30w7RkHqEXg.jpg",
+      "first_air_date": "2024-06-17",
+      "name": "Pamilya Sagrado",
+      "vote_average": 9.0,
+      "vote_count": 1
+    }
+  ],
+  "total_pages": 9185,
+  "total_results": 183684
+}
