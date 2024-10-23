@@ -105,10 +105,13 @@ class MovieRemoteMediator @Inject constructor(
 
             return MediatorResult.Success(endOfPaginationReached = endOfPaginationReached)
         } catch (error: IOException) {
+            error.printStackTrace()
             return MediatorResult.Error(error)
         } catch (error: HttpException) {
+            error.printStackTrace()
             return MediatorResult.Error(error)
         } catch (error: Exception) {
+            error.printStackTrace()
             return MediatorResult.Error(error)
         }
     }

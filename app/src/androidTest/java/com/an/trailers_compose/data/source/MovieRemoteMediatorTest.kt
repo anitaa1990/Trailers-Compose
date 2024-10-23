@@ -9,6 +9,7 @@ import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.an.trailers_compose.ContentTest
+import com.an.trailers_compose.data.local.CategoryStore
 import com.an.trailers_compose.data.local.MovieDatabase
 import com.an.trailers_compose.data.local.dao.MovieDao
 import com.an.trailers_compose.data.local.dao.MovieRemoteKeyDao
@@ -19,6 +20,7 @@ import com.an.trailers_compose.data.remote.model.MovieApiResponse
 import com.an.trailers_compose.data.remote.model.api
 import com.an.trailers_compose.data.repository.MovieRepository
 import junit.framework.TestCase
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
@@ -31,6 +33,7 @@ import org.mockito.Mockito.`when`
 @RunWith(AndroidJUnit4::class)
 class MovieRemoteMediatorTest: TestCase() {
     private lateinit var db: MovieDatabase
+    private lateinit var categoryStore: CategoryStore
     private val apiService: MovieApiService = mock()
 
     private lateinit var repository: MovieRepository
@@ -47,6 +50,7 @@ class MovieRemoteMediatorTest: TestCase() {
         ).build()
         val dao: MovieDao = db.movieDao
         val remoteKeyDao: MovieRemoteKeyDao = db.remoteKeyDao
+        categoryStore = CategoryStore(ApplicationProvider.getApplicationContext())
         repository = MovieRepository(dao, remoteKeyDao, apiService)
     }
 
@@ -64,11 +68,12 @@ class MovieRemoteMediatorTest: TestCase() {
                 page = 1L, totalPages = 1212L, totalResults = 2323L, results = mockMoviesList
             )
         )
+//        `when`(categoryStore.movieCategory).thenReturn(flow { Category.NOW_PLAYING })
 
         val remoteMediator = MovieRemoteMediator(
             repository = repository,
             category = category,
-            categoryStore = mock()
+            categoryStore = categoryStore
         )
         val pagingState = PagingState<Int, MovieEntity>(
             listOf(),
@@ -95,7 +100,7 @@ class MovieRemoteMediatorTest: TestCase() {
         val remoteMediator = MovieRemoteMediator(
             repository = repository,
             category = category,
-            categoryStore = mock()
+            categoryStore = categoryStore
         )
         val pagingState = PagingState<Int, MovieEntity>(
             listOf(),
@@ -116,7 +121,7 @@ class MovieRemoteMediatorTest: TestCase() {
         val remoteMediator = MovieRemoteMediator(
             repository = repository,
             category = Category.NOW_PLAYING,
-            categoryStore = mock()
+            categoryStore = categoryStore
         )
         val pagingState = PagingState<Int, MovieEntity>(
             listOf(),
