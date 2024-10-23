@@ -29,6 +29,8 @@ class MovieDetailViewModel @Inject constructor(
 
     init { getMovie() }
 
+    fun refresh() = getMovie()
+
     private fun getMovie() = viewModelScope.launch {
         _movieUiState.update {
             try {
