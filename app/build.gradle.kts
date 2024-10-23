@@ -75,15 +75,17 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    // Animation Compose
+    implementation(libs.animation.compose)
+    // Navigation compose
+    implementation(libs.navigation.compose)
+
     // Hilt
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
     ksp(libs.hilt.android.compiler)
     kspAndroidTest(libs.hilt.android.compiler)
     androidTestImplementation(libs.hilt.android.testing)
-
-    // Navigation compose
-    implementation(libs.navigation.compose)
 
     // Retrofit
     implementation(libs.retrofit)
