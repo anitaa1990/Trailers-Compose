@@ -20,11 +20,11 @@ fun LoadingItem() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
+            .background(MaterialTheme.colorScheme.scrim),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        CircularProgressIndicator(color = MaterialTheme.colorScheme.onPrimaryContainer)
+        CircularProgressIndicator(color = MaterialTheme.colorScheme.onPrimary)
 
         Text(
             modifier = Modifier.padding(10.dp),
