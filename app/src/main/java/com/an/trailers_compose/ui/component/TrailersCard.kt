@@ -2,6 +2,7 @@ package com.an.trailers_compose.ui.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -21,9 +22,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.an.trailers_compose.AppConstants
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.remote.model.Video
+import com.an.trailers_compose.data.remote.model.youtubeUrl
 
 @Composable
 fun TrailersCard(
@@ -53,6 +54,7 @@ fun TrailersListItem(
 ) {
     Card(
         modifier = Modifier
+            .aspectRatio(ratio = 16f/9f)
             .padding(horizontal = 10.dp)
             .clickable { onVideoItemClicked(video.key) }
         ,
@@ -62,7 +64,7 @@ fun TrailersListItem(
         Box(modifier = Modifier) {
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
-                    .data(String.format(AppConstants.YOUTUBE_THUMBNAIL_URL, video.key))
+                    .data(video.youtubeUrl())
                     .build(),
                 contentDescription = "",
                 contentScale = ContentScale.Crop
