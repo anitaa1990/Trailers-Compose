@@ -1,6 +1,6 @@
 package com.an.trailers_compose.ui.component
 
-import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -30,7 +30,7 @@ import com.an.trailers_compose.ui.model.Artist
 
 @Composable
 fun ArtistCard(
-    @DrawableRes titleId: Int,
+    @StringRes titleId: Int,
     artists: List<Artist>
 ) {
     Column(
