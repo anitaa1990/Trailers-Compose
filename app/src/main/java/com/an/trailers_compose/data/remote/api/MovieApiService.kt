@@ -22,4 +22,10 @@ interface MovieApiService {
     suspend fun fetchMovieDetail(
         @Path("movieId") movieId: Long
     ): MovieEntity
+
+    @GET("search/movie")
+    suspend fun searchMovies(
+        @Query("query") query: String,
+        @Query("page") page: Long
+    ): MovieApiResponse
 }

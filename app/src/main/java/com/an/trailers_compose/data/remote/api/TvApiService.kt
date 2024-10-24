@@ -22,4 +22,10 @@ interface TvApiService {
     suspend fun fetchTvDetail(
         @Path("tvId") tvId: Long
     ): TvEntity
+
+    @GET("search/tv")
+    suspend fun searchTvList(
+        @Query("query") query: String,
+        @Query("page") page: Long
+    ): TvApiResponse
 }
