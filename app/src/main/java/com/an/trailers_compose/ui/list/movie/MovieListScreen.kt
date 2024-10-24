@@ -28,6 +28,7 @@ import com.an.trailers_compose.R
 import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.component.CircleRevealPager
 import com.an.trailers_compose.ui.component.ContentCategories
+import com.an.trailers_compose.ui.component.ContentMenuBar
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 import com.an.trailers_compose.ui.model.Content
@@ -65,8 +66,11 @@ fun SharedTransitionScope.MovieListScreen(
                     animatedContentScope = animatedContentScope
                 )
 
-                // Added filter, search & Tv/movie option
-                MenuItems(onTvMenuSelected = onTvMenuSelected)
+                // Added filter, search & Tv option
+                ContentMenuBar(
+                    resId = R.drawable.ic_tv,
+                    onMenuSelected = onTvMenuSelected
+                )
 
                 // Filter by category
                 ContentCategories(
@@ -76,38 +80,5 @@ fun SharedTransitionScope.MovieListScreen(
                 )
             }
         }
-    }
-}
-
-@Composable
-private fun MenuItems(
-    onTvMenuSelected: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 55.dp, horizontal = 20.dp),
-        horizontalArrangement = Arrangement.End
-    ) {
-        // Tv option
-        IconButton(
-            onClick = { onTvMenuSelected() }
-        ) {
-            Icon(
-                modifier = Modifier.size(30.dp),
-                painter = painterResource(id = R.drawable.ic_tv),
-                contentDescription = "",
-                tint = Color.White
-            )
-        }
-
-        Spacer(Modifier.weight(1f))
-        // Search icon
-        Icon(
-            modifier = Modifier.size(25.dp),
-            imageVector = Icons.Default.Search,
-            contentDescription = "",
-            tint = MaterialTheme.colorScheme.primary
-        )
     }
 }
