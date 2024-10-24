@@ -8,9 +8,18 @@ import com.an.trailers_compose.AppConstants.INTENT_VIDEO_KEY
 import com.an.trailers_compose.VideoActivity
 import dagger.hilt.android.qualifiers.ApplicationContext
 
-fun NavHostController.navigateToDetail(id: Long) {
+fun NavHostController.navigateToMovieDetail(id: Long) {
     this.navigate(
         route = AppConstants.ROUTE_MOVIE_DETAIL_PATH.replace(
+            "{${AppConstants.ROUTE_DETAIL_ARG_NAME}}",
+            "$id"
+        )
+    )
+}
+
+fun NavHostController.navigateToTvDetail(id: Long) {
+    this.navigate(
+        route = AppConstants.ROUTE_TV_DETAIL_PATH.replace(
             "{${AppConstants.ROUTE_DETAIL_ARG_NAME}}",
             "$id"
         )

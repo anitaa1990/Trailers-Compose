@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.detail.movie
+package com.an.trailers_compose.ui.detail.tv
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -35,13 +35,13 @@ import com.an.trailers_compose.utils.ImageUtils
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun SharedTransitionScope.MovieDetailScreen(
-    viewModel: MovieDetailViewModel,
+fun SharedTransitionScope.TvDetailScreen(
+    viewModel: TvDetailViewModel,
     onItemClicked: (remoteId: Long) -> Unit,
     onVideoItemClicked: (key: String) -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
-    val movieUiState = viewModel.movieUiState.collectAsStateWithLifecycle(
+    val movieUiState = viewModel.tvUiState.collectAsStateWithLifecycle(
         lifecycleOwner = LocalLifecycleOwner.current
     )
 

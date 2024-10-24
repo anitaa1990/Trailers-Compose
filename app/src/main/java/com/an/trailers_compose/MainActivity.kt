@@ -19,15 +19,21 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.an.trailers_compose.AppConstants.MOVIES
+import com.an.trailers_compose.AppConstants.ROUTE_DETAIL_ARG_NAME
+import com.an.trailers_compose.AppConstants.ROUTE_MOVIE_DETAIL_PATH
+import com.an.trailers_compose.AppConstants.ROUTE_TV_DETAIL_PATH
 import com.an.trailers_compose.AppConstants.TV
 import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
 import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
+import com.an.trailers_compose.ui.detail.tv.TvDetailScreen
+import com.an.trailers_compose.ui.detail.tv.TvDetailViewModel
 import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.list.tv.TvListScreen
 import com.an.trailers_compose.ui.list.tv.TvListViewModel
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
-import com.an.trailers_compose.utils.navigateToDetail
+import com.an.trailers_compose.utils.navigateToMovieDetail
+import com.an.trailers_compose.utils.navigateToTvDetail
 import com.an.trailers_compose.utils.navigateToVideo
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -62,7 +68,7 @@ class MainActivity : ComponentActivity() {
                         composable(route = MOVIES) {
                             MovieListScreen(
                                 movies = movies,
-                                onItemClicked = { navController.navigateToDetail(it) },
+                                onItemClicked = { navController.navigateToMovieDetail(it) },
                                 selectedCategory = selectedMovieCategory.value,
                                 onCategorySelected = {
                                     movieListViewModel.updateCategory(it)
@@ -73,15 +79,15 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(
-                            route = AppConstants.ROUTE_MOVIE_DETAIL_PATH,
+                            route = ROUTE_MOVIE_DETAIL_PATH,
                             arguments = listOf(
-                                navArgument(AppConstants.ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
+                                navArgument(ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
                             )
                         ) {
                             val context = LocalContext.current
                             MovieDetailScreen(
                                 viewModel = hiltViewModel<MovieDetailViewModel>(),
-                                onItemClicked = { navController.navigateToDetail(it) },
+                                onItemClicked = { navController.navigateToMovieDetail(it) },
                                 onVideoItemClicked = { navigateToVideo(context, it) },
                                 animatedContentScope = this@composable
                             )
@@ -89,13 +95,27 @@ class MainActivity : ComponentActivity() {
                         composable(route = TV) {
                             TvListScreen(
                                 tvSeriesList = tvList,
-                                onItemClicked = { navController.navigateToDetail(it) },
+                                onItemClicked = { navController.navigateToTvDetail(it) },
                                 selectedCategory = selectedTvCategory.value,
                                 onCategorySelected = {
                                     tvListViewModel.updateCategory(it)
                                     tvList.refresh()
                                 },
                                 onMenuItemSelected = { navController.navigate(MOVIES) },
+                                animatedContentScope = this@composable
+                            )
+                        }
+                        composable(
+                            route = ROUTE_TV_DETAIL_PATH,
+                            arguments = listOf(
+                                navArgument(ROUTE_DETAIL_ARG_NAME) { type = NavType.LongType },
+                            )
+                        ) {
+                            val context = LocalContext.current
+                            TvDetailScreen(
+                                viewModel = hiltViewModel<TvDetailViewModel>(),
+                                onItemClicked = { navController.navigateToTvDetail(it) },
+                                onVideoItemClicked = { navigateToVideo(context, it) },
                                 animatedContentScope = this@composable
                             )
                         }

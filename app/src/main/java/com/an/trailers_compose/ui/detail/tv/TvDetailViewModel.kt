@@ -1,10 +1,10 @@
-package com.an.trailers_compose.ui.detail.movie
+package com.an.trailers_compose.ui.detail.tv
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.an.trailers_compose.AppConstants.ROUTE_DETAIL_ARG_NAME
-import com.an.trailers_compose.data.repository.MovieRepository
+import com.an.trailers_compose.data.repository.TvRepository
 import com.an.trailers_compose.ui.model.toContent
 import com.an.trailers_compose.ui.state.ContentDetailUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,27 +15,27 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MovieDetailViewModel @Inject constructor(
+class TvDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-    private val repository: MovieRepository,
+    private val repository: TvRepository,
 ) : ViewModel() {
     private val remoteId: Long = requireNotNull(savedStateHandle[ROUTE_DETAIL_ARG_NAME])
 
     // This is a mutable state flow that will be used internally in the viewmodel,
-    private val _movieUiState = MutableStateFlow<ContentDetailUiState>(ContentDetailUiState.Loading)
+    private val _tvUiState = MutableStateFlow<ContentDetailUiState>(ContentDetailUiState.Loading)
 
     // Immutable state flow that is exposed to the UI
-    val movieUiState = _movieUiState.asStateFlow()
+    val tvUiState = _tvUiState.asStateFlow()
 
-    init { getMovie() }
+    init { getTv() }
 
-    fun refresh() = getMovie()
+    fun refresh() = getTv()
 
-    private fun getMovie() = viewModelScope.launch {
-        _movieUiState.update {
+    private fun getTv() = viewModelScope.launch {
+        _tvUiState.update {
             try {
-                val movie = repository.getMovie(remoteId)
-                ContentDetailUiState.Success(movie.toContent())
+                val tv = repository.getTv(remoteId)
+                ContentDetailUiState.Success(tv.toContent())
             } catch (e: Exception) { ContentDetailUiState.Error }
         }
     }
