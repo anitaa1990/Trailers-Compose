@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.component
+package com.an.trailers_compose.ui.list.common
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

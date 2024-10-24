@@ -10,7 +10,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.an.trailers_compose.R
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
-import com.an.trailers_compose.ui.detail.component.ContentSuccessView
+import com.an.trailers_compose.ui.detail.common.ContentSuccessView
 import com.an.trailers_compose.ui.state.ContentDetailUiState
 
 @OptIn(ExperimentalSharedTransitionApi::class)

@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.navigation.NavHostController
 import com.an.trailers_compose.AppConstants
 import com.an.trailers_compose.AppConstants.INTENT_VIDEO_KEY
-import com.an.trailers_compose.VideoActivity
+import com.an.trailers_compose.ui.activity.VideoActivity
 import dagger.hilt.android.qualifiers.ApplicationContext
 
 fun NavHostController.navigateToMovieDetail(id: Long) {

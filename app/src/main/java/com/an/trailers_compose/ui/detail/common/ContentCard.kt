@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.component
+package com.an.trailers_compose.ui.detail.common
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi

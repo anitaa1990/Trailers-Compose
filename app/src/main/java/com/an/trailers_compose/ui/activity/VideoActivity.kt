@@ -1,4 +1,4 @@
-package com.an.trailers_compose
+package com.an.trailers_compose.ui.activity
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.detail.component
+package com.an.trailers_compose.ui.detail.common
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -20,10 +20,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.palette.graphics.Palette
 import com.an.trailers_compose.R
-import com.an.trailers_compose.ui.component.ContentCard
-import com.an.trailers_compose.ui.component.PosterImage
-import com.an.trailers_compose.ui.component.SimilarContentCard
-import com.an.trailers_compose.ui.component.TrailersCard
 import com.an.trailers_compose.ui.model.Content
 import com.an.trailers_compose.utils.ImageUtils
 

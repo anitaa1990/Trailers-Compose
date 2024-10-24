@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.component
+package com.an.trailers_compose.ui.detail.common
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
