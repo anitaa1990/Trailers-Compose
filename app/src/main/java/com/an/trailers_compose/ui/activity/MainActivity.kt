@@ -22,6 +22,7 @@ import com.an.trailers_compose.AppConstants.MOVIES
 import com.an.trailers_compose.AppConstants.ROUTE_DETAIL_ARG_NAME
 import com.an.trailers_compose.AppConstants.ROUTE_MOVIE_DETAIL_PATH
 import com.an.trailers_compose.AppConstants.ROUTE_TV_DETAIL_PATH
+import com.an.trailers_compose.AppConstants.SEARCH
 import com.an.trailers_compose.AppConstants.TV
 import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
 import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
@@ -31,6 +32,7 @@ import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.list.tv.TvListScreen
 import com.an.trailers_compose.ui.list.tv.TvListViewModel
+import com.an.trailers_compose.ui.search.SearchScreen
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 import com.an.trailers_compose.utils.navigateToMovieDetail
 import com.an.trailers_compose.utils.navigateToTvDetail
@@ -75,6 +77,7 @@ class MainActivity : ComponentActivity() {
                                     movies.refresh()
                                 },
                                 onTvMenuSelected = { navController.navigate(TV) },
+                                onSearchSelected = { navController.navigate(SEARCH) },
                                 animatedContentScope = this@composable
                             )
                         }
@@ -102,6 +105,7 @@ class MainActivity : ComponentActivity() {
                                     tvList.refresh()
                                 },
                                 onMenuItemSelected = { navController.navigate(MOVIES) },
+                                onSearchSelected = { navController.navigate(SEARCH) },
                                 animatedContentScope = this@composable
                             )
                         }
@@ -118,6 +122,9 @@ class MainActivity : ComponentActivity() {
                                 onVideoItemClicked = { navigateToVideo(context, it) },
                                 animatedContentScope = this@composable
                             )
+                        }
+                        composable(SEARCH) {
+                            SearchScreen { navController.navigateUp() }
                         }
                     }
                 }
