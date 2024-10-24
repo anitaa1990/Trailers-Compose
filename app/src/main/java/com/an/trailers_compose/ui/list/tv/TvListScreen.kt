@@ -9,9 +9,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
+import com.an.trailers_compose.AppConstants.tvCategories
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.component.CircleRevealPager
+import com.an.trailers_compose.ui.component.ContentCategories
 import com.an.trailers_compose.ui.component.ContentMenuBar
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
@@ -57,11 +59,11 @@ fun SharedTransitionScope.TvListScreen(
                 )
 
                 // Filter by category
-//                ContentCategories(
-//                    selectedCategory = selectedCategory,
-//                    categories = AppConstants.movieCategories,
-//                    onCategorySelected = onCategorySelected
-//                )
+                ContentCategories(
+                    selectedCategory = selectedCategory,
+                    categories = tvCategories,
+                    onCategorySelected = onCategorySelected
+                )
             }
         }
     }

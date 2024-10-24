@@ -12,7 +12,6 @@ object AppConstants {
     const val PAGE_SIZE = 20
     const val PREFETCH_DISTANCE = 10
 
-    const val HOME = "home"
     const val MOVIES = "Movies"
     const val TV = "TV"
     const val MOVIE_STATUS_RELEASED = "Released"
@@ -32,5 +31,6 @@ object AppConstants {
     const val INTENT_VIDEO_KEY = "intent_video_key"
 
     val genreColors = listOf(genreColor1, genreColor2, genreColor3, genreColor4)
-    val movieCategories = Category.entries.toList()
+    val movieCategories = listOf(Category.NOW_PLAYING, Category.POPULAR, Category.TOP_RATED, Category.UPCOMING)
+    val tvCategories = listOf(Category.AIRING_TODAY, Category.POPULAR, Category.TOP_RATED, Category.ON_THE_AIR)
 }
