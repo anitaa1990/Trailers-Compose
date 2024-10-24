@@ -31,7 +31,7 @@ class TvListViewModel @Inject constructor(
     private val _selectedCategory = MutableStateFlow(Category.POPULAR)
 
     @OptIn(ExperimentalCoroutinesApi::class)
-    val movies = _selectedCategory.flatMapLatest {
+    val tvSeriesList = _selectedCategory.flatMapLatest {
         getPager(it)
             .flow
             .cachedIn(viewModelScope)

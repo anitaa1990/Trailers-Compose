@@ -14,9 +14,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
@@ -37,6 +39,7 @@ fun SharedTransitionScope.MovieListScreen(
     onItemClicked: (remoteId: Long) -> Unit,
     selectedCategory: Category,
     onCategorySelected: (category: Category) -> Unit,
+    onTvMenuSelected: () -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
     Box(
@@ -63,7 +66,7 @@ fun SharedTransitionScope.MovieListScreen(
                 )
 
                 // Added filter, search & Tv/movie option
-                MenuItems()
+                MenuItems(onTvMenuSelected = onTvMenuSelected)
 
                 // Filter by category
                 ContentCategories(
@@ -77,20 +80,27 @@ fun SharedTransitionScope.MovieListScreen(
 }
 
 @Composable
-fun MenuItems() {
+private fun MenuItems(
+    onTvMenuSelected: () -> Unit
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 55.dp, horizontal = 20.dp),
         horizontalArrangement = Arrangement.End
     ) {
-        // Tv or Movie option
-        Icon(
-            modifier = Modifier.size(25.dp),
-            painter = painterResource(id = R.drawable.ic_tv),
-            contentDescription = "",
-            tint = MaterialTheme.colorScheme.primary
-        )
+        // Tv option
+        IconButton(
+            onClick = { onTvMenuSelected() }
+        ) {
+            Icon(
+                modifier = Modifier.size(30.dp),
+                painter = painterResource(id = R.drawable.ic_tv),
+                contentDescription = "",
+                tint = Color.White
+            )
+        }
+
         Spacer(Modifier.weight(1f))
         // Search icon
         Icon(
