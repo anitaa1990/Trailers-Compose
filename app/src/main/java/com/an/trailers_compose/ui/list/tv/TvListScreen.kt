@@ -9,7 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
+import com.an.trailers_compose.R
+import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.component.CircleRevealPager
+import com.an.trailers_compose.ui.component.ContentMenuBar
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 import com.an.trailers_compose.ui.model.Content
@@ -19,8 +22,9 @@ import com.an.trailers_compose.ui.model.Content
 fun SharedTransitionScope.TvListScreen(
     tvSeriesList: LazyPagingItems<Content>,
     onItemClicked: (remoteId: Long) -> Unit,
-//    selectedCategory: Category,
-//    onCategorySelected: (category: Category) -> Unit,
+    selectedCategory: Category,
+    onCategorySelected: (category: Category) -> Unit,
+    onMenuItemSelected: () -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
     Box(
@@ -47,7 +51,10 @@ fun SharedTransitionScope.TvListScreen(
                 )
 
                 // Added search & movie option
-//                MenuItems()
+                ContentMenuBar(
+                    resId = R.drawable.ic_movie,
+                    onMenuSelected = onMenuItemSelected
+                )
 
                 // Filter by category
 //                ContentCategories(

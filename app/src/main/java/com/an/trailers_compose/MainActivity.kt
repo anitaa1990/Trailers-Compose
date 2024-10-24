@@ -90,11 +90,12 @@ class MainActivity : ComponentActivity() {
                             TvListScreen(
                                 tvSeriesList = tvList,
                                 onItemClicked = { navController.navigateToDetail(it) },
-//                                selectedCategory = selectedCategory.value,
-//                                onCategorySelected = {
-//                                    viewModel.updateCategory(it)
-//                                    movies.refresh()
-//                                },
+                                selectedCategory = selectedTvCategory.value,
+                                onCategorySelected = {
+                                    tvListViewModel.updateCategory(it)
+                                    tvList.refresh()
+                                },
+                                onMenuItemSelected = { navController.navigate(MOVIES) },
                                 animatedContentScope = this@composable
                             )
                         }
