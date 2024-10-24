@@ -10,6 +10,6 @@
     <string name="read_less">READ LESS</string>
     <string name="cast">Cast</string>
     <string name="crew">Crew</string>
-    <string name="similar_movies">Similar movies</string>
+    <string name="similar_movies">Similar content</string>
     <string name="load_error">Unable to load details..</string>
 </resources>
