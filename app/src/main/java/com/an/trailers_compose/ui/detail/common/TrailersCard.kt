@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.component
+package com.an.trailers_compose.ui.detail.common
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box

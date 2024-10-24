@@ -12,9 +12,9 @@ import androidx.paging.compose.LazyPagingItems
 import com.an.trailers_compose.AppConstants.tvCategories
 import com.an.trailers_compose.R
 import com.an.trailers_compose.data.remote.model.Category
-import com.an.trailers_compose.ui.component.CircleRevealPager
-import com.an.trailers_compose.ui.component.ContentCategories
-import com.an.trailers_compose.ui.component.ContentMenuBar
+import com.an.trailers_compose.ui.list.common.CircleRevealPager
+import com.an.trailers_compose.ui.list.common.ContentCategories
+import com.an.trailers_compose.ui.list.common.ContentMenuBar
 import com.an.trailers_compose.ui.component.EmptyScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 import com.an.trailers_compose.ui.model.Content
