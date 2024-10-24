@@ -20,9 +20,11 @@ object AppConstants {
     const val YOUTUBE_THUMBNAIL_URL = "https://img.youtube.com/vi/%s/maxresdefault.jpg"
 
     private const val ROUTE_MOVIE_DETAIL = "movie_detail"
-    const val ROUTE_DETAIL_ARG_NAME = "localId"
+    private const val ROUTE_TV_DETAIL = "tv_detail"
+    const val ROUTE_DETAIL_ARG_NAME = "remoteId"
 
     const val ROUTE_MOVIE_DETAIL_PATH = "$ROUTE_MOVIE_DETAIL/$ROUTE_DETAIL_ARG_NAME/{$ROUTE_DETAIL_ARG_NAME}"
+    const val ROUTE_TV_DETAIL_PATH = "$ROUTE_TV_DETAIL/$ROUTE_DETAIL_ARG_NAME/{$ROUTE_DETAIL_ARG_NAME}"
 
     const val KEY_SHARED_TRANSITION_IMAGE = "image-%s"
     const val KEY_SHARED_TRANSITION_TITLE = "title-%s"
