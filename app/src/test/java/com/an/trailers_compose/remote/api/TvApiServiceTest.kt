@@ -84,4 +84,25 @@ class TvApiServiceTest {
         assertEquals(25, actualResponse.credits?.crew?.size)
         assertEquals(20, actualResponse.similarTvApiResponse?.results?.size)
     }
+
+    @Test
+    fun `search tv list and check response Code 200 returned`() = runTest {
+        // Assign
+        val response = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_OK)
+            .setBody(MockResponseFileReader("tv_list_api_response.json").content)
+
+        mockWebServer.enqueue(response)
+
+        // Act
+        val actualResponse = apiService.searchTvList(
+            "big bang theory", 1
+        )
+
+        // Assert
+        assertEquals(1, actualResponse.page)
+        assertEquals(9185, actualResponse.totalPages)
+        assertEquals(183684, actualResponse.totalResults)
+        assertEquals(20, actualResponse.results.size)
+    }
 }

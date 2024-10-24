@@ -84,4 +84,25 @@ class MovieApiServiceTest {
         assertEquals(147, actualResponse.credits?.crew?.size)
         assertEquals(20, actualResponse.similarMoviesApiResponse?.results?.size)
     }
+
+    @Test
+    fun `search movies and check response Code 200 returned`() = runTest {
+        // Assign
+        val response = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_OK)
+            .setBody(MockResponseFileReader("movie_list_api_response.json").content)
+
+        mockWebServer.enqueue(response)
+
+        // Act
+        val actualResponse = apiService.searchMovies(
+            "batman", 1
+        )
+
+        // Assert
+        assertEquals(1, actualResponse.page)
+        assertEquals(46401, actualResponse.totalPages)
+        assertEquals(928019, actualResponse.totalResults)
+        assertEquals(20, actualResponse.results.size)
+    }
 }
