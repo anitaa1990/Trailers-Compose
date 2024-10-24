@@ -11,7 +11,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -21,7 +20,8 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ContentMenuBar(
     @DrawableRes resId: Int,
-    onMenuSelected:() -> Unit
+    onMenuSelected:() -> Unit,
+    onSearchSelected:() -> Unit
 ) {
     Row(
         modifier = Modifier
@@ -42,12 +42,15 @@ fun ContentMenuBar(
         }
 
         Spacer(Modifier.weight(1f))
+
         // Search icon
-        Icon(
-            modifier = Modifier.size(25.dp),
-            imageVector = Icons.Default.Search,
-            contentDescription = "",
-            tint = MaterialTheme.colorScheme.primary
-        )
+        IconButton(onClick = { onSearchSelected() }) {
+            Icon(
+                modifier = Modifier.size(30.dp),
+                imageVector = Icons.Default.Search,
+                contentDescription = "",
+                tint = Color.White
+            )
+        }
     }
 }
