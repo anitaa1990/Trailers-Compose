@@ -8,7 +8,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.an.trailers_compose.R
-import com.an.trailers_compose.ui.component.EmptyScreen
+import com.an.trailers_compose.ui.component.ErrorScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 import com.an.trailers_compose.ui.detail.common.ContentSuccessView
 import com.an.trailers_compose.ui.state.ContentDetailUiState
@@ -39,7 +39,7 @@ fun SharedTransitionScope.MovieDetailScreen(
             LoadingItem()
         }
         is ContentDetailUiState.Error ->
-            EmptyScreen(errorMessage = stringResource(id = R.string.load_error)) {
+            ErrorScreen(errorMessage = stringResource(id = R.string.load_error)) {
                 viewModel.refresh()
             }
     }

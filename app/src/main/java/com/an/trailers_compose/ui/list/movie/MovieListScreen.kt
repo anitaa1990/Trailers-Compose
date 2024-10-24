@@ -15,7 +15,7 @@ import com.an.trailers_compose.data.remote.model.Category
 import com.an.trailers_compose.ui.list.common.CircleRevealPager
 import com.an.trailers_compose.ui.list.common.ContentCategories
 import com.an.trailers_compose.ui.list.common.ContentMenuBar
-import com.an.trailers_compose.ui.component.EmptyScreen
+import com.an.trailers_compose.ui.component.ErrorScreen
 import com.an.trailers_compose.ui.component.LoadingItem
 import com.an.trailers_compose.ui.model.Content
 
@@ -40,7 +40,7 @@ fun SharedTransitionScope.MovieListScreen(
             }
             is LoadState.Error -> {
                 val error = (loadState.refresh as LoadState.Error).error
-                EmptyScreen(errorMessage = error.message ?: error.toString()) {
+                ErrorScreen(errorMessage = error.message ?: error.toString()) {
                     movies.refresh()
                 }
             }

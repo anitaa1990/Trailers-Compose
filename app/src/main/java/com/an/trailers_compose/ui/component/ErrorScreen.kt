@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import com.an.trailers_compose.R
 
 @Composable
-fun EmptyScreen(
+fun ErrorScreen(
     errorMessage: String,
     onRefreshClicked:() -> Unit
 ) {
