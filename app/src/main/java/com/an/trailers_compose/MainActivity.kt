@@ -19,10 +19,13 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.an.trailers_compose.AppConstants.MOVIES
+import com.an.trailers_compose.AppConstants.TV
 import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
 import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
 import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
+import com.an.trailers_compose.ui.list.tv.TvListScreen
+import com.an.trailers_compose.ui.list.tv.TvListViewModel
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 import com.an.trailers_compose.utils.navigateToDetail
 import com.an.trailers_compose.utils.navigateToVideo
@@ -38,11 +41,18 @@ class MainActivity : ComponentActivity() {
             TrailersComposeTheme {
                 val navController = rememberNavController()
 
-                val viewModel = hiltViewModel<MovieListViewModel>()
-                val movies = viewModel.movies.collectAsLazyPagingItems()
-                val selectedCategory = viewModel.selectedCategory.collectAsStateWithLifecycle(
+                val movieListViewModel = hiltViewModel<MovieListViewModel>()
+                val movies = movieListViewModel.movies.collectAsLazyPagingItems()
+                val selectedMovieCategory = movieListViewModel.selectedCategory.collectAsStateWithLifecycle(
                     lifecycleOwner = LocalLifecycleOwner.current
                 )
+
+                val tvListViewModel = hiltViewModel<TvListViewModel>()
+                val tvList = tvListViewModel.tvSeriesList.collectAsLazyPagingItems()
+                val selectedTvCategory = tvListViewModel.selectedCategory.collectAsStateWithLifecycle(
+                    lifecycleOwner = LocalLifecycleOwner.current
+                )
+
                 SharedTransitionLayout {
                     NavHost(
                         navController = navController,
@@ -53,11 +63,12 @@ class MainActivity : ComponentActivity() {
                             MovieListScreen(
                                 movies = movies,
                                 onItemClicked = { navController.navigateToDetail(it) },
-                                selectedCategory = selectedCategory.value,
+                                selectedCategory = selectedMovieCategory.value,
                                 onCategorySelected = {
-                                    viewModel.updateCategory(it)
+                                    movieListViewModel.updateCategory(it)
                                     movies.refresh()
                                 },
+                                onTvMenuSelected = { navController.navigate(TV) },
                                 animatedContentScope = this@composable
                             )
                         }
@@ -72,6 +83,18 @@ class MainActivity : ComponentActivity() {
                                 viewModel = hiltViewModel<MovieDetailViewModel>(),
                                 onItemClicked = { navController.navigateToDetail(it) },
                                 onVideoItemClicked = { navigateToVideo(context, it) },
+                                animatedContentScope = this@composable
+                            )
+                        }
+                        composable(route = TV) {
+                            TvListScreen(
+                                tvSeriesList = tvList,
+                                onItemClicked = { navController.navigateToDetail(it) },
+//                                selectedCategory = selectedCategory.value,
+//                                onCategorySelected = {
+//                                    viewModel.updateCategory(it)
+//                                    movies.refresh()
+//                                },
                                 animatedContentScope = this@composable
                             )
                         }
