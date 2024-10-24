@@ -27,6 +27,7 @@ fun SharedTransitionScope.TvListScreen(
     selectedCategory: Category,
     onCategorySelected: (category: Category) -> Unit,
     onMenuItemSelected: () -> Unit,
+    onSearchSelected: () -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
     Box(
@@ -55,7 +56,8 @@ fun SharedTransitionScope.TvListScreen(
                 // Added search & movie option
                 ContentMenuBar(
                     resId = R.drawable.ic_movie,
-                    onMenuSelected = onMenuItemSelected
+                    onMenuSelected = onMenuItemSelected,
+                    onSearchSelected = onSearchSelected
                 )
 
                 // Filter by category
