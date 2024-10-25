@@ -1,7 +1,7 @@
 # Trailers-Compose
 A simple demo project for The Movie DB based on <b>MVVM clean architecture</b> and <b>Jetpack Compose</b>.
 
-<img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/3.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/4.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/5.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/6.png" width="200" style="max-width:100%;"></br></br>
+<img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/1.gif" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/2.gif" width="200" style="max-width:100%;"> <img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/3.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/4.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/5.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/6.png" width="200" style="max-width:100%;"></br></br>
 
 #### App Architecture 
 Based on mvvm architecture and repository pattern.
