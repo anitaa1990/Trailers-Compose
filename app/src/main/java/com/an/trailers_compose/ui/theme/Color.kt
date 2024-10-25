@@ -79,3 +79,9 @@ val genreColor2 = Color(0xFFF47f87)
 val genreColor3 = Color(0xFF6AC68D)
 val genreColor4 = Color(0xFFFBE0A5)
 val statusColor = Color(0xFF6CC4FC)
+
+val color_soft_white = Color(0xFFF5F5F0)
+val color_silver = Color(0xFFC0C0C0)
+
+val color_blue = Color(0xFF28303D)
+val color_cyan = Color(0xFF75EAF1)

@@ -33,6 +33,7 @@ import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.list.tv.TvListScreen
 import com.an.trailers_compose.ui.list.tv.TvListViewModel
 import com.an.trailers_compose.ui.search.SearchScreen
+import com.an.trailers_compose.ui.search.SearchViewModel
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 import com.an.trailers_compose.utils.navigateToMovieDetail
 import com.an.trailers_compose.utils.navigateToTvDetail
@@ -124,7 +125,12 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(SEARCH) {
-                            SearchScreen { navController.navigateUp() }
+                            SearchScreen(
+                                viewModel = hiltViewModel<SearchViewModel>(),
+                                onBackButtonClicked = { navController.navigateUp() },
+                                onItemClicked = { navController.navigateToMovieDetail(it) },
+                                animatedContentScope = this@composable
+                            )
                         }
                     }
                 }
