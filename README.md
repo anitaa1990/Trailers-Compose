@@ -3,6 +3,15 @@ A simple demo project for The Movie DB based on <b>MVVM clean architecture</b>
 
 <img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/1.gif" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/2.gif" width="200" style="max-width:100%;"> <img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/3.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/4.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/5.png" width="200" style="max-width:100%;"><img src="https://github.com/anitaa1990/Trailers-Compose/blob/main/media/6.png" width="200" style="max-width:100%;"></br></br>
 
+### App Features
+• Users can view list of the movies from the TMDB database.
+• Users can view list of the latest Tv series of their choice from the TMDB database.
+• Users can filter movies based on popularity, upcoming top rated and now playing.
+• Users can filter tv series based on popularity, airing today and top rated.
+• Users can search for any movie or tv series of their choice.
+• Users can click on any movie or tv series to watch the trailers of their choice.
+• Supports pagination so you can literally view all movies/tv shows of your interest.
+
 #### App Architecture 
 Based on mvvm architecture and repository pattern.
 
