@@ -12,6 +12,6 @@
     <string name="crew">Crew</string>
     <string name="similar_movies">Similar content</string>
     <string name="load_error">Unable to load details..</string>
-    <string name="search_empty">No results found...</string>
-    <string name="search_placeholder">Search...</string>
+    <string name="search_empty">No results found…</string>
+    <string name="search_placeholder">Search…</string>
 </resources>
