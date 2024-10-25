@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.search
+package com.an.trailers_compose.ui.search.movie
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -23,7 +23,7 @@ import javax.inject.Inject
 import kotlin.time.Duration.Companion.milliseconds
 
 @HiltViewModel
-class SearchViewModel @Inject constructor(
+class MovieSearchViewModel @Inject constructor(
     private val repository: SearchRepository,
 ) : ViewModel() {
     private val _inputText: MutableStateFlow<String> = MutableStateFlow("")

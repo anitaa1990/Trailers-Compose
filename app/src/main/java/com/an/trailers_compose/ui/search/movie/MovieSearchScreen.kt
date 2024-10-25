@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.search
+package com.an.trailers_compose.ui.search.movie
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -18,7 +18,7 @@ import com.an.trailers_compose.ui.list.common.CircleRevealPager
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun SharedTransitionScope.SearchScreen(
-    viewModel: SearchViewModel = hiltViewModel<SearchViewModel>(),
+    viewModel: MovieSearchViewModel = hiltViewModel<MovieSearchViewModel>(),
     onBackButtonClicked: () -> Unit,
     onItemClicked: (remoteId: Long) -> Unit,
     animatedContentScope: AnimatedContentScope
