@@ -1,4 +1,4 @@
-package com.an.trailers_compose.ui.search.movie
+package com.an.trailers_compose.ui.search.tv
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -17,14 +17,14 @@ import com.an.trailers_compose.ui.list.common.CircleRevealPager
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun SharedTransitionScope.MovieSearchScreen(
-    viewModel: MovieSearchViewModel = hiltViewModel<MovieSearchViewModel>(),
+fun SharedTransitionScope.TvSearchScreen(
+    viewModel: TvSearchViewModel = hiltViewModel<TvSearchViewModel>(),
     onBackButtonClicked: () -> Unit,
     onItemClicked: (remoteId: Long) -> Unit,
     animatedContentScope: AnimatedContentScope
 ) {
     val inputText = viewModel.inputText.collectAsState().value
-    val content = viewModel.movieSearchResults.collectAsLazyPagingItems()
+    val content = viewModel.tvSearchResults.collectAsLazyPagingItems()
 
     Column(
         modifier = Modifier.fillMaxSize()

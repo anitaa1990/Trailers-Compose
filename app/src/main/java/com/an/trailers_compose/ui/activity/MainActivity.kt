@@ -22,7 +22,8 @@ import com.an.trailers_compose.AppConstants.MOVIES
 import com.an.trailers_compose.AppConstants.ROUTE_DETAIL_ARG_NAME
 import com.an.trailers_compose.AppConstants.ROUTE_MOVIE_DETAIL_PATH
 import com.an.trailers_compose.AppConstants.ROUTE_TV_DETAIL_PATH
-import com.an.trailers_compose.AppConstants.SEARCH
+import com.an.trailers_compose.AppConstants.SEARCH_MOVIES
+import com.an.trailers_compose.AppConstants.SEARCH_TV
 import com.an.trailers_compose.AppConstants.TV
 import com.an.trailers_compose.ui.detail.movie.MovieDetailScreen
 import com.an.trailers_compose.ui.detail.movie.MovieDetailViewModel
@@ -32,8 +33,10 @@ import com.an.trailers_compose.ui.list.movie.MovieListScreen
 import com.an.trailers_compose.ui.list.movie.MovieListViewModel
 import com.an.trailers_compose.ui.list.tv.TvListScreen
 import com.an.trailers_compose.ui.list.tv.TvListViewModel
-import com.an.trailers_compose.ui.search.movie.SearchScreen
+import com.an.trailers_compose.ui.search.movie.MovieSearchScreen
 import com.an.trailers_compose.ui.search.movie.MovieSearchViewModel
+import com.an.trailers_compose.ui.search.tv.TvSearchScreen
+import com.an.trailers_compose.ui.search.tv.TvSearchViewModel
 import com.an.trailers_compose.ui.theme.TrailersComposeTheme
 import com.an.trailers_compose.utils.navigateToMovieDetail
 import com.an.trailers_compose.utils.navigateToTvDetail
@@ -78,7 +81,7 @@ class MainActivity : ComponentActivity() {
                                     movies.refresh()
                                 },
                                 onTvMenuSelected = { navController.navigate(TV) },
-                                onSearchSelected = { navController.navigate(SEARCH) },
+                                onSearchSelected = { navController.navigate(SEARCH_MOVIES) },
                                 animatedContentScope = this@composable
                             )
                         }
@@ -106,7 +109,7 @@ class MainActivity : ComponentActivity() {
                                     tvList.refresh()
                                 },
                                 onMenuItemSelected = { navController.navigate(MOVIES) },
-                                onSearchSelected = { navController.navigate(SEARCH) },
+                                onSearchSelected = { navController.navigate(SEARCH_TV) },
                                 animatedContentScope = this@composable
                             )
                         }
@@ -124,11 +127,19 @@ class MainActivity : ComponentActivity() {
                                 animatedContentScope = this@composable
                             )
                         }
-                        composable(SEARCH) {
-                            SearchScreen(
+                        composable(SEARCH_MOVIES) {
+                            MovieSearchScreen(
                                 viewModel = hiltViewModel<MovieSearchViewModel>(),
                                 onBackButtonClicked = { navController.navigateUp() },
                                 onItemClicked = { navController.navigateToMovieDetail(it) },
+                                animatedContentScope = this@composable
+                            )
+                        }
+                        composable(SEARCH_TV) {
+                            TvSearchScreen(
+                                viewModel = hiltViewModel<TvSearchViewModel>(),
+                                onBackButtonClicked = { navController.navigateUp() },
+                                onItemClicked = { navController.navigateToTvDetail(it) },
                                 animatedContentScope = this@composable
                             )
                         }
